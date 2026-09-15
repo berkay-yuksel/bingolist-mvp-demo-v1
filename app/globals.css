@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-500/40;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-feature-settings: 'ss01' on;
+  }
+  :focus-visible {
+    outline: 2px solid #38D6A7;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Ticket-edge motif: a dashed perforation line used where a card is
+     conceptually "torn" from the sheet — e.g. between cover and body. */
+  .perforated-top {
+    position: relative;
+  }
+  .perforated-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      rgba(244, 238, 221, 0.35) 0,
+      rgba(244, 238, 221, 0.35) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
