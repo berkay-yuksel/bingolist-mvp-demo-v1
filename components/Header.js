@@ -8,7 +8,7 @@ import { useCurrentUser } from './UserContext';
 import NotificationBell from './NotificationBell';
 
 export default function Header() {
-  const { user, users, setUserId, isRealSession, logout } = useCurrentUser();
+  const { user, users, setUserId, isRealSession, devSwitcherEnabled, logout } = useCurrentUser();
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const [q, setQ] = useState('');
   const [results, setResults] = useState(null);
@@ -143,14 +143,23 @@ export default function Header() {
         </div>
 
         {!isRealSession && (
-          <Link
-            href="/login"
-            className="hidden shrink-0 rounded-full border border-ink-500 px-3 py-1.5 text-sm text-paper/70 hover:border-mint hover:text-mint sm:block"
-          >
-            Giriş yap
-          </Link>
+          <div className="hidden shrink-0 items-center gap-2 sm:flex">
+            <Link
+              href="/login"
+              className="rounded-full border border-ink-500 px-3 py-1.5 text-sm text-paper/70 hover:border-mint hover:text-mint"
+            >
+              Giriş yap
+            </Link>
+            <Link
+              href="/signup"
+              className="rounded-full bg-mint px-3 py-1.5 text-sm font-medium text-ink hover:bg-mint-dark"
+            >
+              Kayıt ol
+            </Link>
+          </div>
         )}
 
+        {(isRealSession || devSwitcherEnabled) && (
         <div className="relative shrink-0">
           <button
             onClick={() => setSwitcherOpen((s) => !s)}
@@ -250,6 +259,7 @@ export default function Header() {
             </div>
           )}
         </div>
+        )}
       </div>
     </header>
   );

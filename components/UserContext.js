@@ -4,19 +4,26 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import { USERS } from '@/lib/mockData';
 
 const STORAGE_KEY = 'bingolist:currentUserId';
+const DEV_SWITCHER_KEY = 'bingolist:devSwitcherEnabled';
+// Visiting the site once with ?dev=<this> unlocks the demo persona
+// switcher on that browser from then on (stored in localStorage) — anyone
+// else just sees the normal login/signup flow. Change this to your own
+// secret before sharing the link around.
+const DEV_SWITCHER_SECRET = 'bingoadmin2026';
 const UserCtx = createContext(null);
 
 // Two identity sources, in priority order:
 // 1. A real logged-in session (cookie-based, from /api/auth) — this is
 //    what a person using the public deployment actually has.
 // 2. The old localStorage "switch persona" dev tool, using the static
-//    seed USERS — kept only as a fallback for local development/testing
-//    when no real session exists, and hidden from the UI once a real
-//    session is active.
+//    seed USERS — kept only as a hidden admin/dev tool. It's invisible to
+//    everyone by default; visiting once with ?dev=<secret> reveals it on
+//    that browser going forward, and it's always available on localhost.
 export function UserProvider({ children }) {
   const [userId, setUserIdState] = useState(USERS[0].id);
   const [realUser, setRealUser] = useState(null);
   const [ready, setReady] = useState(false);
+  const [devSwitcherEnabled, setDevSwitcherEnabled] = useState(false);
 
   const refreshSession = useCallback(async () => {
     try {
@@ -29,10 +36,20 @@ export function UserProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    const stored = typeof window !== 'undefined' ? window.localStorage.getItem(STORAGE_KEY) : null;
+    if (typeof window === 'undefined') return;
+    const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored && USERS.some((u) => u.id === stored)) {
       setUserIdState(stored);
     }
+
+    const params = new URLSearchParams(window.location.search);
+    const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    if (params.get('dev') === DEV_SWITCHER_SECRET) {
+      window.localStorage.setItem(DEV_SWITCHER_KEY, '1');
+    }
+    const unlocked = window.localStorage.getItem(DEV_SWITCHER_KEY) === '1';
+    setDevSwitcherEnabled(isLocalhost || unlocked);
+
     refreshSession().finally(() => setReady(true));
   }, [refreshSession]);
 
@@ -60,6 +77,7 @@ export function UserProvider({ children }) {
         users: USERS,
         ready,
         isRealSession,
+        devSwitcherEnabled,
         refreshSession,
         logout,
       }}
