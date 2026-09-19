@@ -1,0 +1,2143 @@
+[
+  {
+    "title": "En İyi Progresif Rock Albümleri",
+    "description": "Prog rock'a giriş için güçlü bir çekirdek liste. Dinlediklerini işaretle.",
+    "category": "music",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Musicians%20perform%20on%20stage%20during%20live%20concert.jpg?width=1200",
+    "tags": [
+      "music",
+      "prog-rock",
+      "albums",
+      "classic-rock"
+    ],
+    "cells": [
+      {
+        "text": "King Crimson — In the Court of the Crimson King",
+        "image": "https://loremflickr.com/800/1100/king%20crimson%20in%20the%20court%20of%20the%20crimson%20king,progressive%20rock,vinyl,album?lock=599359"
+      },
+      {
+        "text": "Pink Floyd — The Dark Side of the Moon",
+        "image": "https://loremflickr.com/800/1100/pink%20floyd%20the%20dark%20side%20of%20the%20moon,progressive%20rock,vinyl,album?lock=185958"
+      },
+      {
+        "text": "Yes — Close to the Edge",
+        "image": "https://loremflickr.com/800/1100/yes%20close%20to%20the%20edge,progressive%20rock,vinyl,album?lock=76517"
+      },
+      {
+        "text": "Genesis — Selling England by the Pound",
+        "image": "https://loremflickr.com/800/1100/genesis%20selling%20england%20by%20the%20pound,progressive%20rock,vinyl,album?lock=4171"
+      },
+      {
+        "text": "Jethro Tull — Thick as a Brick",
+        "image": "https://loremflickr.com/800/1100/jethro%20tull%20thick%20as%20a%20brick,progressive%20rock,vinyl,album?lock=732895"
+      },
+      {
+        "text": "King Crimson — Red",
+        "image": "https://loremflickr.com/800/1100/king%20crimson%20red,progressive%20rock,vinyl,album?lock=195483"
+      },
+      {
+        "text": "Pink Floyd — Wish You Were Here",
+        "image": "https://loremflickr.com/800/1100/pink%20floyd%20wish%20you%20were%20here,progressive%20rock,vinyl,album?lock=55677"
+      },
+      {
+        "text": "Genesis — Foxtrot",
+        "image": "https://loremflickr.com/800/1100/genesis%20foxtrot,progressive%20rock,vinyl,album?lock=166234"
+      },
+      {
+        "text": "Yes — Fragile",
+        "image": "https://loremflickr.com/800/1100/yes%20fragile,progressive%20rock,vinyl,album?lock=28021"
+      },
+      {
+        "text": "Rush — Hemispheres",
+        "image": "https://loremflickr.com/800/1100/rush%20hemispheres,progressive%20rock,vinyl,album?lock=590162"
+      },
+      {
+        "text": "Rush — Moving Pictures",
+        "image": "https://loremflickr.com/800/1100/rush%20moving%20pictures,progressive%20rock,vinyl,album?lock=65695"
+      },
+      {
+        "text": "Camel — Mirage",
+        "image": "https://loremflickr.com/800/1100/camel%20mirage,progressive%20rock,vinyl,album?lock=551881"
+      },
+      {
+        "text": "Van der Graaf Generator — Pawn Hearts",
+        "image": "https://loremflickr.com/800/1100/van%20der%20graaf%20generator%20pawn%20hearts,progressive%20rock,vinyl,album?lock=753141"
+      },
+      {
+        "text": "Emerson, Lake & Palmer — Brain Salad Surgery",
+        "image": "https://loremflickr.com/800/1100/emerson%20lake%20palmer%20brain%20salad%20surgery,progressive%20rock,vinyl,album?lock=743244"
+      },
+      {
+        "text": "Porcupine Tree — Fear of a Blank Planet",
+        "image": "https://loremflickr.com/800/1100/porcupine%20tree%20fear%20of%20a%20blank%20planet,progressive%20rock,vinyl,album?lock=409765"
+      },
+      {
+        "text": "Tool — Lateralus",
+        "image": "https://loremflickr.com/800/1100/tool%20lateralus,progressive%20rock,vinyl,album?lock=29437"
+      }
+    ]
+  },
+  {
+    "title": "Tame Impala — Ne Kadar Derindesin?",
+    "description": "Hitlerden deep cut'lara ve Deadbeat dönemine kadar: bildiğin parçaları işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://ents24.imgix.net/image/000/532/132/ba25fcc14e3824789c2363f8a7a1484674836691.jpg?auto=format&crop=faces&h=1920&w=1920",
+    "tags": [
+      "music",
+      "tame-impala",
+      "psychedelic",
+      "fan-card"
+    ],
+    "cells": [
+      {
+        "text": "Let It Happen",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=78394"
+      },
+      {
+        "text": "The Less I Know the Better",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=519857"
+      },
+      {
+        "text": "New Person, Same Old Mistakes",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=568919"
+      },
+      {
+        "text": "Eventually",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=748975"
+      },
+      {
+        "text": "Nangs",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=616731"
+      },
+      {
+        "text": "Borderline",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=839988"
+      },
+      {
+        "text": "Lost in Yesterday",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=693195"
+      },
+      {
+        "text": "Breathe Deeper",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=193111"
+      },
+      {
+        "text": "Elephant",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=122889"
+      },
+      {
+        "text": "Feels Like We Only Go Backwards",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=310535"
+      },
+      {
+        "text": "Mind Mischief",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=557758"
+      },
+      {
+        "text": "Apocalypse Dreams",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=706038"
+      },
+      {
+        "text": "Solitude Is Bliss",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=892007"
+      },
+      {
+        "text": "Half Full Glass of Wine",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=338293"
+      },
+      {
+        "text": "Dracula",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=251239"
+      },
+      {
+        "text": "Loser",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=597515"
+      },
+      {
+        "text": "End of Summer",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=289398"
+      },
+      {
+        "text": "My Old Ways",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=478338"
+      },
+      {
+        "text": "No Reply",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=268745"
+      },
+      {
+        "text": "Ethereal Connection",
+        "image": "https://loremflickr.com/900/900/tame%20impala,psychedelic,concert,music?lock=302314"
+      }
+    ]
+  },
+  {
+    "title": "2000'lerin Herkesin Bildiği Şarkıları",
+    "description": "İlk saniyelerde tanıdığın 2000'ler hitlerini işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic-sl-sv553j.jpg?width=1200",
+    "tags": [
+      "music",
+      "2000s",
+      "nostalji",
+      "hits"
+    ],
+    "cells": [
+      {
+        "text": "Britney Spears — Toxic",
+        "image": "https://loremflickr.com/900/900/britney%20spears%20toxic,music,concert,2000s?lock=597099"
+      },
+      {
+        "text": "The Killers — Mr. Brightside",
+        "image": "https://loremflickr.com/900/900/the%20killers%20mr%20brightside,music,concert,2000s?lock=431372"
+      },
+      {
+        "text": "Beyoncé — Crazy in Love",
+        "image": "https://loremflickr.com/900/900/beyonc%C3%A9%20crazy%20in%20love,music,concert,2000s?lock=510116"
+      },
+      {
+        "text": "Rihanna — Umbrella",
+        "image": "https://loremflickr.com/900/900/rihanna%20umbrella,music,concert,2000s?lock=773570"
+      },
+      {
+        "text": "OutKast — Hey Ya!",
+        "image": "https://loremflickr.com/900/900/outkast%20hey%20ya,music,concert,2000s?lock=334814"
+      },
+      {
+        "text": "Linkin Park — In the End",
+        "image": "https://loremflickr.com/900/900/linkin%20park%20in%20the%20end,music,concert,2000s?lock=349583"
+      },
+      {
+        "text": "The White Stripes — Seven Nation Army",
+        "image": "https://loremflickr.com/900/900/the%20white%20stripes%20seven%20nation%20army,music,concert,2000s?lock=411647"
+      },
+      {
+        "text": "Eminem — Lose Yourself",
+        "image": "https://loremflickr.com/900/900/eminem%20lose%20yourself,music,concert,2000s?lock=499090"
+      },
+      {
+        "text": "Lady Gaga — Poker Face",
+        "image": "https://loremflickr.com/900/900/lady%20gaga%20poker%20face,music,concert,2000s?lock=699946"
+      },
+      {
+        "text": "The Black Eyed Peas — I Gotta Feeling",
+        "image": "https://loremflickr.com/900/900/the%20black%20eyed%20peas%20i%20gotta%20feeling,music,concert,2000s?lock=653657"
+      },
+      {
+        "text": "Avril Lavigne — Complicated",
+        "image": "https://loremflickr.com/900/900/avril%20lavigne%20complicated,music,concert,2000s?lock=836975"
+      },
+      {
+        "text": "Gorillaz — Feel Good Inc.",
+        "image": "https://loremflickr.com/900/900/gorillaz%20feel%20good%20inc,music,concert,2000s?lock=176463"
+      },
+      {
+        "text": "Franz Ferdinand — Take Me Out",
+        "image": "https://loremflickr.com/900/900/franz%20ferdinand%20take%20me%20out,music,concert,2000s?lock=182721"
+      },
+      {
+        "text": "Coldplay — Clocks",
+        "image": "https://loremflickr.com/900/900/coldplay%20clocks,music,concert,2000s?lock=242191"
+      },
+      {
+        "text": "Green Day — Boulevard of Broken Dreams",
+        "image": "https://loremflickr.com/900/900/green%20day%20boulevard%20of%20broken%20dreams,music,concert,2000s?lock=362671"
+      },
+      {
+        "text": "Evanescence — Bring Me to Life",
+        "image": "https://loremflickr.com/900/900/evanescence%20bring%20me%20to%20life,music,concert,2000s?lock=587956"
+      },
+      {
+        "text": "Shakira — Hips Don't Lie",
+        "image": "https://loremflickr.com/900/900/shakira%20hips%20don%27t%20lie,music,concert,2000s?lock=436597"
+      },
+      {
+        "text": "Usher — Yeah!",
+        "image": "https://loremflickr.com/900/900/usher%20yeah,music,concert,2000s?lock=690394"
+      },
+      {
+        "text": "Kelly Clarkson — Since U Been Gone",
+        "image": "https://loremflickr.com/900/900/kelly%20clarkson%20since%20u%20been%20gone,music,concert,2000s?lock=788697"
+      },
+      {
+        "text": "M.I.A. — Paper Planes",
+        "image": "https://loremflickr.com/900/900/m%20i%20a%20paper%20planes,music,concert,2000s?lock=214837"
+      },
+      {
+        "text": "Amy Winehouse — Rehab",
+        "image": "https://loremflickr.com/900/900/amy%20winehouse%20rehab,music,concert,2000s?lock=740689"
+      },
+      {
+        "text": "MGMT — Kids",
+        "image": "https://loremflickr.com/900/900/mgmt%20kids,music,concert,2000s?lock=567804"
+      },
+      {
+        "text": "Kings of Leon — Use Somebody",
+        "image": "https://loremflickr.com/900/900/kings%20of%20leon%20use%20somebody,music,concert,2000s?lock=302881"
+      },
+      {
+        "text": "Snow Patrol — Chasing Cars",
+        "image": "https://loremflickr.com/900/900/snow%20patrol%20chasing%20cars,music,concert,2000s?lock=73174"
+      },
+      {
+        "text": "Jay-Z feat. Alicia Keys — Empire State of Mind",
+        "image": "https://loremflickr.com/900/900/jay-z%20feat%20alicia%20keys%20empire%20state%20of%20mind,music,concert,2000s?lock=644359"
+      }
+    ]
+  },
+  {
+    "title": "Elektro Gitar Skillseti",
+    "description": "Teknikten kulağa, ritimden tona: gerçekten yapabildiklerini işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Jimi%20Hendrix%201967%20uncropped.jpg?width=1200",
+    "tags": [
+      "music",
+      "guitar",
+      "skillset",
+      "musician"
+    ],
+    "cells": [
+      {
+        "text": "Açık akorları temiz çalabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=720660"
+      },
+      {
+        "text": "Barre akorları temiz basabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=677769"
+      },
+      {
+        "text": "Power chord'larda rahatım",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=774987"
+      },
+      {
+        "text": "Alternate picking kullanıyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=402869"
+      },
+      {
+        "text": "Palm mute kontrolüm iyi",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=708383"
+      },
+      {
+        "text": "Bend'leri doğru perdeye çekebiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=865563"
+      },
+      {
+        "text": "Kontrollü vibrato yapabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=257801"
+      },
+      {
+        "text": "Hammer-on / pull-off akıcı",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=78738"
+      },
+      {
+        "text": "Slide'ları temiz kullanıyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=485776"
+      },
+      {
+        "text": "Pentatonik 5 pozisyonu biliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=47325"
+      },
+      {
+        "text": "Majör gamı klavyede taşıyabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=518202"
+      },
+      {
+        "text": "Minör gamı klavyede taşıyabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=605350"
+      },
+      {
+        "text": "Triad şekillerini kullanıyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=720591"
+      },
+      {
+        "text": "Arpejleri melodik kullanabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=278799"
+      },
+      {
+        "text": "String skipping yapabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=411011"
+      },
+      {
+        "text": "Legato cümleler çalabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=518524"
+      },
+      {
+        "text": "Tapping kullanabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=770815"
+      },
+      {
+        "text": "Sweep picking deneyimim var",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=422194"
+      },
+      {
+        "text": "Hybrid picking yapabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=88772"
+      },
+      {
+        "text": "Fingerstyle çalabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=483331"
+      },
+      {
+        "text": "Riff'i kulaktan çıkarabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=842004"
+      },
+      {
+        "text": "Solo'yu kulaktan çıkarabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=574436"
+      },
+      {
+        "text": "Metronomla düzenli çalışıyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=775504"
+      },
+      {
+        "text": "Backing track üstünde doğaçlayabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=91141"
+      },
+      {
+        "text": "Pedal / amfi zincirinden kendi tonumu kurabiliyorum",
+        "image": "https://loremflickr.com/900/900/electric%20guitar,guitarist,guitar,music?lock=800868"
+      }
+    ]
+  },
+  {
+    "title": "Studio Ghibli — Kaçını İzledin?",
+    "description": "Ghibli'nin uzun metraj klasiklerinden kaç tanesini gördün?",
+    "category": "movies",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://miro.medium.com/v2/resize:fit:2560/1*hG2PEJATHLK1kCgMypUiGA.jpeg",
+    "tags": [
+      "movies",
+      "studio-ghibli",
+      "anime",
+      "japan"
+    ],
+    "cells": [
+      {
+        "text": "Castle in the Sky",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=835385"
+      },
+      {
+        "text": "My Neighbor Totoro",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=253979"
+      },
+      {
+        "text": "Grave of the Fireflies",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=852529"
+      },
+      {
+        "text": "Kiki's Delivery Service",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=620227"
+      },
+      {
+        "text": "Only Yesterday",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=554608"
+      },
+      {
+        "text": "Porco Rosso",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=500873"
+      },
+      {
+        "text": "Pom Poko",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=849743"
+      },
+      {
+        "text": "Whisper of the Heart",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=598453"
+      },
+      {
+        "text": "Princess Mononoke",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=383314"
+      },
+      {
+        "text": "Spirited Away",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=453064"
+      },
+      {
+        "text": "Howl's Moving Castle",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=592087"
+      },
+      {
+        "text": "Ponyo",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=32004"
+      },
+      {
+        "text": "The Wind Rises",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=509436"
+      },
+      {
+        "text": "The Tale of the Princess Kaguya",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=727158"
+      },
+      {
+        "text": "When Marnie Was There",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=806842"
+      },
+      {
+        "text": "The Boy and the Heron",
+        "image": "https://loremflickr.com/800/1100/anime,japan,animation,cinema?lock=385656"
+      }
+    ]
+  },
+  {
+    "title": "Stanley Kubrick — Tüm Filmleri",
+    "description": "Kubrick'in uzun metraj filmografisinde izlediklerini işaretle.",
+    "category": "movies",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Stanley%20Kubrick%20(1949%20portrait%20by%20Phillip%20Harrington%20-%20cropped).jpg?width=1200",
+    "tags": [
+      "movies",
+      "kubrick",
+      "director",
+      "filmography"
+    ],
+    "cells": [
+      {
+        "text": "Fear and Desire",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=431400"
+      },
+      {
+        "text": "Killer's Kiss",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=650873"
+      },
+      {
+        "text": "The Killing",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=270885"
+      },
+      {
+        "text": "Paths of Glory",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=821713"
+      },
+      {
+        "text": "Spartacus",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=425015"
+      },
+      {
+        "text": "Lolita",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=530292"
+      },
+      {
+        "text": "Dr. Strangelove",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=87990"
+      },
+      {
+        "text": "2001: A Space Odyssey",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=348294"
+      },
+      {
+        "text": "A Clockwork Orange",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=617624"
+      },
+      {
+        "text": "Barry Lyndon",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=514228"
+      },
+      {
+        "text": "The Shining",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=183078"
+      },
+      {
+        "text": "Full Metal Jacket",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=13466"
+      },
+      {
+        "text": "Eyes Wide Shut",
+        "image": "https://loremflickr.com/800/1100/cinema,film,movie,director?lock=613556"
+      }
+    ]
+  },
+  {
+    "title": "İzlemen Gereken Bilimkurgu Filmleri",
+    "description": "Klasiklerden modern döneme, bilimkurgunun temel durakları.",
+    "category": "movies",
+    "columns": 5,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://img-4.linternaute.com/vgQsVW7lyUcrzGoxQETCqvVpMIY=/1500x1500/smart/eccc713b1c2142a09ae3262700a9df34/ccmcms-linternaute/8.jpg",
+    "tags": [
+      "movies",
+      "sci-fi",
+      "must-watch",
+      "cinema"
+    ],
+    "cells": [
+      {
+        "text": "2001: A Space Odyssey",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=387228"
+      },
+      {
+        "text": "Solaris (1972)",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=64104"
+      },
+      {
+        "text": "Stalker (1979)",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=235866"
+      },
+      {
+        "text": "Alien",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=106480"
+      },
+      {
+        "text": "Blade Runner",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=148604"
+      },
+      {
+        "text": "The Thing",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=655458"
+      },
+      {
+        "text": "Terminator 2: Judgment Day",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=678541"
+      },
+      {
+        "text": "The Matrix",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=750959"
+      },
+      {
+        "text": "Children of Men",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=119682"
+      },
+      {
+        "text": "Moon",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=637129"
+      },
+      {
+        "text": "District 9",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=57376"
+      },
+      {
+        "text": "Inception",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=118789"
+      },
+      {
+        "text": "Her",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=214625"
+      },
+      {
+        "text": "Ex Machina",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=868734"
+      },
+      {
+        "text": "Interstellar",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=346118"
+      },
+      {
+        "text": "Arrival",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=666389"
+      },
+      {
+        "text": "Annihilation",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=762646"
+      },
+      {
+        "text": "Edge of Tomorrow",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=830362"
+      },
+      {
+        "text": "Dune: Part One",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=356686"
+      },
+      {
+        "text": "Dune: Part Two",
+        "image": "https://loremflickr.com/800/1100/science%20fiction,cinema,space,movie?lock=522279"
+      }
+    ]
+  },
+  {
+    "title": "Kurtlar Konseyi",
+    "description": "Kurtlar Vadisi evreninin ikonik karakterlerinden kaçını tek bakışta hatırlıyorsun?",
+    "category": "tv",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://imgrosetta.webtekno.com/file/178349/1200x675.jpg",
+    "tags": [
+      "tv",
+      "kurtlar-vadisi",
+      "nostalji",
+      "characters"
+    ],
+    "cells": [
+      {
+        "text": "Polat Alemdar",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=334682"
+      },
+      {
+        "text": "Süleyman Çakır",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=232335"
+      },
+      {
+        "text": "Memati Baş",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=850592"
+      },
+      {
+        "text": "Abdülhey Çoban",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=897157"
+      },
+      {
+        "text": "Aslan Akbey",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=336071"
+      },
+      {
+        "text": "Laz Ziya",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=621802"
+      },
+      {
+        "text": "Mehmet Karahanlı",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=72975"
+      },
+      {
+        "text": "Testere Necmi",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=618031"
+      },
+      {
+        "text": "Hüsrev Ağa",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=849889"
+      },
+      {
+        "text": "Tombalacı Mehmet",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=276757"
+      },
+      {
+        "text": "İplikçi Nedim",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=813097"
+      },
+      {
+        "text": "Tuncay Kantarcı",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=134832"
+      },
+      {
+        "text": "Elif Eylül",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=494255"
+      },
+      {
+        "text": "Pala",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=453406"
+      },
+      {
+        "text": "Halo Dayı",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=467169"
+      },
+      {
+        "text": "Cerrahpaşalı Halit",
+        "image": "https://loremflickr.com/900/900/istanbul,men,suit,turkey?lock=450263"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul Sokak Lezzetleri Turu",
+    "description": "İstanbul'u yiyerek gez: tattığın sokak lezzetlerini işaretle.",
+    "category": "food",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Simit.jpg?width=1200",
+    "tags": [
+      "food",
+      "istanbul",
+      "street-food",
+      "turkish-food"
+    ],
+    "cells": [
+      {
+        "text": "Simit",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Simit.jpg?width=1200"
+      },
+      {
+        "text": "Balık ekmek",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Balik%20ekmek%20Galata%20Bridge.JPG?width=1200"
+      },
+      {
+        "text": "Kokoreç",
+        "image": "https://loremflickr.com/900/900/kokorec,street%20food,turkey?lock=695882"
+      },
+      {
+        "text": "Midye dolma",
+        "image": "https://loremflickr.com/900/900/mussels,street%20food,istanbul?lock=473961"
+      },
+      {
+        "text": "Islak hamburger",
+        "image": "https://loremflickr.com/900/900/burger,istanbul,street%20food?lock=306002"
+      },
+      {
+        "text": "Kumpir",
+        "image": "https://loremflickr.com/900/900/baked%20potato,street%20food?lock=358127"
+      },
+      {
+        "text": "Döner dürüm",
+        "image": "https://loremflickr.com/900/900/doner%20kebab,wrap,turkey?lock=602609"
+      },
+      {
+        "text": "Tantuni",
+        "image": "https://loremflickr.com/900/900/tantuni,wrap,turkey?lock=113155"
+      },
+      {
+        "text": "Lahmacun",
+        "image": "https://loremflickr.com/900/900/lahmacun,turkish%20food?lock=183296"
+      },
+      {
+        "text": "Börek",
+        "image": "https://loremflickr.com/900/900/borek,pastry,turkey?lock=524959"
+      },
+      {
+        "text": "Kestane",
+        "image": "https://loremflickr.com/900/900/roasted%20chestnut,street%20food?lock=559594"
+      },
+      {
+        "text": "Sokak mısırı",
+        "image": "https://loremflickr.com/900/900/corn,street%20food?lock=776317"
+      },
+      {
+        "text": "Halka tatlısı",
+        "image": "https://loremflickr.com/900/900/turkish%20dessert,street%20food?lock=706404"
+      },
+      {
+        "text": "Boza",
+        "image": "https://loremflickr.com/900/900/boza,drink,turkey?lock=172775"
+      },
+      {
+        "text": "Kanlıca yoğurdu",
+        "image": "https://loremflickr.com/900/900/yogurt,istanbul?lock=835662"
+      },
+      {
+        "text": "Türk kahvesi",
+        "image": "https://loremflickr.com/900/900/turkish%20coffee,coffee?lock=877214"
+      }
+    ]
+  },
+  {
+    "title": "Kadıköy Yemek Turu",
+    "description": "Kadıköy'de farklı karakterde duraklardan oluşan bir günlük food crawl.",
+    "category": "food",
+    "columns": 3,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://www.guidaistanbul.com/wp-content/uploads/2022/01/strada-kadikoy.jpg",
+    "tags": [
+      "food",
+      "kadıköy",
+      "istanbul",
+      "food-crawl"
+    ],
+    "cells": [
+      {
+        "text": "Çiya Sofrası",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=395776"
+      },
+      {
+        "text": "Yanyalı Fehmi Lokantası",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=526908"
+      },
+      {
+        "text": "Borsam Taşfırın",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=771726"
+      },
+      {
+        "text": "Baylan Kadıköy",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=301902"
+      },
+      {
+        "text": "Basta! Street Food Bar",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=487346"
+      },
+      {
+        "text": "Cankurtaran Gıda",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=239762"
+      },
+      {
+        "text": "Aida Vino e Cucina",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=681662"
+      },
+      {
+        "text": "Suflör Kadıköy",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=452043"
+      },
+      {
+        "text": "Tarihi Kadıköy Şekerci Cafer Erol",
+        "image": "https://loremflickr.com/900/900/kadikoy,istanbul,restaurant,food?lock=773009"
+      }
+    ]
+  },
+  {
+    "title": "Karadağ'da Yapmadan Dönme",
+    "description": "Kotor Körfezi'nden Durmitor'a, ilk Karadağ gezisi için görmeye değer duraklar.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kotor%20Montenegro%20panorama%202016.jpg?width=1200",
+    "tags": [
+      "travel",
+      "montenegro",
+      "balkans",
+      "guide"
+    ],
+    "cells": [
+      {
+        "text": "Kotor Old Town",
+        "image": "https://loremflickr.com/900/900/kotor%20old%20town,montenegro,travel,landscape?lock=530659"
+      },
+      {
+        "text": "San Giovanni Kalesi",
+        "image": "https://loremflickr.com/900/900/san%20giovanni%20kalesi,montenegro,travel,landscape?lock=370466"
+      },
+      {
+        "text": "Perast",
+        "image": "https://loremflickr.com/900/900/perast,montenegro,travel,landscape?lock=755075"
+      },
+      {
+        "text": "Our Lady of the Rocks",
+        "image": "https://loremflickr.com/900/900/our%20lady%20of%20the%20rocks,montenegro,travel,landscape?lock=476330"
+      },
+      {
+        "text": "Kotor Körfezi'nde tekne turu",
+        "image": "https://loremflickr.com/900/900/kotor%20korfezi%27nde%20tekne%20turu,montenegro,travel,landscape?lock=239170"
+      },
+      {
+        "text": "Budva Old Town",
+        "image": "https://loremflickr.com/900/900/budva%20old%20town,montenegro,travel,landscape?lock=328396"
+      },
+      {
+        "text": "Mogren Beach",
+        "image": "https://loremflickr.com/900/900/mogren%20beach,montenegro,travel,landscape?lock=115653"
+      },
+      {
+        "text": "Sveti Stefan manzarası",
+        "image": "https://loremflickr.com/900/900/sveti%20stefan%20manzarasi,montenegro,travel,landscape?lock=583193"
+      },
+      {
+        "text": "Lovćen Milli Parkı",
+        "image": "https://loremflickr.com/900/900/lov%C4%87en%20milli%20parki,montenegro,travel,landscape?lock=718517"
+      },
+      {
+        "text": "Njegoš Mozolesi",
+        "image": "https://loremflickr.com/900/900/njego%C5%A1%20mozolesi,montenegro,travel,landscape?lock=485749"
+      },
+      {
+        "text": "Skadar Gölü",
+        "image": "https://loremflickr.com/900/900/skadar%20golu,montenegro,travel,landscape?lock=437115"
+      },
+      {
+        "text": "Virpazar",
+        "image": "https://loremflickr.com/900/900/virpazar,montenegro,travel,landscape?lock=499000"
+      },
+      {
+        "text": "Durmitor Milli Parkı",
+        "image": "https://loremflickr.com/900/900/durmitor%20milli%20parki,montenegro,travel,landscape?lock=737911"
+      },
+      {
+        "text": "Black Lake",
+        "image": "https://loremflickr.com/900/900/black%20lake,montenegro,travel,landscape?lock=303779"
+      },
+      {
+        "text": "Tara Kanyonu",
+        "image": "https://loremflickr.com/900/900/tara%20kanyonu,montenegro,travel,landscape?lock=696733"
+      },
+      {
+        "text": "Đurđevića Tara Köprüsü",
+        "image": "https://loremflickr.com/900/900/%C4%91ur%C4%91evi%C4%87a%20tara%20koprusu,montenegro,travel,landscape?lock=483570"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul'a İlk Kez Geliyorsan Bunları Yap",
+    "description": "İlk ziyaret için klasiklerle mahalle deneyimlerini dengeleyen İstanbul başlangıç kartı.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia%20Sophia%202017.jpg?width=1200",
+    "tags": [
+      "travel",
+      "istanbul",
+      "first-time",
+      "city-guide"
+    ],
+    "cells": [
+      {
+        "text": "Ayasofya",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia%20Sophia%202017.jpg?width=1200"
+      },
+      {
+        "text": "Sultanahmet Camii",
+        "image": "https://loremflickr.com/900/900/sultanahmet%20camii,istanbul,turkey,travel?lock=340140"
+      },
+      {
+        "text": "Yerebatan Sarnıcı",
+        "image": "https://loremflickr.com/900/900/yerebatan%20sarnici,istanbul,turkey,travel?lock=568947"
+      },
+      {
+        "text": "Topkapı Sarayı",
+        "image": "https://loremflickr.com/900/900/topkapi%20sarayi,istanbul,turkey,travel?lock=99667"
+      },
+      {
+        "text": "Kapalıçarşı",
+        "image": "https://loremflickr.com/900/900/kapalicarsi,istanbul,turkey,travel?lock=771463"
+      },
+      {
+        "text": "Galata Kulesi",
+        "image": "https://loremflickr.com/900/900/galata%20kulesi,istanbul,turkey,travel?lock=320667"
+      },
+      {
+        "text": "İstiklal Caddesi + Taksim",
+        "image": "https://loremflickr.com/900/900/istiklal%20caddesi%20taksim,istanbul,turkey,travel?lock=799773"
+      },
+      {
+        "text": "Karaköy sokakları",
+        "image": "https://loremflickr.com/900/900/karakoy%20sokaklari,istanbul,turkey,travel?lock=773273"
+      },
+      {
+        "text": "Vapurla Boğaz geçişi",
+        "image": "https://loremflickr.com/900/900/vapurla%20bogaz%20gecisi,istanbul,turkey,travel?lock=82944"
+      },
+      {
+        "text": "Kadıköy Çarşı",
+        "image": "https://loremflickr.com/900/900/kadikoy%20carsi,istanbul,turkey,travel?lock=55956"
+      },
+      {
+        "text": "Moda sahili",
+        "image": "https://loremflickr.com/900/900/moda%20sahili,istanbul,turkey,travel?lock=503270"
+      },
+      {
+        "text": "Ortaköy",
+        "image": "https://loremflickr.com/900/900/ortakoy,istanbul,turkey,travel?lock=543375"
+      },
+      {
+        "text": "Dolmabahçe Sarayı",
+        "image": "https://loremflickr.com/900/900/dolmabahce%20sarayi,istanbul,turkey,travel?lock=49245"
+      },
+      {
+        "text": "Fener + Balat",
+        "image": "https://loremflickr.com/900/900/fener%20balat,istanbul,turkey,travel?lock=36028"
+      },
+      {
+        "text": "Adalar'da bir gün",
+        "image": "https://loremflickr.com/900/900/adalar%27da%20bir%20gun,istanbul,turkey,travel?lock=616253"
+      },
+      {
+        "text": "Tarihi hamam deneyimi",
+        "image": "https://loremflickr.com/900/900/tarihi%20hamam%20deneyimi,istanbul,turkey,travel?lock=606006"
+      }
+    ]
+  },
+  {
+    "title": "15,99€+'dan Avrupa'ya — Nereye Uçardın?",
+    "description": "Pegasus mobil uygulama kampanyasındaki seçili dış hatlardan favorilerini seç. Kampanya: 18–20 Eylül 2026 satış, 5 Ekim 2026–27 Mart 2027 uçuş dönemi; vergiler hariç başlangıç fiyatıdır.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://logos-world.net/wp-content/uploads/2023/06/Pegasus-Airlines-Logo.jpg",
+    "tags": [
+      "travel",
+      "reklam",
+      "pegasus",
+      "kampanya",
+      "avrupa"
+    ],
+    "cells": [
+      {
+        "text": "Alicante",
+        "image": "https://loremflickr.com/900/900/alicante,europe,city,travel?lock=404497"
+      },
+      {
+        "text": "Atina",
+        "image": "https://loremflickr.com/900/900/atina,europe,city,travel?lock=725062"
+      },
+      {
+        "text": "Barcelona",
+        "image": "https://loremflickr.com/900/900/barcelona,europe,city,travel?lock=355804"
+      },
+      {
+        "text": "Basel",
+        "image": "https://loremflickr.com/900/900/basel,europe,city,travel?lock=751827"
+      },
+      {
+        "text": "Berlin",
+        "image": "https://loremflickr.com/900/900/berlin,europe,city,travel?lock=757217"
+      },
+      {
+        "text": "Bilbao",
+        "image": "https://loremflickr.com/900/900/bilbao,europe,city,travel?lock=291975"
+      },
+      {
+        "text": "Bologna",
+        "image": "https://loremflickr.com/900/900/bologna,europe,city,travel?lock=648809"
+      },
+      {
+        "text": "Bratislava",
+        "image": "https://loremflickr.com/900/900/bratislava,europe,city,travel?lock=3386"
+      },
+      {
+        "text": "Bükreş",
+        "image": "https://loremflickr.com/900/900/bukres,europe,city,travel?lock=424450"
+      },
+      {
+        "text": "Cenevre",
+        "image": "https://loremflickr.com/900/900/cenevre,europe,city,travel?lock=655884"
+      },
+      {
+        "text": "Edinburgh",
+        "image": "https://loremflickr.com/900/900/edinburgh,europe,city,travel?lock=784047"
+      },
+      {
+        "text": "Eindhoven",
+        "image": "https://loremflickr.com/900/900/eindhoven,europe,city,travel?lock=828190"
+      }
+    ]
+  },
+  {
+    "title": "2026/27 Süper Lig: Şampiyon Kim Olacak?",
+    "description": "Sezon başı tahminini yap: şampiyonluk ihtimali verdiğin takımları işaretle.",
+    "category": "sports",
+    "columns": 6,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Trendyol%20super%20lig%20logo.svg?width=1200",
+    "tags": [
+      "sports",
+      "football",
+      "süper-lig",
+      "2026-27",
+      "prediction"
+    ],
+    "cells": [
+      {
+        "text": "Amed Sportif Faaliyetler",
+        "image": "https://loremflickr.com/900/900/amed%20sportif%20faaliyetler,football,soccer,turkey?lock=132049"
+      },
+      {
+        "text": "Arca Çorum FK",
+        "image": "https://loremflickr.com/900/900/arca%20corum%20fk,football,soccer,turkey?lock=380831"
+      },
+      {
+        "text": "Beşiktaş",
+        "image": "https://loremflickr.com/900/900/besiktas,football,soccer,turkey?lock=125386"
+      },
+      {
+        "text": "Çaykur Rizespor",
+        "image": "https://loremflickr.com/900/900/caykur%20rizespor,football,soccer,turkey?lock=435913"
+      },
+      {
+        "text": "Corendon Alanyaspor",
+        "image": "https://loremflickr.com/900/900/corendon%20alanyaspor,football,soccer,turkey?lock=101346"
+      },
+      {
+        "text": "Erzurumspor FK",
+        "image": "https://loremflickr.com/900/900/erzurumspor%20fk,football,soccer,turkey?lock=153923"
+      },
+      {
+        "text": "Eyüpspor",
+        "image": "https://loremflickr.com/900/900/eyupspor,football,soccer,turkey?lock=450090"
+      },
+      {
+        "text": "Fenerbahçe",
+        "image": "https://loremflickr.com/900/900/fenerbahce,football,soccer,turkey?lock=521921"
+      },
+      {
+        "text": "Galatasaray",
+        "image": "https://loremflickr.com/900/900/galatasaray,football,soccer,turkey?lock=589935"
+      },
+      {
+        "text": "Gaziantep FK",
+        "image": "https://loremflickr.com/900/900/gaziantep%20fk,football,soccer,turkey?lock=433382"
+      },
+      {
+        "text": "Gençlerbirliği",
+        "image": "https://loremflickr.com/900/900/genclerbirligi,football,soccer,turkey?lock=120065"
+      },
+      {
+        "text": "Göztepe",
+        "image": "https://loremflickr.com/900/900/goztepe,football,soccer,turkey?lock=32360"
+      },
+      {
+        "text": "İstanbul Başakşehir",
+        "image": "https://loremflickr.com/900/900/istanbul%20basaksehir,football,soccer,turkey?lock=49228"
+      },
+      {
+        "text": "Kasımpaşa",
+        "image": "https://loremflickr.com/900/900/kasimpasa,football,soccer,turkey?lock=454590"
+      },
+      {
+        "text": "Kocaelispor",
+        "image": "https://loremflickr.com/900/900/kocaelispor,football,soccer,turkey?lock=444890"
+      },
+      {
+        "text": "Samsunspor",
+        "image": "https://loremflickr.com/900/900/samsunspor,football,soccer,turkey?lock=49379"
+      },
+      {
+        "text": "Trabzonspor",
+        "image": "https://loremflickr.com/900/900/trabzonspor,football,soccer,turkey?lock=306413"
+      },
+      {
+        "text": "Tümosan Konyaspor",
+        "image": "https://loremflickr.com/900/900/tumosan%20konyaspor,football,soccer,turkey?lock=505327"
+      }
+    ]
+  },
+  {
+    "title": "2026 Dream Team — Dünyanın En İyi 11'ini Kur",
+    "description": "Pozisyon havuzundan kendi 2026 dünya 11'ini seç. KL: kaleci, DF: defans, OS: orta saha, FV: forvet.",
+    "category": "sports",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Yanda%C5%9F%20and%20Szoboszlai%20in%20the%20international%20match%20(September%202020).jpg?width=1200",
+    "tags": [
+      "sports",
+      "football",
+      "dream-team",
+      "2026",
+      "ballon-dor"
+    ],
+    "cells": [
+      {
+        "text": "KL — Unai Simón",
+        "image": "https://loremflickr.com/900/900/kl%20unai%20sim%C3%B3n,football,soccer,player?lock=558074"
+      },
+      {
+        "text": "KL — Thibaut Courtois",
+        "image": "https://loremflickr.com/900/900/kl%20thibaut%20courtois,football,soccer,player?lock=258963"
+      },
+      {
+        "text": "KL — Emiliano Martínez",
+        "image": "https://loremflickr.com/900/900/kl%20emiliano%20mart%C3%ADnez,football,soccer,player?lock=16595"
+      },
+      {
+        "text": "KL — David Raya",
+        "image": "https://loremflickr.com/900/900/kl%20david%20raya,football,soccer,player?lock=429697"
+      },
+      {
+        "text": "DF — Achraf Hakimi",
+        "image": "https://loremflickr.com/900/900/df%20achraf%20hakimi,football,soccer,player?lock=61535"
+      },
+      {
+        "text": "DF — William Saliba",
+        "image": "https://loremflickr.com/900/900/df%20william%20saliba,football,soccer,player?lock=758698"
+      },
+      {
+        "text": "DF — Pau Cubarsí",
+        "image": "https://loremflickr.com/900/900/df%20pau%20cubars%C3%AD,football,soccer,player?lock=541046"
+      },
+      {
+        "text": "DF — Nuno Mendes",
+        "image": "https://loremflickr.com/900/900/df%20nuno%20mendes,football,soccer,player?lock=10390"
+      },
+      {
+        "text": "DF — Gabriel",
+        "image": "https://loremflickr.com/900/900/df%20gabriel,football,soccer,player?lock=680017"
+      },
+      {
+        "text": "DF — Marquinhos",
+        "image": "https://loremflickr.com/900/900/df%20marquinhos,football,soccer,player?lock=678498"
+      },
+      {
+        "text": "DF — Dayot Upamecano",
+        "image": "https://loremflickr.com/900/900/df%20dayot%20upamecano,football,soccer,player?lock=585636"
+      },
+      {
+        "text": "OS — Rodri",
+        "image": "https://loremflickr.com/900/900/os%20rodri,football,soccer,player?lock=583810"
+      },
+      {
+        "text": "OS — Jude Bellingham",
+        "image": "https://loremflickr.com/900/900/os%20jude%20bellingham,football,soccer,player?lock=862051"
+      },
+      {
+        "text": "OS — Vitinha",
+        "image": "https://loremflickr.com/900/900/os%20vitinha,football,soccer,player?lock=111399"
+      },
+      {
+        "text": "OS — Declan Rice",
+        "image": "https://loremflickr.com/900/900/os%20declan%20rice,football,soccer,player?lock=281565"
+      },
+      {
+        "text": "OS — Bruno Fernandes",
+        "image": "https://loremflickr.com/900/900/os%20bruno%20fernandes,football,soccer,player?lock=671946"
+      },
+      {
+        "text": "OS — João Neves",
+        "image": "https://loremflickr.com/900/900/os%20jo%C3%A3o%20neves,football,soccer,player?lock=339235"
+      },
+      {
+        "text": "OS — Fabián Ruiz",
+        "image": "https://loremflickr.com/900/900/os%20fabi%C3%A1n%20ruiz,football,soccer,player?lock=753507"
+      },
+      {
+        "text": "FV — Kylian Mbappé",
+        "image": "https://loremflickr.com/900/900/fv%20kylian%20mbapp%C3%A9,football,soccer,player?lock=2251"
+      },
+      {
+        "text": "FV — Lamine Yamal",
+        "image": "https://loremflickr.com/900/900/fv%20lamine%20yamal,football,soccer,player?lock=528582"
+      },
+      {
+        "text": "FV — Harry Kane",
+        "image": "https://loremflickr.com/900/900/fv%20harry%20kane,football,soccer,player?lock=562610"
+      },
+      {
+        "text": "FV — Erling Haaland",
+        "image": "https://loremflickr.com/900/900/fv%20erling%20haaland,football,soccer,player?lock=822450"
+      },
+      {
+        "text": "FV — Ousmane Dembélé",
+        "image": "https://loremflickr.com/900/900/fv%20ousmane%20demb%C3%A9l%C3%A9,football,soccer,player?lock=575705"
+      },
+      {
+        "text": "FV — Vinícius Júnior",
+        "image": "https://loremflickr.com/900/900/fv%20vin%C3%ADcius%20j%C3%BAnior,football,soccer,player?lock=296223"
+      },
+      {
+        "text": "FV — Lionel Messi",
+        "image": "https://loremflickr.com/900/900/fv%20lionel%20messi,football,soccer,player?lock=762467"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul 2026 Koşu Takvimi",
+    "description": "2026'da İstanbul'daki büyük yol koşularından katıldıklarını veya hedeflediklerini işaretle.",
+    "category": "sports",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://img.piri.net/resim/upload/2018/11/11/10/34/5f4f8a1732800294.jpg",
+    "tags": [
+      "sports",
+      "running",
+      "istanbul",
+      "2026",
+      "calendar"
+    ],
+    "cells": [
+      {
+        "text": "İstanbul Yarı Maratonu — 10K — 19 Nisan",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=684555"
+      },
+      {
+        "text": "İstanbul Yarı Maratonu — 21K — 19 Nisan",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=308418"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Asya — 5K — 3 Mayıs",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=302673"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Asya — 10K — 3 Mayıs",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=221990"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Avrupa — 5K — 4 Ekim",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=214216"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Avrupa — 10K — 4 Ekim",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=119819"
+      },
+      {
+        "text": "48. İstanbul Maratonu — 15K — 1 Kasım",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=642199"
+      },
+      {
+        "text": "48. İstanbul Maratonu — 42K — 1 Kasım",
+        "image": "https://loremflickr.com/900/900/istanbul,marathon,running,runner?lock=87586"
+      }
+    ]
+  },
+  {
+    "title": "Felsefeye Giriş: Hangilerini Okudun?",
+    "description": "Tek bir ekole kapanmadan temel felsefi metinlere açılan 16 kitaplık başlangıç rotası.",
+    "category": "books",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20School%20of%20Athens%20by%20Raffaello%20Sanzio%20da%20Urbino.jpg?width=1200",
+    "tags": [
+      "books",
+      "philosophy",
+      "classics",
+      "reading-list"
+    ],
+    "cells": [
+      {
+        "text": "Platon — Sokrates'in Savunması",
+        "image": "https://loremflickr.com/800/1100/platon%20sokrates%27in%20savunmasi,philosophy,book,library?lock=465585"
+      },
+      {
+        "text": "Platon — Devlet",
+        "image": "https://loremflickr.com/800/1100/platon%20devlet,philosophy,book,library?lock=672677"
+      },
+      {
+        "text": "Aristoteles — Nikomakhos'a Etik",
+        "image": "https://loremflickr.com/800/1100/aristoteles%20nikomakhos%27a%20etik,philosophy,book,library?lock=809809"
+      },
+      {
+        "text": "Epiktetos — Enchiridion",
+        "image": "https://loremflickr.com/800/1100/epiktetos%20enchiridion,philosophy,book,library?lock=661524"
+      },
+      {
+        "text": "Marcus Aurelius — Kendime Düşünceler",
+        "image": "https://loremflickr.com/800/1100/marcus%20aurelius%20kendime%20dusunceler,philosophy,book,library?lock=158658"
+      },
+      {
+        "text": "Seneca — Yaşamın Kısalığı Üzerine",
+        "image": "https://loremflickr.com/800/1100/seneca%20yasamin%20kisaligi%20uzerine,philosophy,book,library?lock=139794"
+      },
+      {
+        "text": "Epikuros — Mektuplar ve Maksimler",
+        "image": "https://loremflickr.com/800/1100/epikuros%20mektuplar%20ve%20maksimler,philosophy,book,library?lock=691490"
+      },
+      {
+        "text": "Descartes — Yöntem Üzerine Konuşma",
+        "image": "https://loremflickr.com/800/1100/descartes%20yontem%20uzerine%20konusma,philosophy,book,library?lock=31855"
+      },
+      {
+        "text": "Spinoza — Etika",
+        "image": "https://loremflickr.com/800/1100/spinoza%20etika,philosophy,book,library?lock=427169"
+      },
+      {
+        "text": "Hume — İnsanın Anlama Yetisi Üzerine Bir Soruşturma",
+        "image": "https://loremflickr.com/800/1100/hume%20insanin%20anlama%20yetisi%20uzerine%20bir%20sorusturma,philosophy,book,library?lock=665470"
+      },
+      {
+        "text": "Kant — Ahlak Metafiziğinin Temellendirilmesi",
+        "image": "https://loremflickr.com/800/1100/kant%20ahlak%20metafiziginin%20temellendirilmesi,philosophy,book,library?lock=97967"
+      },
+      {
+        "text": "Nietzsche — Putların Alacakaranlığı",
+        "image": "https://loremflickr.com/800/1100/nietzsche%20putlarin%20alacakaranligi,philosophy,book,library?lock=301709"
+      },
+      {
+        "text": "Kierkegaard — Korku ve Titreme",
+        "image": "https://loremflickr.com/800/1100/kierkegaard%20korku%20ve%20titreme,philosophy,book,library?lock=592914"
+      },
+      {
+        "text": "Camus — Sisifos Söyleni",
+        "image": "https://loremflickr.com/800/1100/camus%20sisifos%20soyleni,philosophy,book,library?lock=825024"
+      },
+      {
+        "text": "Sartre — Varoluşçuluk Bir Hümanizmdir",
+        "image": "https://loremflickr.com/800/1100/sartre%20varolusculuk%20bir%20humanizmdir,philosophy,book,library?lock=103553"
+      },
+      {
+        "text": "Bertrand Russell — Felsefenin Sorunları",
+        "image": "https://loremflickr.com/800/1100/bertrand%20russell%20felsefenin%20sorunlari,philosophy,book,library?lock=713356"
+      }
+    ]
+  },
+  {
+    "title": "Distopya Klasikleri",
+    "description": "Gözetimden biyopolitikaya, çöküşten kontrol toplumuna uzanan distopya seçkisi.",
+    "category": "books",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Orwell,%20c.%201940%20(41928180381)%20(cropped).jpg?width=1200",
+    "tags": [
+      "books",
+      "dystopia",
+      "classics",
+      "fiction"
+    ],
+    "cells": [
+      {
+        "text": "George Orwell — 1984",
+        "image": "https://loremflickr.com/800/1100/george%20orwell%201984,book,novel,library?lock=392492"
+      },
+      {
+        "text": "Aldous Huxley — Cesur Yeni Dünya",
+        "image": "https://loremflickr.com/800/1100/aldous%20huxley%20cesur%20yeni%20dunya,book,novel,library?lock=270407"
+      },
+      {
+        "text": "Ray Bradbury — Fahrenheit 451",
+        "image": "https://loremflickr.com/800/1100/ray%20bradbury%20fahrenheit%20451,book,novel,library?lock=594557"
+      },
+      {
+        "text": "Yevgeni Zamyatin — Biz",
+        "image": "https://loremflickr.com/800/1100/yevgeni%20zamyatin%20biz,book,novel,library?lock=600349"
+      },
+      {
+        "text": "Margaret Atwood — Damızlık Kızın Öyküsü",
+        "image": "https://loremflickr.com/800/1100/margaret%20atwood%20damizlik%20kizin%20oykusu,book,novel,library?lock=323545"
+      },
+      {
+        "text": "Anthony Burgess — Otomatik Portakal",
+        "image": "https://loremflickr.com/800/1100/anthony%20burgess%20otomatik%20portakal,book,novel,library?lock=752806"
+      },
+      {
+        "text": "Lois Lowry — Seçilmiş Kişi",
+        "image": "https://loremflickr.com/800/1100/lois%20lowry%20secilmis%20kisi,book,novel,library?lock=283396"
+      },
+      {
+        "text": "Kazuo Ishiguro — Beni Asla Bırakma",
+        "image": "https://loremflickr.com/800/1100/kazuo%20ishiguro%20beni%20asla%20birakma,book,novel,library?lock=696153"
+      },
+      {
+        "text": "Philip K. Dick — Android'ler Elektrikli Koyun Düşler mi?",
+        "image": "https://loremflickr.com/800/1100/philip%20k%20dick%20android%27ler%20elektrikli%20koyun%20dusler%20mi,book,novel,library?lock=406195"
+      },
+      {
+        "text": "Octavia E. Butler — Ekici'nin Meseli",
+        "image": "https://loremflickr.com/800/1100/octavia%20e%20butler%20ekici%27nin%20meseli,book,novel,library?lock=870769"
+      },
+      {
+        "text": "José Saramago — Körlük",
+        "image": "https://loremflickr.com/800/1100/jos%C3%A9%20saramago%20korluk,book,novel,library?lock=738922"
+      },
+      {
+        "text": "Margaret Atwood — Antilop ve Flurya",
+        "image": "https://loremflickr.com/800/1100/margaret%20atwood%20antilop%20ve%20flurya,book,novel,library?lock=391144"
+      },
+      {
+        "text": "Naomi Alderman — Güç",
+        "image": "https://loremflickr.com/800/1100/naomi%20alderman%20guc,book,novel,library?lock=444035"
+      },
+      {
+        "text": "Yoko Ogawa — Hafıza Polisi",
+        "image": "https://loremflickr.com/800/1100/yoko%20ogawa%20hafiza%20polisi,book,novel,library?lock=720782"
+      },
+      {
+        "text": "George Orwell — Hayvan Çiftliği",
+        "image": "https://loremflickr.com/800/1100/george%20orwell%20hayvan%20ciftligi,book,novel,library?lock=637057"
+      },
+      {
+        "text": "P. D. James — İnsan Çocukları",
+        "image": "https://loremflickr.com/800/1100/p%20d%20james%20insan%20cocuklari,book,novel,library?lock=641376"
+      }
+    ]
+  },
+  {
+    "title": "90'larda Çocuk Olmak",
+    "description": "Türkiye'de 90'larda büyüyenlerin hafızasına küçük bir stres testi.",
+    "category": "lifestyle",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Game-Boy-Original.jpg?width=1200",
+    "tags": [
+      "lifestyle",
+      "90lar",
+      "nostalji",
+      "çocukluk"
+    ],
+    "cells": [
+      {
+        "text": "Akşam ezanına kadar sokakta oynamak",
+        "image": "https://loremflickr.com/900/900/children,street,playing?lock=325804"
+      },
+      {
+        "text": "Taso biriktirmek",
+        "image": "https://loremflickr.com/900/900/pogs,90s,toy?lock=841629"
+      },
+      {
+        "text": "Misket oynamak",
+        "image": "https://loremflickr.com/900/900/marbles,children,game?lock=19319"
+      },
+      {
+        "text": "Saklambaçta sobelemek",
+        "image": "https://loremflickr.com/900/900/hide%20and%20seek,children?lock=336303"
+      },
+      {
+        "text": "Seksek çizmek",
+        "image": "https://loremflickr.com/900/900/hopscotch,children?lock=881952"
+      },
+      {
+        "text": "Atari salonunda jeton harcamak",
+        "image": "https://loremflickr.com/900/900/arcade,retro%20gaming?lock=718952"
+      },
+      {
+        "text": "Tetris / el konsolu taşımak",
+        "image": "https://loremflickr.com/900/900/gameboy,tetris,retro?lock=584801"
+      },
+      {
+        "text": "Kaseti kalemle geri sarmak",
+        "image": "https://loremflickr.com/900/900/cassette%20tape,pencil,retro?lock=335644"
+      },
+      {
+        "text": "Walkman dinlemek",
+        "image": "https://loremflickr.com/900/900/walkman,cassette,90s?lock=824155"
+      },
+      {
+        "text": "Video kaset kiralamak",
+        "image": "https://loremflickr.com/900/900/vhs,video%20cassette,retro?lock=240621"
+      },
+      {
+        "text": "Hugo'yu televizyondan aramaya çalışmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=16443"
+      },
+      {
+        "text": "Turbo sakız çiğnemek",
+        "image": "https://loremflickr.com/900/900/bubble%20gum,90s?lock=748344"
+      },
+      {
+        "text": "Leblebi tozu yerken boğulmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=169922"
+      },
+      {
+        "text": "Çatapat patlatmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=196506"
+      },
+      {
+        "text": "Su tabancası savaşı yapmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=838905"
+      },
+      {
+        "text": "Okuldan sonra çizgi film kuşağı beklemek",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=38902"
+      },
+      {
+        "text": "Kaset doldurtmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=145263"
+      },
+      {
+        "text": "36 pozluk fotoğraf filmini bitirmeyi beklemek",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=845632"
+      },
+      {
+        "text": "Ansiklopedi setinden ödev yapmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=382467"
+      },
+      {
+        "text": "Disket taşımak",
+        "image": "https://loremflickr.com/900/900/floppy%20disk,retro%20computer?lock=127527"
+      },
+      {
+        "text": "Gazeteden poster / kupon biriktirmek",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=470319"
+      },
+      {
+        "text": "Mahalle maçında kale direğini taşla yapmak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=529569"
+      },
+      {
+        "text": "Kola kapağı promosyonu kovalamak",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=790719"
+      },
+      {
+        "text": "Telefon numaralarını ezbere bilmek",
+        "image": "https://loremflickr.com/900/900/1990s,nostalgia,retro,childhood?lock=536002"
+      },
+      {
+        "text": "Televizyon anteniyle uğraşmak",
+        "image": "https://loremflickr.com/900/900/television%20antenna,retro%20tv?lock=329451"
+      }
+    ]
+  },
+  {
+    "title": "ADHD Bingo",
+    "description": "Gündelik dikkat, unutkanlık ve hiperfokus anlarından mizahi bir kart. Tanı veya tarama testi değildir.",
+    "category": "lifestyle",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/ADHD%20Thought%20Bubble.jpg?width=1200",
+    "tags": [
+      "lifestyle",
+      "adhd",
+      "relatable",
+      "bingo"
+    ],
+    "cells": [
+      {
+        "text": "Odaya neden geldiğimi unuttum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=15296"
+      },
+      {
+        "text": "20 sekme açtım, hiçbirini kapatmadım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=847062"
+      },
+      {
+        "text": "Bir işe başlarken üç yeni işe geçtim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=38339"
+      },
+      {
+        "text": "Son dakikada hiperfokus geldi",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=746319"
+      },
+      {
+        "text": "Anahtarı ararken elimde tuttuğumu fark ettim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=569059"
+      },
+      {
+        "text": "Mesajı yazdım ama göndermeyi unuttum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=99223"
+      },
+      {
+        "text": "Bir şeyi 'hemen' yapmayıp tamamen unuttum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=98066"
+      },
+      {
+        "text": "Beş dakikalık işi gün boyu erteledim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=624901"
+      },
+      {
+        "text": "Yeni hobiye ekipman alarak başladım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=65550"
+      },
+      {
+        "text": "Takvim hatırlatıcısını görüp yine unuttum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=702353"
+      },
+      {
+        "text": "Bir şarkıyı günlerce döndürdüm",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=755566"
+      },
+      {
+        "text": "Konuşurken konudan konuya atladım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=843680"
+      },
+      {
+        "text": "Online sepette gereksiz araştırmaya daldım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=758625"
+      },
+      {
+        "text": "Kahveyi koyup soğuyana kadar unuttum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=335421"
+      },
+      {
+        "text": "Telefonu bulmak için telefonu kullandım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=677552"
+      },
+      {
+        "text": "Bir işi bitirince saatlerin geçtiğini fark ettim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=836604"
+      },
+      {
+        "text": "Masa toplarken eski bir şeye dalıp gittim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=556848"
+      },
+      {
+        "text": "Bir fikri not etmezsem saniyeler içinde kaybettim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=810180"
+      },
+      {
+        "text": "Deadline yaklaşınca bir anda süper verimli oldum",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=376039"
+      },
+      {
+        "text": "Bir videoyu 1.5x izlerken başka şey yaptım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=121376"
+      },
+      {
+        "text": "Randevuya çok erken ya da son anda yetiştim",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=769212"
+      },
+      {
+        "text": "Gürültü yüzünden düşünce zincirim koptu",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=301832"
+      },
+      {
+        "text": "Bir cümleyi üç kez okuyup yine anlamadım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=347461"
+      },
+      {
+        "text": "Yeni sistem kurup iki gün sonra bıraktım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=144842"
+      },
+      {
+        "text": "Yapılacaklar listesi için ayrı bir yapılacaklar listesi yaptım",
+        "image": "https://loremflickr.com/900/900/desk,notes,productivity,workspace?lock=175786"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript Geliştirici Bingosu",
+    "description": "Frontend ve Node dünyasında en az bir kere yaşadığın şeyleri işaretle.",
+    "category": "work",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/JavaScript-logo.png?width=1200",
+    "tags": [
+      "work",
+      "javascript",
+      "developer",
+      "coding"
+    ],
+    "cells": [
+      {
+        "text": "console.log ile debug ettim",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=563768"
+      },
+      {
+        "text": "'undefined is not a function' gördüm",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=571443"
+      },
+      {
+        "text": "npm install sonrası proje bozuldu",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=62699"
+      },
+      {
+        "text": "node_modules klasörünün boyutuna baktım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=515244"
+      },
+      {
+        "text": "'Works on my machine' dedim",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=250420"
+      },
+      {
+        "text": "Dependency vulnerability uyarısı aldım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=544354"
+      },
+      {
+        "text": "async/await ile Promise zincirini kurtardım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=758951"
+      },
+      {
+        "text": "Promise { <pending> } gördüm",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=51398"
+      },
+      {
+        "text": "CORS yüzünden saat kaybettim",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=868498"
+      },
+      {
+        "text": "Timezone bug'ı yaşadım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=157387"
+      },
+      {
+        "text": "Noktalı virgül tartışmasına girdim",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=477652"
+      },
+      {
+        "text": "useEffect sonsuz döngüye girdi",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=816290"
+      },
+      {
+        "text": "Kullandığım paket deprecated oldu",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=225206"
+      },
+      {
+        "text": ".env değişkenini unutup hata aldım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=4878"
+      },
+      {
+        "text": "Production'a gece hotfix attım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=491083"
+      },
+      {
+        "text": "TypeScript'te any kullandım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=285706"
+      },
+      {
+        "text": "JSON.parse patladı",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=818028"
+      },
+      {
+        "text": "Off-by-one hatası yaptım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=122707"
+      },
+      {
+        "text": "== yerine === tartıştım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=163132"
+      },
+      {
+        "text": "Regex'i internetten aldım",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=867085"
+      },
+      {
+        "text": "Cache temizleyince düzeldi",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=368273"
+      },
+      {
+        "text": "Hydration mismatch gördüm",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=777976"
+      },
+      {
+        "text": "'Sadece küçük bir değişiklik' büyüdü",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=403760"
+      },
+      {
+        "text": "Git merge conflict çözdüm",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=690083"
+      },
+      {
+        "text": "node_modules silip yeniden kurdum",
+        "image": "https://loremflickr.com/900/900/javascript,code,programming,developer?lock=464216"
+      }
+    ]
+  },
+  {
+    "title": "Gerçek Olduğuna İnanamayacağın Doğa Harikaları",
+    "description": "Photoshop gibi görünen ama gerçekten var olan sekiz doğa oluşumu.",
+    "category": "other",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pink%20Lake%20(Lake%20Hillier)%20on%20Middle%20Island%20off%20the%20coast%20of%20Esperance%20Western%20Australia.jpg?width=1200",
+    "tags": [
+      "other",
+      "nature",
+      "unreal",
+      "wonders"
+    ],
+    "cells": [
+      {
+        "text": "Lake Hillier — Avustralya",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pink%20Lake%20(Lake%20Hillier)%20on%20Middle%20Island%20off%20the%20coast%20of%20Esperance%20Western%20Australia.jpg?width=1200"
+      },
+      {
+        "text": "Salar de Uyuni — Bolivya",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Uyuni%20Reflection.jpg?width=1200"
+      },
+      {
+        "text": "Grand Prismatic Spring — ABD",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20image%20of%20Grand%20Prismatic%20Spring%20(view%20from%20the%20south).jpg?width=1200"
+      },
+      {
+        "text": "Pamukkale — Türkiye",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pamukkale%20Hierapolis%20Travertine%20pools.JPG?width=1200"
+      },
+      {
+        "text": "Zhangye Danxia — Çin",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zhangye%20National%20Geopark%2013.jpg?width=1200"
+      },
+      {
+        "text": "Aurora Borealis — İzlanda",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aurora%20boreal%20en%20Hvolsv%C3%B6llur%20(Islandia)%203.jpg?width=1200"
+      },
+      {
+        "text": "Blood Falls — Antarktika",
+        "image": "https://res.cloudinary.com/jerrick/image/upload/v1715100257/663a5a605addae001d448074.jpg"
+      },
+      {
+        "text": "Waitomo Glowworm Caves — Yeni Zelanda",
+        "image": "https://cdn.hswstatic.com/gif/s1/mq_travel/waitomo-cave-new-zealand.jpg"
+      }
+    ]
+  },
+  {
+    "title": "En İyi Upper Body Egzersizleri",
+    "description": "Göğüs, sırt, omuz ve kollar için güçlü bir hareket havuzu. Program reçetesi değil; yaptığın ve sevdiğin hareketleri seç.",
+    "category": "other",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bench%20Press.jpg?width=1200",
+    "tags": [
+      "other",
+      "fitness",
+      "upper-body",
+      "workout"
+    ],
+    "cells": [
+      {
+        "text": "Bench Press",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bench%20Press.jpg?width=1200"
+      },
+      {
+        "text": "Incline Dumbbell Press",
+        "image": "https://loremflickr.com/900/900/incline%20dumbbell%20press,gym,fitness,exercise?lock=322001"
+      },
+      {
+        "text": "Push-Up",
+        "image": "https://loremflickr.com/900/900/push-up,gym,fitness,exercise?lock=699956"
+      },
+      {
+        "text": "Dips",
+        "image": "https://loremflickr.com/900/900/dips,gym,fitness,exercise?lock=595903"
+      },
+      {
+        "text": "Overhead Press",
+        "image": "https://loremflickr.com/900/900/overhead%20press,gym,fitness,exercise?lock=781912"
+      },
+      {
+        "text": "Lateral Raise",
+        "image": "https://loremflickr.com/900/900/lateral%20raise,gym,fitness,exercise?lock=149367"
+      },
+      {
+        "text": "Rear Delt Fly",
+        "image": "https://loremflickr.com/900/900/rear%20delt%20fly,gym,fitness,exercise?lock=546315"
+      },
+      {
+        "text": "Pull-Up",
+        "image": "https://loremflickr.com/900/900/pull-up,gym,fitness,exercise?lock=710697"
+      },
+      {
+        "text": "Chin-Up",
+        "image": "https://loremflickr.com/900/900/chin-up,gym,fitness,exercise?lock=204458"
+      },
+      {
+        "text": "Lat Pulldown",
+        "image": "https://loremflickr.com/900/900/lat%20pulldown,gym,fitness,exercise?lock=67031"
+      },
+      {
+        "text": "Barbell Row",
+        "image": "https://loremflickr.com/900/900/barbell%20row,gym,fitness,exercise?lock=418096"
+      },
+      {
+        "text": "One-Arm Dumbbell Row",
+        "image": "https://loremflickr.com/900/900/one-arm%20dumbbell%20row,gym,fitness,exercise?lock=93101"
+      },
+      {
+        "text": "Seated Cable Row",
+        "image": "https://loremflickr.com/900/900/seated%20cable%20row,gym,fitness,exercise?lock=178826"
+      },
+      {
+        "text": "Face Pull",
+        "image": "https://loremflickr.com/900/900/face%20pull,gym,fitness,exercise?lock=707817"
+      },
+      {
+        "text": "Barbell Curl",
+        "image": "https://loremflickr.com/900/900/barbell%20curl,gym,fitness,exercise?lock=774488"
+      },
+      {
+        "text": "Incline Dumbbell Curl",
+        "image": "https://loremflickr.com/900/900/incline%20dumbbell%20curl,gym,fitness,exercise?lock=400555"
+      },
+      {
+        "text": "Hammer Curl",
+        "image": "https://loremflickr.com/900/900/hammer%20curl,gym,fitness,exercise?lock=114828"
+      },
+      {
+        "text": "Triceps Pushdown",
+        "image": "https://loremflickr.com/900/900/triceps%20pushdown,gym,fitness,exercise?lock=377483"
+      },
+      {
+        "text": "Overhead Triceps Extension",
+        "image": "https://loremflickr.com/900/900/overhead%20triceps%20extension,gym,fitness,exercise?lock=208880"
+      },
+      {
+        "text": "Skull Crusher",
+        "image": "https://loremflickr.com/900/900/skull%20crusher,gym,fitness,exercise?lock=530910"
+      }
+    ]
+  },
+  {
+    "title": "Starbucks Sonbahar Menüsü — Hangisini Denersin?",
+    "description": "Starbucks'ın sınırlı süreli sezonluk içeceklerinden hangilerini denedin ya da denemek istersin?",
+    "category": "other",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://api.mircate.com/5p1hp1d2t/CALL/PIMAPI/getImage/1j19r3y78mj?filename=1j19r3y78mj-f5df8da6d43c4972977547e161ad1396.jpg",
+    "tags": [
+      "starbucks",
+      "kahve",
+      "sonbahar",
+      "sezonluk",
+      "reklam"
+    ],
+    "cells": [
+      {
+        "text": "Pumpkin Spice Latte",
+        "image": "https://loremflickr.com/900/900/pumpkin%20spice%20latte,coffee,latte,starbucks?lock=829837"
+      },
+      {
+        "text": "Iced Pumpkin Spice Latte",
+        "image": "https://loremflickr.com/900/900/iced%20pumpkin%20spice%20latte,coffee,latte,starbucks?lock=348059"
+      },
+      {
+        "text": "Pumpkin Spice Frappuccino®",
+        "image": "https://loremflickr.com/900/900/pumpkin%20spice%20frappuccino,coffee,latte,starbucks?lock=290616"
+      },
+      {
+        "text": "Pumpkin Spice Cream Frappuccino®",
+        "image": "https://loremflickr.com/900/900/pumpkin%20spice%20cream%20frappuccino,coffee,latte,starbucks?lock=704747"
+      },
+      {
+        "text": "Pumpkin Cream Iced Matcha Latte",
+        "image": "https://loremflickr.com/900/900/pumpkin%20cream%20iced%20matcha%20latte,coffee,latte,starbucks?lock=13563"
+      },
+      {
+        "text": "Iced Spanish Cream Matcha Latte",
+        "image": "https://loremflickr.com/900/900/iced%20spanish%20cream%20matcha%20latte,coffee,latte,starbucks?lock=806100"
+      },
+      {
+        "text": "Cherry & Pomegranate Refresha®",
+        "image": "https://loremflickr.com/900/900/cherry%20pomegranate%20refresha,coffee,latte,starbucks?lock=129141"
+      },
+      {
+        "text": "Caramel Mocha Cloud Frappuccino®",
+        "image": "https://loremflickr.com/900/900/caramel%20mocha%20cloud%20frappuccino,coffee,latte,starbucks?lock=584364"
+      },
+      {
+        "text": "Strawberry Matcha Cloud Frappuccino®",
+        "image": "https://loremflickr.com/900/900/strawberry%20matcha%20cloud%20frappuccino,coffee,latte,starbucks?lock=629525"
+      },
+      {
+        "text": "Tiramisu Cream Iced Latte",
+        "image": "https://loremflickr.com/900/900/tiramisu%20cream%20iced%20latte,coffee,latte,starbucks?lock=875336"
+      },
+      {
+        "text": "Tiramisu Velvet Latte",
+        "image": "https://loremflickr.com/900/900/tiramisu%20velvet%20latte,coffee,latte,starbucks?lock=393571"
+      },
+      {
+        "text": "Tiramisu Velvet Matcha Latte",
+        "image": "https://loremflickr.com/900/900/tiramisu%20velvet%20matcha%20latte,coffee,latte,starbucks?lock=568837"
+      },
+      {
+        "text": "Tiramisu Frappuccino®",
+        "image": "https://loremflickr.com/900/900/tiramisu%20frappuccino,coffee,latte,starbucks?lock=867456"
+      },
+      {
+        "text": "Tiramisu Cream Iced Matcha Latte",
+        "image": "https://loremflickr.com/900/900/tiramisu%20cream%20iced%20matcha%20latte,coffee,latte,starbucks?lock=785569"
+      },
+      {
+        "text": "Brown Sugar Cloud Frappuccino®",
+        "image": "https://loremflickr.com/900/900/brown%20sugar%20cloud%20frappuccino,coffee,latte,starbucks?lock=297756"
+      },
+      {
+        "text": "Iced Pecan Maple Latte",
+        "image": "https://loremflickr.com/900/900/iced%20pecan%20maple%20latte,coffee,latte,starbucks?lock=727673"
+      },
+      {
+        "text": "Iced Pecan Maple Macchiato",
+        "image": "https://loremflickr.com/900/900/iced%20pecan%20maple%20macchiato,coffee,latte,starbucks?lock=560505"
+      },
+      {
+        "text": "Pecan Maple Latte",
+        "image": "https://loremflickr.com/900/900/pecan%20maple%20latte,coffee,latte,starbucks?lock=223486"
+      },
+      {
+        "text": "Pumpkin Cream Matcha Latte",
+        "image": "https://loremflickr.com/900/900/pumpkin%20cream%20matcha%20latte,coffee,latte,starbucks?lock=292327"
+      },
+      {
+        "text": "Pumpkin Spice Caramel Macchiato",
+        "image": "https://loremflickr.com/900/900/pumpkin%20spice%20caramel%20macchiato,coffee,latte,starbucks?lock=354403"
+      }
+    ]
+  }
+]

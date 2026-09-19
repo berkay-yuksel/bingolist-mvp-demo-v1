@@ -1,0 +1,2143 @@
+[
+  {
+    "title": "En İyi Progresif Rock Albümleri",
+    "description": "Prog rock'a giriş için güçlü bir çekirdek liste. Dinlediklerini işaretle.",
+    "category": "music",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/8/84/In_the_Court_of_the_Crimson_King_-_40th_Anniversary_Box_Set_-_Front_cover.jpeg",
+    "tags": [
+      "music",
+      "prog-rock",
+      "albums",
+      "classic-rock"
+    ],
+    "cells": [
+      {
+        "text": "King Crimson — In the Court of the Crimson King",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/84/In_the_Court_of_the_Crimson_King_-_40th_Anniversary_Box_Set_-_Front_cover.jpeg"
+      },
+      {
+        "text": "Pink Floyd — The Dark Side of the Moon",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Dark_Side_of_the_Moon.png/1200px-Dark_Side_of_the_Moon.png"
+      },
+      {
+        "text": "Yes — Close to the Edge",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/09/Yes-close.jpg"
+      },
+      {
+        "text": "Genesis — Selling England by the Pound",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/57/GenesisSellingEngland.jpg"
+      },
+      {
+        "text": "Jethro Tull — Thick as a Brick",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/ef/DirkvdM_thick_as_a_brick.jpg"
+      },
+      {
+        "text": "King Crimson — Red",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/6c/Red%2C_King_Crimson.jpg"
+      },
+      {
+        "text": "Pink Floyd — Wish You Were Here",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a4/Pink_Floyd%2C_Wish_You_Were_Here_%281975%29.png"
+      },
+      {
+        "text": "Genesis — Foxtrot",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Foxtrot72.jpg"
+      },
+      {
+        "text": "Yes — Fragile",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c0/Fragile_%28Yes_album%29_cover_art.jpg"
+      },
+      {
+        "text": "Rush — Hemispheres",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/6c/Rush_Hemispheres.jpg"
+      },
+      {
+        "text": "Rush — Moving Pictures",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/4a/Moving_Pictures.jpg"
+      },
+      {
+        "text": "Camel — Mirage",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/89/Camel-Mirage.jpg"
+      },
+      {
+        "text": "Van der Graaf Generator — Pawn Hearts",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/61/Pawn_Hearts_%28Van_der_Graaf_Generator_album_-_cover_art%29.jpg"
+      },
+      {
+        "text": "Emerson, Lake & Palmer — Brain Salad Surgery",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0d/ELP_-_Brain_Salad_Surgery.jpg"
+      },
+      {
+        "text": "Porcupine Tree — Fear of a Blank Planet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Porcupine_Tree_-_Fear_of_a_blank_planet_%28album_cover%29.jpg"
+      },
+      {
+        "text": "Tool — Lateralus",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/63/Tool_-_Lateralus.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Tame Impala — Ne Kadar Derindesin?",
+    "description": "Hitlerden deep cut'lara ve Deadbeat dönemine kadar: bildiğin parçaları işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png",
+    "tags": [
+      "music",
+      "tame-impala",
+      "psychedelic",
+      "fan-card"
+    ],
+    "cells": [
+      {
+        "text": "Let It Happen",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
+      },
+      {
+        "text": "The Less I Know the Better",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
+      },
+      {
+        "text": "New Person, Same Old Mistakes",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
+      },
+      {
+        "text": "Eventually",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
+      },
+      {
+        "text": "Nangs",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
+      },
+      {
+        "text": "Borderline",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Tame_Impala_-_The_Slow_Rush.png"
+      },
+      {
+        "text": "Lost in Yesterday",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Tame_Impala_-_The_Slow_Rush.png"
+      },
+      {
+        "text": "Breathe Deeper",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Tame_Impala_-_The_Slow_Rush.png"
+      },
+      {
+        "text": "Elephant",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Tame_Impala_-_Lonerism.png"
+      },
+      {
+        "text": "Feels Like We Only Go Backwards",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Tame_Impala_-_Lonerism.png"
+      },
+      {
+        "text": "Mind Mischief",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Tame_Impala_-_Lonerism.png"
+      },
+      {
+        "text": "Apocalypse Dreams",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Tame_Impala_-_Lonerism.png"
+      },
+      {
+        "text": "Solitude Is Bliss",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/dc/Tame_Impala_-_Innerspeaker.png"
+      },
+      {
+        "text": "Half Full Glass of Wine",
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/Tame_Impala_EP.JPG"
+      },
+      {
+        "text": "Dracula",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      },
+      {
+        "text": "Loser",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      },
+      {
+        "text": "End of Summer",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      },
+      {
+        "text": "My Old Ways",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      },
+      {
+        "text": "No Reply",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      },
+      {
+        "text": "Ethereal Connection",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f1/DeadbeatTameImpala.jpeg"
+      }
+    ]
+  },
+  {
+    "title": "2000'lerin Herkesin Bildiği Şarkıları",
+    "description": "İlk saniyelerde tanıdığın 2000'ler hitlerini işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/2/21/Britney_Spears_Toxic.png",
+    "tags": [
+      "music",
+      "2000s",
+      "nostalji",
+      "hits"
+    ],
+    "cells": [
+      {
+        "text": "Britney Spears — Toxic",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Britney_Spears_Toxic.png"
+      },
+      {
+        "text": "The Killers — Mr. Brightside",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d1/Mr.-Brightside.jpg"
+      },
+      {
+        "text": "Beyoncé — Crazy in Love",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/30/Beyonce_-_Crazy_in_Love_%28single%29.png"
+      },
+      {
+        "text": "Rihanna — Umbrella",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/01/Rihanna_-_Umbrella.png"
+      },
+      {
+        "text": "OutKast — Hey Ya!",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d8/Hey_Ya_single_cover.png"
+      },
+      {
+        "text": "Linkin Park — In the End",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3f/LinkinParkIntheEnd.jpg"
+      },
+      {
+        "text": "The White Stripes — Seven Nation Army",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/62/7nationarmy.jpg"
+      },
+      {
+        "text": "Eminem — Lose Yourself",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d6/Lose_Yourself.jpg"
+      },
+      {
+        "text": "Lady Gaga — Poker Face",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Poker_Face_by_Lady_Gaga_alternative_cover.png"
+      },
+      {
+        "text": "The Black Eyed Peas — I Gotta Feeling",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f4/I_Gotta_Feeling.png"
+      },
+      {
+        "text": "Avril Lavigne — Complicated",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/76/Complicated_cover.png"
+      },
+      {
+        "text": "Gorillaz — Feel Good Inc.",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/dc/Feel_Good_Inc._Artwork.jpg"
+      },
+      {
+        "text": "Franz Ferdinand — Take Me Out",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/52/Franz_Ferdinand_-_Take_Me_Out.jpg"
+      },
+      {
+        "text": "Coldplay — Clocks",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/96/Clocks_single.jpg"
+      },
+      {
+        "text": "Green Day — Boulevard of Broken Dreams",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/2a/Green_Day_-_Boulevard_of_Broken_Dreams_cover.jpg"
+      },
+      {
+        "text": "Evanescence — Bring Me to Life",
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/Evanescence_-_Bring_Me_to_Life.png"
+      },
+      {
+        "text": "Shakira — Hips Don't Lie",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c0/Shakira-HipsDon%27tLie.jpg"
+      },
+      {
+        "text": "Usher — Yeah!",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/ea/Usher_-_Yeah%21.png"
+      },
+      {
+        "text": "Kelly Clarkson — Since U Been Gone",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/4e/Since_U_Been_Gone.jpg"
+      },
+      {
+        "text": "M.I.A. — Paper Planes",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/aa/MIAPaperPlanesUKcover.jpg"
+      },
+      {
+        "text": "Amy Winehouse — Rehab",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/71/Amy_Winehouse_-_Rehab.jpg"
+      },
+      {
+        "text": "MGMT — Kids",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/MGMT_Kids.jpg"
+      },
+      {
+        "text": "Kings of Leon — Use Somebody",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a0/Use_Somebody.jpg"
+      },
+      {
+        "text": "Snow Patrol — Chasing Cars",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Chasingcars.jpg"
+      },
+      {
+        "text": "Jay-Z feat. Alicia Keys — Empire State of Mind",
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/ba/Empire_State_of_Mind_single_cover.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Elektro Gitar Skillseti",
+    "description": "Teknikten kulağa, ritimden tona: gerçekten yapabildiklerini işaretle.",
+    "category": "music",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/6/67/G_major_chord_for_guitar_%28open%29.png",
+    "tags": [
+      "music",
+      "guitar",
+      "skillset",
+      "musician"
+    ],
+    "cells": [
+      {
+        "text": "Açık akorları temiz çalabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/G_major_chord_for_guitar_%28open%29.png"
+      },
+      {
+        "text": "Barre akorları temiz basabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/A%E2%99%AF_minor_chord_on_guitar_with_barre.jpg"
+      },
+      {
+        "text": "Power chord'larda rahatım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Power_chord_fondamentale_sulla_quinta_corda.JPG"
+      },
+      {
+        "text": "Alternate picking kullanıyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Palm mute kontrolüm iyi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Palm_mute_by_punkettaro.gif"
+      },
+      {
+        "text": "Bend'leri doğru perdeye çekebiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_Guitar_%28Superstrat_based_on_ESP_KH_-_vertical%29_-_with_hint_lines_and_numbers.png"
+      },
+      {
+        "text": "Kontrollü vibrato yapabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_Guitar_%28Superstrat_based_on_ESP_KH_-_vertical%29_-_with_hint_lines_and_numbers.png"
+      },
+      {
+        "text": "Hammer-on / pull-off akıcı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Guitar-1333353440ujZ.jpg"
+      },
+      {
+        "text": "Slide'ları temiz kullanıyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fingandslide.jpg"
+      },
+      {
+        "text": "Pentatonik 5 pozisyonu biliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Diatonic_and_Pentatonic_scale_intervals.svg"
+      },
+      {
+        "text": "Majör gamı klavyede taşıyabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Major_scale1.jpg"
+      },
+      {
+        "text": "Minör gamı klavyede taşıyabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Chord_progression_in_A_minor..png"
+      },
+      {
+        "text": "Triad şekillerini kullanıyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Type_of_triads-2.png"
+      },
+      {
+        "text": "Arpejleri melodik kullanabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bach_Arpeggio_from_Jesu%2C_Joy_of_Man%27s_Desiring.png"
+      },
+      {
+        "text": "String skipping yapabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_Guitar_%28Superstrat_based_on_ESP_KH_-_vertical%29_-_with_hint_lines_and_numbers.png"
+      },
+      {
+        "text": "Legato cümleler çalabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Tapping kullanabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_Guitar_%28Superstrat_based_on_ESP_KH_-_vertical%29_-_with_hint_lines_and_numbers.png"
+      },
+      {
+        "text": "Sweep picking deneyimim var",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Hybrid picking yapabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Fingerstyle çalabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Al_Di_Meola_guitar_in_Utrecht%2C_Netherlands.jpg"
+      },
+      {
+        "text": "Riff'i kulaktan çıkarabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_Guitar_%28Superstrat_based_on_ESP_KH_-_vertical%29_-_with_hint_lines_and_numbers.png"
+      },
+      {
+        "text": "Solo'yu kulaktan çıkarabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Metronomla düzenli çalışıyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Electronic-metronome.jpg"
+      },
+      {
+        "text": "Backing track üstünde doğaçlayabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Guitar_1.jpg"
+      },
+      {
+        "text": "Pedal / amfi zincirinden kendi tonumu kurabiliyorum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/JesseNabers-6_crop.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Studio Ghibli — Kaçını İzledin?",
+    "description": "Ghibli'nin uzun metraj klasiklerinden kaç tanesini gördün?",
+    "category": "movies",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/f/f5/Castle_in_the_Sky_%281986%29.png",
+    "tags": [
+      "movies",
+      "studio-ghibli",
+      "anime",
+      "japan"
+    ],
+    "cells": [
+      {
+        "text": "Castle in the Sky",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f5/Castle_in_the_Sky_%281986%29.png"
+      },
+      {
+        "text": "My Neighbor Totoro",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/02/My_Neighbor_Totoro_-_Tonari_no_Totoro_%28Movie_Poster%29.jpg"
+      },
+      {
+        "text": "Grave of the Fireflies",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg"
+      },
+      {
+        "text": "Kiki's Delivery Service",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg"
+      },
+      {
+        "text": "Only Yesterday",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/46/OYpost.jpg"
+      },
+      {
+        "text": "Porco Rosso",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/fc/Porco_Rosso_%28Movie_Poster%29.jpg"
+      },
+      {
+        "text": "Pom Poko",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/68/Pompokoposter.jpg"
+      },
+      {
+        "text": "Whisper of the Heart",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/93/Whisper_of_the_Heart_%28Movie_Poster%29.jpg"
+      },
+      {
+        "text": "Princess Mononoke",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Princess_Mononoke_Japanese_poster.png"
+      },
+      {
+        "text": "Spirited Away",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png"
+      },
+      {
+        "text": "Howl's Moving Castle",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a0/Howls-moving-castleposter.jpg"
+      },
+      {
+        "text": "Ponyo",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/51/Ponyo.png"
+      },
+      {
+        "text": "The Wind Rises",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+      },
+      {
+        "text": "The Tale of the Princess Kaguya",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/68/The_Tale_of_the_Princess_Kaguya_%28poster%29.jpg"
+      },
+      {
+        "text": "When Marnie Was There",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a7/When_Marnie_Was_There.png"
+      },
+      {
+        "text": "The Boy and the Heron",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/41/How_Do_You_Live_poster.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Stanley Kubrick — Tüm Filmleri",
+    "description": "Kubrick'in uzun metraj filmografisinde izlediklerini işaretle.",
+    "category": "movies",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Fear_and_Desire_poster.jpg",
+    "tags": [
+      "movies",
+      "kubrick",
+      "director",
+      "filmography"
+    ],
+    "cells": [
+      {
+        "text": "Fear and Desire",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Fear_and_Desire_poster.jpg"
+      },
+      {
+        "text": "Killer's Kiss",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a6/KillersKissPoster.jpg"
+      },
+      {
+        "text": "The Killing",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d6/TheKillingPosterKubrick.jpg"
+      },
+      {
+        "text": "Paths of Glory",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Paths_of_Glory_%281957_poster%29.jpg"
+      },
+      {
+        "text": "Spartacus",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Spartacus_-_1960_-_poster.png"
+      },
+      {
+        "text": "Lolita",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lolita_%281962_film_poster%29.jpg"
+      },
+      {
+        "text": "Dr. Strangelove",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/e6/Dr._Strangelove_poster.jpg"
+      },
+      {
+        "text": "2001: A Space Odyssey",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png"
+      },
+      {
+        "text": "A Clockwork Orange",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/73/A_Clockwork_Orange_%281971%29.png"
+      },
+      {
+        "text": "Barry Lyndon",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/ee/Barry_Lyndon_A.jpg"
+      },
+      {
+        "text": "The Shining",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg"
+      },
+      {
+        "text": "Full Metal Jacket",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/99/Full_Metal_Jacket_poster.jpg"
+      },
+      {
+        "text": "Eyes Wide Shut",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/73/Eyes_Wide_Shut_%281999%29.png"
+      }
+    ]
+  },
+  {
+    "title": "İzlemen Gereken Bilimkurgu Filmleri",
+    "description": "Klasiklerden modern döneme, bilimkurgunun temel durakları.",
+    "category": "movies",
+    "columns": 5,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png",
+    "tags": [
+      "movies",
+      "sci-fi",
+      "must-watch",
+      "cinema"
+    ],
+    "cells": [
+      {
+        "text": "2001: A Space Odyssey",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png"
+      },
+      {
+        "text": "Solaris (1972)",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Solyaris_ussr_poster.jpg"
+      },
+      {
+        "text": "Stalker (1979)",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d4/Stalker_poster.jpg"
+      },
+      {
+        "text": "Alien",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c3/Alien_movie_poster.jpg"
+      },
+      {
+        "text": "Blade Runner",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Blade_Runner_%281982_poster%29.png"
+      },
+      {
+        "text": "The Thing",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/e3/The_Thing_%281982_film%29.png"
+      },
+      {
+        "text": "Terminator 2: Judgment Day",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/5e/Terminator_2-Judgment_Day.png"
+      },
+      {
+        "text": "The Matrix",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png"
+      },
+      {
+        "text": "Children of Men",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/fc/Children_of_men_ver4.jpg"
+      },
+      {
+        "text": "Moon",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/af/Moon_%282009_film%29.jpg"
+      },
+      {
+        "text": "District 9",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d7/District_nine_ver2.jpg"
+      },
+      {
+        "text": "Inception",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+      },
+      {
+        "text": "Her",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Her2013Poster.jpg"
+      },
+      {
+        "text": "Ex Machina",
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/ba/Ex-machina-uk-poster.jpg"
+      },
+      {
+        "text": "Interstellar",
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+      },
+      {
+        "text": "Arrival",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg"
+      },
+      {
+        "text": "Annihilation",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Annihilation_%28film%29.png"
+      },
+      {
+        "text": "Edge of Tomorrow",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f9/Edge_of_Tomorrow_Poster.jpg"
+      },
+      {
+        "text": "Dune: Part One",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+      },
+      {
+        "text": "Dune: Part Two",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Kurtlar Konseyi",
+    "description": "Kurtlar Vadisi evreninin ikonik karakterlerinden kaçını tek bakışta hatırlıyorsun?",
+    "category": "tv",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png",
+    "tags": [
+      "tv",
+      "kurtlar-vadisi",
+      "nostalji",
+      "characters"
+    ],
+    "cells": [
+      {
+        "text": "Polat Alemdar",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Süleyman Çakır",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Oktay_Kaynarca_2019_01.png"
+      },
+      {
+        "text": "Memati Baş",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Abdülhey Çoban",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Aslan Akbey",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Sel%C3%A7uk_Y%C3%B6ntem.jpg"
+      },
+      {
+        "text": "Laz Ziya",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/5/5a/%C4%B0stemi_Betil.jpg"
+      },
+      {
+        "text": "Mehmet Karahanlı",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Testere Necmi",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/7/77/Tar%C4%B1k_%C3%9Cnl%C3%BCo%C4%9Flu.jpg"
+      },
+      {
+        "text": "Hüsrev Ağa",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/1/12/Baykalsaran.jpg"
+      },
+      {
+        "text": "Tombalacı Mehmet",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/b/bd/Haldun_Boysan.jpg"
+      },
+      {
+        "text": "İplikçi Nedim",
+        "image": "https://upload.wikimedia.org/wikipedia/tr/5/52/%C4%B0smail_%C4%B0ncekara.jpg"
+      },
+      {
+        "text": "Tuncay Kantarcı",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Elif Eylül",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/%C3%96zg%C3%BC_Namal_at_Berlinale_2026.jpg"
+      },
+      {
+        "text": "Pala",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Y%C3%BCksel_Ar%C4%B1c%C4%B1.jpg"
+      },
+      {
+        "text": "Halo Dayı",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      },
+      {
+        "text": "Cerrahpaşalı Halit",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Valleyofthewolvestitlecard.png"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul Sokak Lezzetleri Turu",
+    "description": "İstanbul'u yiyerek gez: tattığın sokak lezzetlerini işaretle.",
+    "category": "food",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/0/07/Simit-2x.JPG",
+    "tags": [
+      "food",
+      "istanbul",
+      "street-food",
+      "turkish-food"
+    ],
+    "cells": [
+      {
+        "text": "Simit",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Simit-2x.JPG"
+      },
+      {
+        "text": "Balık ekmek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Fish_sandwich%2C_Istanbul%2C_Turkey.JPG"
+      },
+      {
+        "text": "Kokoreç",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Kokore%C3%A7.JPG"
+      },
+      {
+        "text": "Midye dolma",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Midye_dolma_%286%29.JPG"
+      },
+      {
+        "text": "Islak hamburger",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Islak_hamburger_istanbul_2023.jpg"
+      },
+      {
+        "text": "Kumpir",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kumpir_-_Turkish_Cuisine.jpg"
+      },
+      {
+        "text": "Döner dürüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/D%C3%B6ner_kebab_slicing.jpg"
+      },
+      {
+        "text": "Tantuni",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Tantuni_sokak_yeme%C4%9Fi.jpg"
+      },
+      {
+        "text": "Lahmacun",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Lahmacun.jpg"
+      },
+      {
+        "text": "Börek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Burek_trokut_1.png"
+      },
+      {
+        "text": "Kestane",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%C3%A2taignier_120807_1.jpg"
+      },
+      {
+        "text": "Sokak mısırı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/CookedCornOnTheCob.JPG"
+      },
+      {
+        "text": "Halka tatlısı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Tulumba.jpg"
+      },
+      {
+        "text": "Boza",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Boza.jpg"
+      },
+      {
+        "text": "Kanlıca yoğurdu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Joghurt.jpg"
+      },
+      {
+        "text": "Türk kahvesi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/T%C3%BCrk_Kahvesi_-_Bakir_Cezve.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Kadıköy Yemek Turu",
+    "description": "Kadıköy'de farklı karakterde duraklardan oluşan bir günlük food crawl.",
+    "category": "food",
+    "columns": 3,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sigara_B%C3%B6rek.jpg",
+    "tags": [
+      "food",
+      "kadıköy",
+      "istanbul",
+      "food-crawl"
+    ],
+    "cells": [
+      {
+        "text": "Çiya Sofrası",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sigara_B%C3%B6rek.jpg"
+      },
+      {
+        "text": "Yanyalı Fehmi Lokantası",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sigara_B%C3%B6rek.jpg"
+      },
+      {
+        "text": "Borsam Taşfırın",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pide_%28meal%29.jpg"
+      },
+      {
+        "text": "Baylan Kadıköy",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Lille_Meert2.JPG"
+      },
+      {
+        "text": "Basta! Street Food Bar",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/StreetfoodNY.jpg"
+      },
+      {
+        "text": "Cankurtaran Gıda",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Haydarpasa_train_station_%28cropped%29.jpg"
+      },
+      {
+        "text": "Aida Vino e Cucina",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/Italian_food.JPG"
+      },
+      {
+        "text": "Suflör Kadıköy",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Bacon_and_Cheddar_Cheese_Souffl%C3%A9.jpg"
+      },
+      {
+        "text": "Tarihi Kadıköy Şekerci Cafer Erol",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Krokan.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Karadağ'da Yapmadan Dönme",
+    "description": "Kotor Körfezi'nden Durmitor'a, ilk Karadağ gezisi için görmeye değer duraklar.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/2/26/20090719_Crkva_Gospa_od_Zdravlja_Kotor_Bay_Montenegro.jpg",
+    "tags": [
+      "travel",
+      "montenegro",
+      "balkans",
+      "guide"
+    ],
+    "cells": [
+      {
+        "text": "Kotor Old Town",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/20090719_Crkva_Gospa_od_Zdravlja_Kotor_Bay_Montenegro.jpg"
+      },
+      {
+        "text": "San Giovanni Kalesi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/20090719_Crkva_Gospa_od_Zdravlja_Kotor_Bay_Montenegro.jpg"
+      },
+      {
+        "text": "Perast",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Perast_100.jpg"
+      },
+      {
+        "text": "Our Lady of the Rocks",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Nuestra_Se%C3%B1ora_de_las_Rocas%2C_Perast%2C_Bah%C3%ADa_de_Kotor%2C_Montenegro%2C_2014-04-19%2C_DD_19.JPG"
+      },
+      {
+        "text": "Kotor Körfezi'nde tekne turu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Kotor_aerial_1.jpg"
+      },
+      {
+        "text": "Budva Old Town",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Budva_%2826871774051%29.jpg"
+      },
+      {
+        "text": "Mogren Beach",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Budva_%2826871774051%29.jpg"
+      },
+      {
+        "text": "Sveti Stefan manzarası",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Sveti_Stefan_%2806%29.jpg"
+      },
+      {
+        "text": "Lovćen Milli Parkı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Lovcen-008-p1010045.jpg"
+      },
+      {
+        "text": "Njegoš Mozolesi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Njego%C5%A1ev_mauzolej.JPG"
+      },
+      {
+        "text": "Skadar Gölü",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Skadarsko_Jezero.jpg"
+      },
+      {
+        "text": "Virpazar",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Virpazar.jpg"
+      },
+      {
+        "text": "Durmitor Milli Parkı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Durmitor.jpg"
+      },
+      {
+        "text": "Black Lake",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/The_Black_Lake_in_Montenegro.jpg"
+      },
+      {
+        "text": "Tara Kanyonu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/Tara_River_Canyon.jpg"
+      },
+      {
+        "text": "Đurđevića Tara Köprüsü",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/%D0%9C%D0%BE%D1%81%D1%82_%D0%94%D0%B6%D1%83%D1%80%D0%B4%D0%B6%D0%B5%D0%B2%D0%B8%D1%87%D0%B0.jpg"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul'a İlk Kez Geliyorsan Bunları Yap",
+    "description": "İlk ziyaret için klasiklerle mahalle deneyimlerini dengeleyen İstanbul başlangıç kartı.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Hagia_Sophia_%28228968325%29.jpeg",
+    "tags": [
+      "travel",
+      "istanbul",
+      "first-time",
+      "city-guide"
+    ],
+    "cells": [
+      {
+        "text": "Ayasofya",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Hagia_Sophia_%28228968325%29.jpeg"
+      },
+      {
+        "text": "Sultanahmet Camii",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Istanbul_%2834223582516%29_%28cropped%29.jpg"
+      },
+      {
+        "text": "Yerebatan Sarnıcı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cisterna_Bas%C3%ADlica%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_58-60_HDR.jpg"
+      },
+      {
+        "text": "Topkapı Sarayı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Topkap%C4%B1_-_01.jpg"
+      },
+      {
+        "text": "Kapalıçarşı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Istanbul_asv2021-11_img41_Grand_Bazaar.jpg"
+      },
+      {
+        "text": "Galata Kulesi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Istanbul_asv2020-02_img48_Galata_Tower.jpg"
+      },
+      {
+        "text": "İstiklal Caddesi + Taksim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Istiklal_Avenue_in_Istanbul_-_Turkey.jpg"
+      },
+      {
+        "text": "Karaköy sokakları",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Istanbul_asv2020-02_img46_Galata_Bridge_and_Tower.jpg"
+      },
+      {
+        "text": "Vapurla Boğaz geçişi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Emin%C3%B6n%C3%BC_Vapur_iskelesi_IMG_0650.jpg"
+      },
+      {
+        "text": "Kadıköy Çarşı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Haydarpasa_train_station_%28cropped%29.jpg"
+      },
+      {
+        "text": "Moda sahili",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Moda_IMAGE.jpg"
+      },
+      {
+        "text": "Ortaköy",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ortak%C3%B6y_Square_and_Mosque_Istanbul_Turkey.jpg"
+      },
+      {
+        "text": "Dolmabahçe Sarayı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Dolmabahce_Istanbul_Turkey.jpg"
+      },
+      {
+        "text": "Fener + Balat",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Balat_houses.jpg"
+      },
+      {
+        "text": "Adalar'da bir gün",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/BuyukadaMainSquare.jpg"
+      },
+      {
+        "text": "Tarihi hamam deneyimi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Istanbul_-_panoramio_%28116%29.jpg"
+      }
+    ]
+  },
+  {
+    "title": "15,99€+'dan Avrupa'ya — Nereye Uçardın?",
+    "description": "Pegasus mobil uygulama kampanyasındaki seçili dış hatlardan favorilerini seç. Kampanya: 18–20 Eylül 2026 satış, 5 Ekim 2026–27 Mart 2027 uçuş dönemi; vergiler hariç başlangıç fiyatıdır.",
+    "category": "travel",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/8/85/Alicante%2C_Spain.jpg",
+    "tags": [
+      "travel",
+      "reklam",
+      "pegasus",
+      "kampanya",
+      "avrupa"
+    ],
+    "cells": [
+      {
+        "text": "Alicante",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Alicante%2C_Spain.jpg"
+      },
+      {
+        "text": "Atina",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Athens_Acropolis_at_Daybreak.jpg"
+      },
+      {
+        "text": "Barcelona",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Evening_light_over_Barcelona.jpg"
+      },
+      {
+        "text": "Basel",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Basel_-_M%C3%BCnsterpfalz1.jpg"
+      },
+      {
+        "text": "Berlin",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"
+      },
+      {
+        "text": "Bilbao",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Collage_de_Bilbao%2C_Pa%C3%ADs_Vasco%2C_Espa%C3%B1a.png"
+      },
+      {
+        "text": "Bologna",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Torri_di_Bologna%2C_Bologna.jpg"
+      },
+      {
+        "text": "Bratislava",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Slovakia_bratislava.jpg"
+      },
+      {
+        "text": "Bükreş",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bucharest_University_Square_%28cropped%29.jpg"
+      },
+      {
+        "text": "Cenevre",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Geneve_2005_001_Ork.ch.jpg"
+      },
+      {
+        "text": "Edinburgh",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Skyline_of_Edinburgh.jpg"
+      },
+      {
+        "text": "Eindhoven",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Lichttoren_Eindhoven_1_-_Cropped.jpg"
+      }
+    ]
+  },
+  {
+    "title": "2026/27 Süper Lig: Şampiyon Kim Olacak?",
+    "description": "Sezon başı tahminini yap: şampiyonluk ihtimali verdiğin takımları işaretle.",
+    "category": "sports",
+    "columns": 6,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/1/18/AmedSFKLogo.png",
+    "tags": [
+      "sports",
+      "football",
+      "süper-lig",
+      "2026-27",
+      "prediction"
+    ],
+    "cells": [
+      {
+        "text": "Amed Sportif Faaliyetler",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/18/AmedSFKLogo.png"
+      },
+      {
+        "text": "Arca Çorum FK",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/ab/%C3%87orum_F.K._crest.svg"
+      },
+      {
+        "text": "Beşiktaş",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/BesiktasJK-Logo.svg"
+      },
+      {
+        "text": "Çaykur Rizespor",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo_Rizespor.png"
+      },
+      {
+        "text": "Corendon Alanyaspor",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/40/Alanyaspor_logo.svg"
+      },
+      {
+        "text": "Erzurumspor FK",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/68/Erzurumspor_F.K._crest_%282025%29.png"
+      },
+      {
+        "text": "Eyüpspor",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ey%C3%BCpspor_Logosu.png"
+      },
+      {
+        "text": "Fenerbahçe",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Fenerbah%C3%A7e.svg"
+      },
+      {
+        "text": "Galatasaray",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/49/Galatasaray_SK_football_logo.png"
+      },
+      {
+        "text": "Gaziantep FK",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/Gazi%C5%9Fehir_Gaziantep_logo.svg"
+      },
+      {
+        "text": "Gençlerbirliği",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Gen%C3%A7lerbirli%C4%9Fi_S.K._crest.svg"
+      },
+      {
+        "text": "Göztepe",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0f/G%C3%B6ztepe_S.K._logo.png"
+      },
+      {
+        "text": "İstanbul Başakşehir",
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/%C4%B0stanbul_Ba%C5%9Fak%C5%9Fehir_logo.svg"
+      },
+      {
+        "text": "Kasımpaşa",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/18/Kasimpasa_logo.svg"
+      },
+      {
+        "text": "Kocaelispor",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/cc/Kocaelispor_current_logo.png"
+      },
+      {
+        "text": "Samsunspor",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/83/Samsunspor_crest.svg"
+      },
+      {
+        "text": "Trabzonspor",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/de/Trabzonspor_Amblem.svg"
+      },
+      {
+        "text": "Tümosan Konyaspor",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d1/Konyaspor_logo.svg"
+      }
+    ]
+  },
+  {
+    "title": "2026 Dream Team — Dünyanın En İyi 11'ini Kur",
+    "description": "Pozisyon havuzundan kendi 2026 dünya 11'ini seç. KL: kaleci, DF: defans, OS: orta saha, FV: forvet.",
+    "category": "sports",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/5/53/Unai_Simon_Argentina_v_Spain_19_July_2026-078_%28cropped%29.jpg",
+    "tags": [
+      "sports",
+      "football",
+      "dream-team",
+      "2026",
+      "ballon-dor"
+    ],
+    "cells": [
+      {
+        "text": "KL — Unai Simón",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Unai_Simon_Argentina_v_Spain_19_July_2026-078_%28cropped%29.jpg"
+      },
+      {
+        "text": "KL — Thibaut Courtois",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Thibaut_Courtois_at_the_2018_World_Cup_%28cropped%29.jpg"
+      },
+      {
+        "text": "KL — Emiliano Martínez",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Emiliano_Martinez_Argentina_v_Spain_19_July_2026-269.jpg"
+      },
+      {
+        "text": "KL — David Raya",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/David_Raya_Argentina_v_Spain_19_July_2026-003_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Achraf Hakimi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Achraf_Hakimi_Morocco_v_Norway_7_June_2026-16.jpg"
+      },
+      {
+        "text": "DF — William Saliba",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/William_Saliba_France_v_Senegal_16_June_2026-336_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Pau Cubarsí",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Pau_Cubarsi_Argentina_v_Spain_19_July_2026-181_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Nuno Mendes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Nuno_Mendes_Croatia_v_Portugal_2_July_2026-135_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Gabriel",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Gabriel_Magalhaes_Brazil_V_Morocco_13_June_2026-132_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Marquinhos",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Marquinhos_Brazil_V_Morocco_13_June_2026-153_%28cropped%29.jpg"
+      },
+      {
+        "text": "DF — Dayot Upamecano",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Dayot_Upamecano_France_v_Senegal_16_June_2026-402_%28cropped%29.jpg"
+      },
+      {
+        "text": "OS — Rodri",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Rodri_Argentina_v_Spain_19_July_2026-187_%28cropped%29.jpg"
+      },
+      {
+        "text": "OS — Jude Bellingham",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Jude_Bellingham_England_v_Ghana_23_June_2026-061_%28cropped%29.jpg"
+      },
+      {
+        "text": "OS — Vitinha",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Vitinha_USMNT_v_Portugal_Mar_31_2026-50_%28cropped%29.jpg"
+      },
+      {
+        "text": "OS — Declan Rice",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Declan_Rice_England_v_Ghana_23_June_2026-150.jpg"
+      },
+      {
+        "text": "OS — Bruno Fernandes",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Bruno_Fernandes_USMNT_v_Portugal_Mar_31_2026-27_%28cropped%29.jpg"
+      },
+      {
+        "text": "OS — João Neves",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Joao_Neves_Croatia_v_Portugal_2_July_2026-102.jpg"
+      },
+      {
+        "text": "OS — Fabián Ruiz",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Fabian_Ruiz_Argentina_v_Spain_19_July_2026-315.jpg"
+      },
+      {
+        "text": "FV — Kylian Mbappé",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Kylian_Mbappe_France_v_Senegal_16_June_2026-391_%28cropped%29.jpg"
+      },
+      {
+        "text": "FV — Lamine Yamal",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lamine_Yamal_France_v_Spain_7.24.26-142.jpg"
+      },
+      {
+        "text": "FV — Harry Kane",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg"
+      },
+      {
+        "text": "FV — Erling Haaland",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg"
+      },
+      {
+        "text": "FV — Ousmane Dembélé",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Ousmane_Dembele_France_v_Senegal_16_June_2026-341_%28cropped%29_2.jpg"
+      },
+      {
+        "text": "FV — Vinícius Júnior",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Vin%C3%ADcius_J%C3%BAnior_Brazil_V_Morocco_13_June_2026-207_%28cropped%29.jpg"
+      },
+      {
+        "text": "FV — Lionel Messi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg"
+      }
+    ]
+  },
+  {
+    "title": "İstanbul 2026 Koşu Takvimi",
+    "description": "2026'da İstanbul'daki büyük yol koşularından katıldıklarını veya hedeflediklerini işaretle.",
+    "category": "sports",
+    "columns": 4,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg",
+    "tags": [
+      "sports",
+      "running",
+      "istanbul",
+      "2026",
+      "calendar"
+    ],
+    "cells": [
+      {
+        "text": "İstanbul Yarı Maratonu — 10K — 19 Nisan",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "İstanbul Yarı Maratonu — 21K — 19 Nisan",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Asya — 5K — 3 Mayıs",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Asya — 10K — 3 Mayıs",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Avrupa — 5K — 4 Ekim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "İstanbul'u Koşuyorum Avrupa — 10K — 4 Ekim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "48. İstanbul Maratonu — 15K — 1 Kasım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      },
+      {
+        "text": "48. İstanbul Maratonu — 42K — 1 Kasım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/38th_Istanbul_Vodafone_Marathon_%2834%29.jpg"
+      }
+    ]
+  },
+  {
+    "title": "Felsefeye Giriş: Hangilerini Okudun?",
+    "description": "Tek bir ekole kapanmadan temel felsefi metinlere açılan 16 kitaplık başlangıç rotası.",
+    "category": "books",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://en.wikipedia.org/wiki/Special:Redirect/file/Plato%20Silanion%20Musei%20Capitolini%20MC1377.png",
+    "tags": [
+      "books",
+      "philosophy",
+      "classics",
+      "reading-list"
+    ],
+    "cells": [
+      {
+        "text": "Platon — Sokrates'in Savunması",
+        "image": "https://en.wikipedia.org/wiki/Special:Redirect/file/Plato%20Silanion%20Musei%20Capitolini%20MC1377.png"
+      },
+      {
+        "text": "Platon — Devlet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Politeia_beginning._Codex_Parisinus_graecus_1807.jpg"
+      },
+      {
+        "text": "Aristoteles — Nikomakhos'a Etik",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Aristotelis_De_Moribus_ad_Nicomachum.jpg"
+      },
+      {
+        "text": "Epiktetos — Enchiridion",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Epictetus_Enchiridion_1683_page1.jpg"
+      },
+      {
+        "text": "Marcus Aurelius — Kendime Düşünceler",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Marcus_Aurelius._De_seipso%2C_seu_vita_sua_%28Xylander%2C_1558%29.jpg"
+      },
+      {
+        "text": "Seneca — Yaşamın Kısalığı Üzerine",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg"
+      },
+      {
+        "text": "Epikuros — Mektuplar ve Maksimler",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Epikouros_BM_1843.jpg"
+      },
+      {
+        "text": "Descartes — Yöntem Üzerine Konuşma",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Descartes_Discours_de_la_Methode.jpg"
+      },
+      {
+        "text": "Spinoza — Etika",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Spinoza_Ethica.jpg"
+      },
+      {
+        "text": "Hume — İnsanın Anlama Yetisi Üzerine Bir Soruşturma",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/David_Hume.jpg"
+      },
+      {
+        "text": "Kant — Ahlak Metafiziğinin Temellendirilmesi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Immanuel_Kant_portrait_c1790.jpg"
+      },
+      {
+        "text": "Nietzsche — Putların Alacakaranlığı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/G%C3%B6tzen-D%C3%A4mmerung_%281889%29.gif"
+      },
+      {
+        "text": "Kierkegaard — Korku ve Titreme",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fear_and_Trembling.jpg"
+      },
+      {
+        "text": "Camus — Sisifos Söyleni",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/75/Le_Mythe_de_Sisyphe.jpg"
+      },
+      {
+        "text": "Sartre — Varoluşçuluk Bir Hümanizmdir",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/59/Existentialism_and_Humanism_%28French_edition%29.jpg"
+      },
+      {
+        "text": "Bertrand Russell — Felsefenin Sorunları",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c7/The_Problems_of_Philosophy%2C_1912_title_page.JPG"
+      }
+    ]
+  },
+  {
+    "title": "Distopya Klasikleri",
+    "description": "Gözetimden biyopolitikaya, çöküşten kontrol toplumuna uzanan distopya seçkisi.",
+    "category": "books",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/5/51/1984_first_edition_cover.jpg",
+    "tags": [
+      "books",
+      "dystopia",
+      "classics",
+      "fiction"
+    ],
+    "cells": [
+      {
+        "text": "George Orwell — 1984",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/1984_first_edition_cover.jpg"
+      },
+      {
+        "text": "Aldous Huxley — Cesur Yeni Dünya",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/62/BraveNewWorld_FirstEdition.jpg"
+      },
+      {
+        "text": "Ray Bradbury — Fahrenheit 451",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg"
+      },
+      {
+        "text": "Yevgeni Zamyatin — Biz",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Weyevgenyzamyatin.png"
+      },
+      {
+        "text": "Margaret Atwood — Damızlık Kızın Öyküsü",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/18/TheHandmaidsTale%281stEd%29.jpg"
+      },
+      {
+        "text": "Anthony Burgess — Otomatik Portakal",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/23/Clockwork_orange.jpg"
+      },
+      {
+        "text": "Lois Lowry — Seçilmiş Kişi",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/7b/The_Giver_first_edition_1993.jpg"
+      },
+      {
+        "text": "Kazuo Ishiguro — Beni Asla Bırakma",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/66/Never_Let_Me_Go_%28First-edition_cover%29.jpg"
+      },
+      {
+        "text": "Philip K. Dick — Android'ler Elektrikli Koyun Düşler mi?",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/DoAndroidsDream.png"
+      },
+      {
+        "text": "Octavia E. Butler — Ekici'nin Meseli",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/03/ParableOfTheSower%281stEd%29.jpg"
+      },
+      {
+        "text": "José Saramago — Körlük",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Book_cover_of_Ensaio_sobre_a_Cegueira.jpg"
+      },
+      {
+        "text": "Margaret Atwood — Antilop ve Flurya",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/cd/OryxAndCrake.jpg"
+      },
+      {
+        "text": "Naomi Alderman — Güç",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/19/The_Power_%28Alderman_novel%29.jpg"
+      },
+      {
+        "text": "Yoko Ogawa — Hafıza Polisi",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/17/Hisoyaka_na_kessh%C5%8D_%28Ogawa_novel%29.png"
+      },
+      {
+        "text": "George Orwell — Hayvan Çiftliği",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Animal_Farm_-_1st_edition.jpg"
+      },
+      {
+        "text": "P. D. James — İnsan Çocukları",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/aa/Children-of-Men-bookcover.jpg"
+      }
+    ]
+  },
+  {
+    "title": "90'larda Çocuk Olmak",
+    "description": "Türkiye'de 90'larda büyüyenlerin hafızasına küçük bir stres testi.",
+    "category": "lifestyle",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/8/82/Hopscotch_de_Cubanese.jpg",
+    "tags": [
+      "lifestyle",
+      "90lar",
+      "nostalji",
+      "çocukluk"
+    ],
+    "cells": [
+      {
+        "text": "Akşam ezanına kadar sokakta oynamak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Hopscotch_de_Cubanese.jpg"
+      },
+      {
+        "text": "Taso biriktirmek",
+        "image": "https://en.wikipedia.org/wiki/Special:Redirect/file/Kids%20playing%20pog.jpeg"
+      },
+      {
+        "text": "Misket oynamak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Marble_collector_-_Flickr_-_smkybear.jpg"
+      },
+      {
+        "text": "Saklambaçta sobelemek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Meyerheim_Versteckspiel.jpg"
+      },
+      {
+        "text": "Seksek çizmek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Hopscotch_de_Cubanese.jpg"
+      },
+      {
+        "text": "Atari salonunda jeton harcamak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Daiichhisega.jpg"
+      },
+      {
+        "text": "Tetris / el konsolu taşımak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Game-Boy-FL.png"
+      },
+      {
+        "text": "Kaseti kalemle geri sarmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Compactcassette.jpg"
+      },
+      {
+        "text": "Walkman dinlemek",
+        "image": "https://en.wikipedia.org/wiki/Special:Redirect/file/Original%20Sony%20Walkman%20TPS-L2.JPG"
+      },
+      {
+        "text": "Video kaset kiralamak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/I_Luv_Video_Storefront.jpg"
+      },
+      {
+        "text": "Hugo'yu televizyondan aramaya çalışmak",
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/29/Ugo_TV_logo.jpg"
+      },
+      {
+        "text": "Turbo sakız çiğnemek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Blowing_bubble_gum.jpg"
+      },
+      {
+        "text": "Leblebi tozu yerken boğulmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Leblebi.jpg"
+      },
+      {
+        "text": "Çatapat patlatmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Cap_gun.jpg"
+      },
+      {
+        "text": "Su tabancası savaşı yapmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/The_girls_fight_with_water_cannons%21.jpg"
+      },
+      {
+        "text": "Okuldan sonra çizgi film kuşağı beklemek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg"
+      },
+      {
+        "text": "Kaset doldurtmak",
+        "image": "https://en.wikipedia.org/wiki/Special:Redirect/file/Funky%20Stuff%20mixtape.jpg"
+      },
+      {
+        "text": "36 pozluk fotoğraf filmini bitirmeyi beklemek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Undeveloped_35_mm_film.jpg"
+      },
+      {
+        "text": "Ansiklopedi setinden ödev yapmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Wikipedia_and_Encyclop%C3%A6dia_Britannica.jpg"
+      },
+      {
+        "text": "Disket taşımak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Floppy_disk_2009_G1.jpg"
+      },
+      {
+        "text": "Gazeteden poster / kupon biriktirmek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Vichy-Louis_Tauzin.jpg"
+      },
+      {
+        "text": "Mahalle maçında kale direğini taşla yapmak",
+        "image": "https://en.wikipedia.org/wiki/Special:Redirect/file/Kids%20playing%20football.jpg"
+      },
+      {
+        "text": "Kola kapağı promosyonu kovalamak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Kronenkorken_01_KMJ.jpg"
+      },
+      {
+        "text": "Telefon numaralarını ezbere bilmek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Waehlscheibe-kurzwahlnummern.jpg"
+      },
+      {
+        "text": "Televizyon anteniyle uğraşmak",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Antenne_VHF_UHF.jpg"
+      }
+    ]
+  },
+  {
+    "title": "ADHD Bingo",
+    "description": "Gündelik dikkat, unutkanlık ve hiperfokus anlarından mizahi bir kart. Tanı veya tarama testi değildir.",
+    "category": "lifestyle",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg",
+    "tags": [
+      "lifestyle",
+      "adhd",
+      "relatable",
+      "bingo"
+    ],
+    "cells": [
+      {
+        "text": "Odaya neden geldiğimi unuttum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "20 sekme açtım, hiçbirini kapatmadım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Bir işe başlarken üç yeni işe geçtim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Senado_Not%C3%ADcias_no_Twitter_Moments_%2826721094992%29.jpg"
+      },
+      {
+        "text": "Son dakikada hiperfokus geldi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Monotropic_and_polytropic_learning_-_fixed.png"
+      },
+      {
+        "text": "Anahtarı ararken elimde tuttuğumu fark ettim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Mesajı yazdım ama göndermeyi unuttum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Bir şeyi 'hemen' yapmayıp tamamen unuttum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Beş dakikalık işi gün boyu erteledim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Yeni hobiye ekipman alarak başladım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Fran%C3%A7ois_Barraud_-_Le_Philat%C3%A9liste.jpg"
+      },
+      {
+        "text": "Takvim hatırlatıcısını görüp yine unuttum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Bir şarkıyı günlerce döndürdüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Konuşurken konudan konuya atladım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Online sepette gereksiz araştırmaya daldım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/REMA_1000_Supermarket_interior_grocery_store_T%C3%B8nsberg%2C_Norway_2017-11-03_cashier_checkout_e.jpg"
+      },
+      {
+        "text": "Kahveyi koyup soğuyana kadar unuttum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg"
+      },
+      {
+        "text": "Telefonu bulmak için telefonu kullandım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Mobile_Phone_Evolution_1992_-_2014.jpg"
+      },
+      {
+        "text": "Bir işi bitirince saatlerin geçtiğini fark ettim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Scout_Girl_in_Concentration.jpg"
+      },
+      {
+        "text": "Masa toplarken eski bir şeye dalıp gittim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Bir fikri not etmezsem saniyeler içinde kaybettim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carter-notes-pope-mtg-xl.jpg"
+      },
+      {
+        "text": "Deadline yaklaşınca bir anda süper verimli oldum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Bir videoyu 1.5x izlerken başka şey yaptım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Senado_Not%C3%ADcias_no_Twitter_Moments_%2826721094992%29.jpg"
+      },
+      {
+        "text": "Randevuya çok erken ya da son anda yetiştim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      },
+      {
+        "text": "Gürültü yüzünden düşünce zincirim koptu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Noise_Research_Program_on_Hangar_Apron_-_GPN-2000-001457.jpg"
+      },
+      {
+        "text": "Bir cümleyi üç kez okuyup yine anlamadım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Information_overload1.jpg"
+      },
+      {
+        "text": "Yeni sistem kurup iki gün sonra bıraktım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Good_Habits_%28Abby_the_Pup%29.jpg"
+      },
+      {
+        "text": "Yapılacaklar listesi için ayrı bir yapılacaklar listesi yaptım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Benjamin_Franklin%27s_Schedule_%28cropped%29.jpg"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript Geliştirici Bingosu",
+    "description": "Frontend ve Node dünyasında en az bir kere yaşadığın şeyleri işaretle.",
+    "category": "work",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png",
+    "tags": [
+      "work",
+      "javascript",
+      "developer",
+      "coding"
+    ],
+    "cells": [
+      {
+        "text": "console.log ile debug ettim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "'undefined is not a function' gördüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "npm install sonrası proje bozuldu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
+      },
+      {
+        "text": "node_modules klasörünün boyutuna baktım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+      },
+      {
+        "text": "'Works on my machine' dedim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Dependency vulnerability uyarısı aldım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "async/await ile Promise zincirini kurtardım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Promise { <pending> } gördüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "CORS yüzünden saat kaybettim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Timezone bug'ı yaşadım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/World_Time_Zones_Map.svg"
+      },
+      {
+        "text": "Noktalı virgül tartışmasına girdim",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "useEffect sonsuz döngüye girdi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg"
+      },
+      {
+        "text": "Kullandığım paket deprecated oldu",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": ".env değişkenini unutup hata aldım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Production'a gece hotfix attım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "TypeScript'te any kullandım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg"
+      },
+      {
+        "text": "JSON.parse patladı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Off-by-one hatası yaptım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "== yerine === tartıştım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Regex'i internetten aldım",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Antony08.gif"
+      },
+      {
+        "text": "Cache temizleyince düzeldi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Cache%2Cbasic.svg"
+      },
+      {
+        "text": "Hydration mismatch gördüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg"
+      },
+      {
+        "text": "'Sadece küçük bir değişiklik' büyüdü",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "Git merge conflict çözdüm",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Source_code_in_Javascript.png"
+      },
+      {
+        "text": "node_modules silip yeniden kurdum",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
+      }
+    ]
+  },
+  {
+    "title": "Gerçek Olduğuna İnanamayacağın Doğa Harikaları",
+    "description": "Photoshop gibi görünen ama gerçekten var olan sekiz doğa oluşumu.",
+    "category": "other",
+    "columns": 4,
+    "cellShape": "poster",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Lake_Hillier_2_Middle_Island_Recherche_Archipelago_NR_IV-2011.JPG",
+    "tags": [
+      "other",
+      "nature",
+      "unreal",
+      "wonders"
+    ],
+    "cells": [
+      {
+        "text": "Lake Hillier — Avustralya",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Lake_Hillier_2_Middle_Island_Recherche_Archipelago_NR_IV-2011.JPG"
+      },
+      {
+        "text": "Salar de Uyuni — Bolivya",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Salar_Uyuni_au01.jpg"
+      },
+      {
+        "text": "Grand Prismatic Spring — ABD",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Aerial_image_of_Grand_Prismatic_Spring_%28view_from_the_south%29.jpg"
+      },
+      {
+        "text": "Pamukkale — Türkiye",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Pamukkale%2C_Denizli_2026_68.jpg"
+      },
+      {
+        "text": "Zhangye Danxia — Çin",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Zhangye_National_Geopark_5.jpg"
+      },
+      {
+        "text": "Aurora Borealis — İzlanda",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg"
+      },
+      {
+        "text": "Blood Falls — Antarktika",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Blood_Falls_by_Peter_Rejcek.jpg"
+      },
+      {
+        "text": "Waitomo Glowworm Caves — Yeni Zelanda",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Glowworm_Grotto%2C_Waitomo_Glowworm_Cave.jpg"
+      }
+    ]
+  },
+  {
+    "title": "En İyi Upper Body Egzersizleri",
+    "description": "Göğüs, sırt, omuz ve kollar için güçlü bir hareket havuzu. Program reçetesi değil; yaptığın ve sevdiğin hareketleri seç.",
+    "category": "other",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bench_press_1.jpg",
+    "tags": [
+      "other",
+      "fitness",
+      "upper-body",
+      "workout"
+    ],
+    "cells": [
+      {
+        "text": "Bench Press",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bench_press_1.jpg"
+      },
+      {
+        "text": "Incline Dumbbell Press",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Bench_press_1.jpg"
+      },
+      {
+        "text": "Push-Up",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Marines_do_pushups.jpg"
+      },
+      {
+        "text": "Dips",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Dipexercise.svg"
+      },
+      {
+        "text": "Overhead Press",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Seated-military-shoulder-press-1.png"
+      },
+      {
+        "text": "Lateral Raise",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/DumbbellFlye.JPG"
+      },
+      {
+        "text": "Rear Delt Fly",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/DumbbellFlye.JPG"
+      },
+      {
+        "text": "Pull-Up",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Marine_Pull-ups.jpg"
+      },
+      {
+        "text": "Chin-Up",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Marine_Pull-ups.jpg"
+      },
+      {
+        "text": "Lat Pulldown",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/PulldownMachineExercise.JPG"
+      },
+      {
+        "text": "Barbell Row",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Barbell_row.jpg"
+      },
+      {
+        "text": "One-Arm Dumbbell Row",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Barbell_row.jpg"
+      },
+      {
+        "text": "Seated Cable Row",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Barbell_row.jpg"
+      },
+      {
+        "text": "Face Pull",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Barbell_row.jpg"
+      },
+      {
+        "text": "Barbell Curl",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Standing-biceps-curl-1.gif"
+      },
+      {
+        "text": "Incline Dumbbell Curl",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Standing-biceps-curl-1.gif"
+      },
+      {
+        "text": "Hammer Curl",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Standing-biceps-curl-1.gif"
+      },
+      {
+        "text": "Triceps Pushdown",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/DumbbellTricepsExtension.JPG"
+      },
+      {
+        "text": "Overhead Triceps Extension",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/DumbbellTricepsExtension.JPG"
+      },
+      {
+        "text": "Skull Crusher",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/DumbbellTricepsExtension.JPG"
+      }
+    ]
+  },
+  {
+    "title": "Starbucks Sonbahar Menüsü — Hangisini Denersin?",
+    "description": "Starbucks'ın sınırlı süreli sezonluk içeceklerinden hangilerini denedin ya da denemek istersin?",
+    "category": "other",
+    "columns": 5,
+    "cellShape": "square",
+    "checkStyle": "border",
+    "creatorUsername": "lunarisdev",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Pumpkin_Spice_%2848986157673%29_cropped.png",
+    "tags": [
+      "starbucks",
+      "kahve",
+      "sonbahar",
+      "sezonluk",
+      "reklam"
+    ],
+    "cells": [
+      {
+        "text": "Pumpkin Spice Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Pumpkin_Spice_%2848986157673%29_cropped.png"
+      },
+      {
+        "text": "Iced Pumpkin Spice Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Pumpkin_Spice_%2848986157673%29_cropped.png"
+      },
+      {
+        "text": "Pumpkin Spice Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Strawberry_Delight_Frappuccino.JPG"
+      },
+      {
+        "text": "Pumpkin Spice Cream Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Strawberry_Delight_Frappuccino.JPG"
+      },
+      {
+        "text": "Pumpkin Cream Iced Matcha Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matcha_Scoop.jpg"
+      },
+      {
+        "text": "Iced Spanish Cream Matcha Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matcha_Scoop.jpg"
+      },
+      {
+        "text": "Cherry & Pomegranate Refresha®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pomegranate_Juice_%282019%29.jpg"
+      },
+      {
+        "text": "Caramel Mocha Cloud Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Mocha_coffee.jpg"
+      },
+      {
+        "text": "Strawberry Matcha Cloud Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg"
+      },
+      {
+        "text": "Tiramisu Cream Iced Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg"
+      },
+      {
+        "text": "Tiramisu Velvet Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg"
+      },
+      {
+        "text": "Tiramisu Velvet Matcha Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matcha_Scoop.jpg"
+      },
+      {
+        "text": "Tiramisu Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg"
+      },
+      {
+        "text": "Tiramisu Cream Iced Matcha Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matcha_Scoop.jpg"
+      },
+      {
+        "text": "Brown Sugar Cloud Frappuccino®",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Sucre_blanc_cassonade_complet_rapadura.jpg"
+      },
+      {
+        "text": "Iced Pecan Maple Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Carya_illinoinensis.jpg"
+      },
+      {
+        "text": "Iced Pecan Maple Macchiato",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Macchiato_%287199366530%29.jpg"
+      },
+      {
+        "text": "Pecan Maple Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Carya_illinoinensis.jpg"
+      },
+      {
+        "text": "Pumpkin Cream Matcha Latte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Matcha_Scoop.jpg"
+      },
+      {
+        "text": "Pumpkin Spice Caramel Macchiato",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Macchiato_%287199366530%29.jpg"
+      }
+    ]
+  }
+]

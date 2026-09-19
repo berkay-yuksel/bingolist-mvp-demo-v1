@@ -4,23 +4,28 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import { USERS } from '@/lib/mockData';
 
 const STORAGE_KEY = 'bingolist:currentUserId';
-const DEV_SWITCHER_KEY = 'bingolist:devSwitcherEnabled';
-// Visiting the site once with ?dev=<this> unlocks the demo persona
-// switcher on that browser from then on (stored in localStorage) — anyone
-// else just sees the normal login/signup flow. Change this to your own
-// secret before sharing the link around.
-const DEV_SWITCHER_SECRET = 'bingoadmin2026';
 const UserCtx = createContext(null);
 
-// Two identity sources, in priority order:
-// 1. A real logged-in session (cookie-based, from /api/auth) — this is
-//    what a person using the public deployment actually has.
-// 2. The old localStorage "switch persona" dev tool, using the static
-//    seed USERS — kept only as a hidden admin/dev tool. It's invisible to
-//    everyone by default; visiting once with ?dev=<secret> reveals it on
-//    that browser going forward, and it's always available on localhost.
+// Used only when there's no real session AND the static demo USERS list is
+// empty (e.g. once all the placeholder seed accounts are deleted from
+// mockData.js) — keeps anonymous browsing from crashing instead of relying
+// on USERS[0] always existing.
+const GUEST_USER = {
+  id: 'guest',
+  username: 'guest',
+  displayName: 'Ziyaretçi',
+  avatarColor: '#4FA3FF',
+  avatarImage: null,
+  role: 'player',
+  isCreator: false,
+};
+
+// Identity source: a real logged-in session (cookie-based, from
+// /api/auth). The old localStorage "switch persona" dev tool is fully
+// retired now that the site has real accounts — devSwitcherEnabled always
+// stays false, kept only so nothing else in the app has to change.
 export function UserProvider({ children }) {
-  const [userId, setUserIdState] = useState(USERS[0].id);
+  const [userId, setUserIdState] = useState(USERS[0]?.id || GUEST_USER.id);
   const [realUser, setRealUser] = useState(null);
   const [ready, setReady] = useState(false);
   const [devSwitcherEnabled, setDevSwitcherEnabled] = useState(false);
@@ -42,13 +47,8 @@ export function UserProvider({ children }) {
       setUserIdState(stored);
     }
 
-    const params = new URLSearchParams(window.location.search);
-    const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-    if (params.get('dev') === DEV_SWITCHER_SECRET) {
-      window.localStorage.setItem(DEV_SWITCHER_KEY, '1');
-    }
-    const unlocked = window.localStorage.getItem(DEV_SWITCHER_KEY) === '1';
-    setDevSwitcherEnabled(isLocalhost || unlocked);
+    // Demo persona switcher retired now that the site has real accounts.
+    setDevSwitcherEnabled(false);
 
     refreshSession().finally(() => setReady(true));
   }, [refreshSession]);
@@ -66,7 +66,7 @@ export function UserProvider({ children }) {
   }
 
   const isRealSession = !!realUser;
-  const user = isRealSession ? realUser : USERS.find((u) => u.id === userId) || USERS[0];
+  const user = isRealSession ? realUser : USERS.find((u) => u.id === userId) || USERS[0] || GUEST_USER;
 
   return (
     <UserCtx.Provider

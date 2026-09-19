@@ -9,11 +9,21 @@ const path = require('path');
 const SITE_URL = 'https://bingolist-demo.vercel.app/'; // <-- burayı değiştir
 
 const USERNAME_TO_ID = {
+  spinoza: 'u_asli',
+  nietzsche: 'u_deniz',
+  epiktetos: 'u_mert',
+  epikuros: 'u_ece',
+  marcusaurelius: 'u_can',
+  seneca: 'u_selin',
+  camus: 'u_leyla',
+  schopenhauer: 'u_arda',
+  carljung: 'u_duru',
+  aynrand: 'u_bora',
   lunarisdev: 'u_1789495703392',
 };
 
 async function main() {
-  const cards = JSON.parse(fs.readFileSync(path.join(__dirname, 'cards.json'), 'utf-8'));
+  const cards = JSON.parse(fs.readFileSync(path.join(__dirname, 'cards3.json'), 'utf-8'));
   console.log(`${cards.length} kart bulundu, gönderiliyor...`);
 
   for (const card of cards) {
