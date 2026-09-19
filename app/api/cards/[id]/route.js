@@ -1,5 +1,22 @@
 import { NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 import { readDB, updateDB, sessionKey, canEditCardContent, editableUntil } from '@/lib/db';
+
+const BUCKET = 'card-images';
+const useSupabase = !!(process.env.SUPABASE_URL && process.env.SUPABASE_SECRET_KEY);
+const supabase = useSupabase ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SECRET_KEY) : null;
+
+// Pulls the storage object path (e.g. "cover/1234-ab.webp") back out of a
+// public Storage URL. Returns null for anything else — an external link
+// (AI-sourced Wikipedia image, etc.) or a base64 data URI — so those are
+// simply left alone rather than mistakenly targeted for deletion.
+function storagePathFromUrl(url) {
+  if (!url || typeof url !== 'string') return null;
+  const marker = `/storage/v1/object/public/${BUCKET}/`;
+  const idx = url.indexOf(marker);
+  if (idx === -1) return null;
+  return url.slice(idx + marker.length);
+}
 
 function buildCardPayload(db, card, userId) {
   const creator = db.users.find((u) => u.id === card.creatorId);
@@ -130,15 +147,29 @@ export async function DELETE(request, { params }) {
       return { error: 'Sadece kartın sahibi silebilir.', status: 403 };
     }
 
+    const storagePaths = [card.coverImage, ...card.cells.map((c) => c.image)]
+      .map(storagePathFromUrl)
+      .filter(Boolean);
+
     db.cards = db.cards.filter((c) => c.id !== id);
     db.collections.forEach((col) => {
       col.cardIds = col.cardIds.filter((cid) => cid !== id);
     });
     if (db.heroBanner?.cardId === id) db.heroBanner.cardId = null;
 
-    return { ok: true };
+    return { ok: true, storagePaths };
   });
 
   if (result.error) return NextResponse.json({ error: result.error }, { status: result.status });
+
+  if (useSupabase && result.storagePaths?.length) {
+    const { error } = await supabase.storage.from(BUCKET).remove(result.storagePaths);
+    if (error) {
+      // The card is already gone from the DB either way — a Storage
+      // cleanup failure shouldn't block the delete, just get logged.
+      console.error('Storage cleanup failed for deleted card:', error.message);
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
