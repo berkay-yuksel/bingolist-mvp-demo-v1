@@ -78,9 +78,7 @@ function CreateInner() {
   const [loadingRemix, setLoadingRemix] = useState(!!remixOf);
   const [previewSelected, setPreviewSelected] = useState(new Set());
 
-  useEffect(() => {
-    if (hideCellText && !cells.some((c) => c.image)) setHideCellText(false);
-  }, [cells, hideCellText]);
+
 
   useEffect(() => {
     if (!remixOf) return;
@@ -339,17 +337,16 @@ function CreateInner() {
             </div>
           </div>
         </div>
-        {cells.some((c) => c.image) && (
-          <label className="flex items-center gap-2 text-xs text-paper/70">
-            <input
-              type="checkbox"
-              checked={hideCellText}
-              onChange={(e) => setHideCellText(e.target.checked)}
-              className="accent-mint"
-            />
-            Hücre yazılarını gizle (sadece görseller görünsün)
-          </label>
-        )}
+<label className="flex items-center gap-2 text-xs text-paper/70">
+  <input
+    type="checkbox"
+    checked={hideCellText}
+    onChange={(e) => setHideCellText(e.target.checked)}
+    className="accent-mint"
+  />
+  Hücre yazılarını gizle (sadece görseller görünsün){' '}
+  <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
+</label>
       </section>
 
       {/* Cells */}
@@ -457,7 +454,7 @@ function CreateInner() {
             checkStyle={checkStyle}
             shape={cellShape}
             accent={accentForCategory(category)}
-            hideText={hideCellText}
+            hideText={hideCellText && cells.every((c) => c.image)}
             onToggle={(id) =>
               setPreviewSelected((prev) => {
                 const next = new Set(prev);

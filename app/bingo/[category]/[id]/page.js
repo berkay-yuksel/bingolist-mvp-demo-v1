@@ -291,7 +291,7 @@ export default function PlayPage({ params }) {
           checkStyle={card.checkStyle}
           shape={card.cellShape}
           accent={card.theme?.accent}
-          hideText={card.hideCellText}
+      hideText={card.hideCellText && card.cells.every((c) => c.image)}
           onToggle={toggleCell}
         />
       </div>

@@ -36,9 +36,10 @@ export async function POST(request) {
     return NextResponse.json({ error: 'title, category ve en az bir hücre gerekli.' }, { status: 400 });
   }
 
-  const id = slugify(body.title) + '-' + Math.random().toString(36).slice(2, 7);
-
   const newCard = await updateDB((db) => {
+    const existingIds = new Set(db.cards.map((c) => c.id));
+    const id = generateShortCode(existingIds);
+
     const card = {
       id,
       title: body.title.trim(),
@@ -94,13 +95,18 @@ export async function POST(request) {
   return NextResponse.json({ card: publicCardSummary(newCard) }, { status: 201 });
 }
 
-function slugify(str) {
-  return str
-    .toLowerCase()
-    .replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-    .slice(0, 40) || 'card';
+// Short, opaque card IDs instead of a title-derived slug — shorter URLs,
+// and the URL no longer leaks/locks in whatever the title was at creation
+// time. 7 lowercase-alphanumeric chars (~36^7 ≈ 78 billion combos) is
+// comfortably collision-free at this app's scale; the uniqueness check
+// against existing IDs is just a belt-and-suspenders backstop.
+function generateShortCode(existingIds) {
+  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let code;
+  do {
+    code = Array.from({ length: 7 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+  } while (existingIds.has(code));
+  return code;
 }
 
 function buildTags(category, tags) {

@@ -79,9 +79,7 @@ export default function EditCardPage({ params }) {
   const [saved, setSaved] = useState(false);
   const [previewSelected, setPreviewSelected] = useState(new Set());
 
-  useEffect(() => {
-    if (hideCellText && !cells.some((c) => c.image)) setHideCellText(false);
-  }, [cells, hideCellText]);
+
 
   useEffect(() => {
     fetch(`/api/cards/${id}?userId=${userId}`)
@@ -393,17 +391,16 @@ export default function EditCardPage({ params }) {
             </div>
           </div>
         </div>
-        {cells.some((c) => c.image) && (
-          <label className="flex items-center gap-2 text-xs text-paper/70">
-            <input
-              type="checkbox"
-              checked={hideCellText}
-              onChange={(e) => setHideCellText(e.target.checked)}
-              className="accent-mint"
-            />
-            Hücre yazılarını gizle (sadece görseller görünsün)
-          </label>
-        )}
+       <label className="flex items-center gap-2 text-xs text-paper/70">
+  <input
+    type="checkbox"
+    checked={hideCellText}
+    onChange={(e) => setHideCellText(e.target.checked)}
+    className="accent-mint"
+  />
+  Hücre yazılarını gizle (sadece görseller görünsün){' '}
+  <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
+</label>
       </section>
 
       {/* Cells */}
@@ -503,7 +500,7 @@ export default function EditCardPage({ params }) {
             checkStyle={checkStyle}
             shape={cellShape}
             accent={accentForCategory(category)}
-            hideText={hideCellText}
+            hideText={hideCellText && cells.every((c) => c.image)}
             onToggle={(cellId) =>
               setPreviewSelected((prev) => {
                 const next = new Set(prev);
