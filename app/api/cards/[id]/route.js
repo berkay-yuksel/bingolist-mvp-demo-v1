@@ -46,7 +46,7 @@ function buildCardPayload(db, card, userId) {
         return acc;
       }, {}),
     },
-    creator: creator ? { id: creator.id, username: creator.username, displayName: creator.displayName, avatarColor: creator.avatarColor } : null,
+    creator: creator ? { id: creator.id, username: creator.username, displayName: creator.displayName, avatarColor: creator.avatarColor, avatarImage: creator.avatarImage || null } : null,
     original: original ? { id: original.id, title: original.title, category: original.category } : null,
     originalCreator: originalCreator ? { username: originalCreator.username, displayName: originalCreator.displayName } : null,
     viewerState: {

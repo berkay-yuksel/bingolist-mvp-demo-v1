@@ -244,8 +244,16 @@ export default function PlayPage({ params }) {
 
       {creator && (
         <Link href={`/profile/${creator.username}`} className="mb-4 flex w-fit items-center gap-2 text-sm text-paper/60 hover:text-paper">
-          <span className="grid h-6 w-6 place-items-center rounded-full text-[11px] font-bold text-ink" style={{ backgroundColor: creator.avatarColor }}>
-            {creator.displayName[0]}
+          <span
+            className="grid h-6 w-6 place-items-center overflow-hidden rounded-full text-[11px] font-bold text-ink"
+            style={{ backgroundColor: creator.avatarColor }}
+          >
+            {creator.avatarImage ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={creator.avatarImage} alt="" className="h-full w-full object-cover" />
+            ) : (
+              creator.displayName[0]
+            )}
           </span>
           @{creator.username}
         </Link>
