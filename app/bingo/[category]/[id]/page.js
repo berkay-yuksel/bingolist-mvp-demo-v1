@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, BarChart3, Pencil, ShieldAlert, Check } from 'lucide-react';
 import { useCurrentUser } from '@/components/UserContext';
+import { renderMarkdownLite } from '@/lib/markdown';
 import BingoGrid from '@/components/BingoGrid';
 import ActionBar from '@/components/ActionBar';
 import ShareModal from '@/components/ShareModal';
@@ -37,6 +38,7 @@ export default function PlayPage({ params }) {
   const [moreCards, setMoreCards] = useState(null);
   const [categoryCards, setCategoryCards] = useState(null);
   const [idCopied, setIdCopied] = useState(false);
+  const [descExpanded, setDescExpanded] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -210,7 +212,19 @@ export default function PlayPage({ params }) {
           )}
         </div>
       </div>
-      {card.description && <p className="mb-3 text-base text-paper/60">{card.description}</p>}
+      {card.description && (
+        <div className="mb-3 text-base text-paper/60">
+          <div
+            className={descExpanded ? '' : 'line-clamp-4'}
+            dangerouslySetInnerHTML={{ __html: renderMarkdownLite(card.description) }}
+          />
+          {card.description.length > 220 && (
+            <button onClick={() => setDescExpanded((v) => !v)} className="mt-1 text-sm font-medium text-mint hover:underline">
+              {descExpanded ? 'Daha az göster' : 'Tümünü gör'}
+            </button>
+          )}
+        </div>
+      )}
 
       {isOwner && pubState && (
         <div className={`mb-4 rounded-lg border px-4 py-2.5 text-sm ${pubState.tone}`}>
@@ -291,7 +305,7 @@ export default function PlayPage({ params }) {
           checkStyle={card.checkStyle}
           shape={card.cellShape}
           accent={card.theme?.accent}
-      hideText={card.hideCellText && card.cells.every((c) => c.image)}
+          hideText={card.hideCellText && card.cells.every((c) => c.image)}
           onToggle={toggleCell}
         />
       </div>

@@ -79,8 +79,6 @@ export default function EditCardPage({ params }) {
   const [saved, setSaved] = useState(false);
   const [previewSelected, setPreviewSelected] = useState(new Set());
 
-
-
   useEffect(() => {
     fetch(`/api/cards/${id}?userId=${userId}`)
       .then((r) => {
@@ -297,11 +295,13 @@ export default function EditCardPage({ params }) {
           />
         </div>
         <div>
-          <label className="mb-1 block text-xs font-medium text-paper/60">Açıklama</label>
+          <label className="mb-1 block text-xs font-medium text-paper/60">
+            Açıklama <span className="text-paper/35">(markdown desteklenir: **kalın**, *italik*, "- " liste)</span>
+          </label>
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            rows={2}
+            rows={6}
             className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-sm focus:border-mint"
           />
         </div>
@@ -391,16 +391,16 @@ export default function EditCardPage({ params }) {
             </div>
           </div>
         </div>
-       <label className="flex items-center gap-2 text-xs text-paper/70">
-  <input
-    type="checkbox"
-    checked={hideCellText}
-    onChange={(e) => setHideCellText(e.target.checked)}
-    className="accent-mint"
-  />
-  Hücre yazılarını gizle (sadece görseller görünsün){' '}
-  <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
-</label>
+        <label className="flex items-center gap-2 text-xs text-paper/70">
+          <input
+            type="checkbox"
+            checked={hideCellText}
+            onChange={(e) => setHideCellText(e.target.checked)}
+            className="accent-mint"
+          />
+          Hücre yazılarını gizle (sadece görseller görünsün){' '}
+          <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
+        </label>
       </section>
 
       {/* Cells */}
