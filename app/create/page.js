@@ -347,7 +347,16 @@ function CreateInner() {
             </div>
           </div>
         </div>
-        <label className="flex items-center gap-2 text-xs text-paper/70">
+      </section>
+
+      {/* Cells */}
+      <section className="mt-4 rounded-lg border border-ink-500 bg-ink-700/40 p-4">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <p className="text-xs font-medium text-paper/60">Hücreler ({cells.length})</p>
+          <BulkImagePicker onFiles={handleBulkImages} />
+        </div>
+
+        <label className="mb-4 flex items-center gap-2 text-xs text-paper/70">
           <input
             type="checkbox"
             checked={hideCellText}
@@ -357,14 +366,6 @@ function CreateInner() {
           Hücre yazılarını gizle (sadece görseller görünsün){' '}
           <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
         </label>
-      </section>
-
-      {/* Cells */}
-      <section className="mt-4 rounded-lg border border-ink-500 bg-ink-700/40 p-4">
-        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-          <p className="text-xs font-medium text-paper/60">Hücreler ({cells.length})</p>
-          <BulkImagePicker onFiles={handleBulkImages} />
-        </div>
 
         <div className="mb-4 rounded-md border border-dashed border-ink-500 p-3">
           <p className="mb-1.5 text-xs font-medium text-paper/60">Hücreleri Toplu Doldur</p>
