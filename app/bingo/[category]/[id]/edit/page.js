@@ -9,6 +9,7 @@ import { CATEGORIES } from '@/lib/mockData';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
+import { parseBulkText, applyBulkText, filenameToText } from '@/lib/bulkFill';
 
 function accentForCategory(category) {
   return CATEGORIES.find((c) => c.slug === category)?.accent || '#38D6A7';
@@ -71,6 +72,8 @@ export default function EditCardPage({ params }) {
   const [coverImage, setCoverImage] = useState(null);
   const [columns, setColumns] = useState(3);
   const [cells, setCells] = useState([]);
+  const [bulkTextInput, setBulkTextInput] = useState('');
+  const [useFilenameAsText, setUseFilenameAsText] = useState(false);
   const [activePreset, setActivePreset] = useState('custom');
   const [customRows, setCustomRows] = useState(3);
   const [customCols, setCustomCols] = useState(3);
@@ -150,12 +153,23 @@ export default function EditCardPage({ params }) {
     setCells((prev) => {
       let imgIdx = 0;
       const next = prev.map((c) => {
-        if (imgIdx < images.length && !c.image) return { ...c, image: images[imgIdx++] };
+        if (imgIdx < images.length && !c.image) {
+          const img = images[imgIdx++];
+          return { ...c, image: img.url, text: useFilenameAsText && !c.text ? filenameToText(img.filename) : c.text };
+        }
         return c;
       });
-      while (imgIdx < images.length) next.push({ ...emptyCell(next.length), image: images[imgIdx++] });
+      while (imgIdx < images.length) {
+        const img = images[imgIdx++];
+        next.push({ ...emptyCell(next.length), image: img.url, text: useFilenameAsText ? filenameToText(img.filename) : '' });
+      }
       return next;
     });
+  }
+
+  function applyBulkTextInput() {
+    const entries = parseBulkText(bulkTextInput);
+    setCells((prev) => applyBulkText(prev, entries));
   }
 
   async function handleSubmit(e) {
@@ -408,6 +422,35 @@ export default function EditCardPage({ params }) {
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <p className="text-xs font-medium text-paper/60">Hücreler ({cells.length})</p>
           <BulkImagePicker onFiles={handleBulkImages} />
+        </div>
+
+        <div className="mb-4 rounded-md border border-dashed border-ink-500 p-3">
+          <p className="mb-1.5 text-xs font-medium text-paper/60">Hücreleri Toplu Doldur</p>
+          <textarea
+            value={bulkTextInput}
+            onChange={(e) => setBulkTextInput(e.target.value)}
+            rows={4}
+            placeholder={'Her satır bir hücre olur:\nDark Souls\nElden Ring\nBloodborne\n\n(tek satırsa virgülle de ayırabilirsin)'}
+            className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-xs focus:border-mint"
+          />
+          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+            <label className="flex items-center gap-2 text-[11px] text-paper/60">
+              <input
+                type="checkbox"
+                checked={useFilenameAsText}
+                onChange={(e) => setUseFilenameAsText(e.target.checked)}
+                className="accent-mint"
+              />
+              Toplu görsel yüklerken dosya adını yazı olarak kullan
+            </label>
+            <button
+              type="button"
+              onClick={applyBulkTextInput}
+              className="rounded-md border border-ink-500 px-3 py-1.5 text-xs font-medium text-paper/70 hover:border-mint hover:text-mint"
+            >
+              Uygula
+            </button>
+          </div>
         </div>
 
         <div className="mb-3 flex flex-wrap gap-1.5">
