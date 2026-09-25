@@ -28,7 +28,7 @@ const MARKS = [
 ];
 const PRESETS = [
   { id: '3x3', n: 9, rows: 3, cols: 3 },
-  { id: '4x5', n: 20, rows: 4, cols: 5 },
+  { id: '5x4', n: 20, rows: 5, cols: 4 },
   { id: '5x5', n: 25, rows: 5, cols: 5 },
   { id: '10x10', n: 100, rows: 10, cols: 10 },
 ];
@@ -36,7 +36,7 @@ const MAX_COLS = 10;
 const MAX_ROWS = 20;
 
 function emptyCell(i) {
-  return { id: `c${Date.now()}_${i}`, text: '', emoji: null, image: null, description: '' };
+  return { id: `c${Date.now()}_${i}`, text: '', emoji: null, image: null, description: '', sourceFilename: null };
 }
 
 function resizeCells(prev, total) {
@@ -73,7 +73,6 @@ export default function EditCardPage({ params }) {
   const [columns, setColumns] = useState(3);
   const [cells, setCells] = useState([]);
   const [bulkTextInput, setBulkTextInput] = useState('');
-  const [useFilenameAsText, setUseFilenameAsText] = useState(false);
   const [activePreset, setActivePreset] = useState('custom');
   const [customRows, setCustomRows] = useState(3);
   const [customCols, setCustomCols] = useState(3);
@@ -162,16 +161,22 @@ export default function EditCardPage({ params }) {
       const next = resized.map((c) => {
         if (imgIdx < images.length && !c.image) {
           const img = images[imgIdx++];
-          return { ...c, image: img.url, text: useFilenameAsText && !c.text ? filenameToText(img.filename) : c.text };
+          return { ...c, image: img.url, sourceFilename: img.filename };
         }
         return c;
       });
       while (imgIdx < images.length) {
         const img = images[imgIdx++];
-        next.push({ ...emptyCell(next.length), image: img.url, text: useFilenameAsText ? filenameToText(img.filename) : '' });
+        next.push({ ...emptyCell(next.length), image: img.url, sourceFilename: img.filename });
       }
       return next;
     });
+  }
+
+  function applyFilenamesAsText() {
+    setCells((prev) =>
+      prev.map((c) => (c.image && c.sourceFilename && !c.text ? { ...c, text: filenameToText(c.sourceFilename) } : c))
+    );
   }
 
   function applyBulkTextInput() {
@@ -426,7 +431,7 @@ export default function EditCardPage({ params }) {
       {/* Cells */}
       <section className="mt-4 rounded-lg border border-ink-500 bg-ink-700/40 p-4">
         <p className="text-sm font-bold text-paper">Hücreler ({cells.length})</p>
-        <p className="mb-3 text-xs text-paper/45">Buradan toplu ekleyebilir ya da aşağıdan tek tek ekleyebilirsin.</p>
+        <p className="mb-3 text-xs text-paper/45">Toplu eklemek için burayı, tek tek eklemek için aşağıdaki alanı kullanabilirsin.</p>
 
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <BulkImagePicker onFiles={handleBulkImages} label="Görsel ekle" />
@@ -445,8 +450,9 @@ export default function EditCardPage({ params }) {
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={() => setUseFilenameAsText((v) => !v)}
-            className={`text-xs font-medium ${useFilenameAsText ? 'text-mint' : 'text-paper/40 hover:text-paper/60'}`}
+            onClick={applyFilenamesAsText}
+            title="Görseli olup yazısı boş olan hücreleri, o görselin dosya adından doldurur"
+            className="text-xs font-medium text-paper/40 hover:text-mint"
           >
             dosya adlarından içe aktar
           </button>
@@ -481,7 +487,7 @@ export default function EditCardPage({ params }) {
           </div>
 
           <button type="button" onClick={() => setHideCellText((v) => !v)} className="flex items-center gap-2 text-xs text-paper/60">
-            Metinleri sadece istatistik için kullan
+            Metinleri sadece istatistik için kullan <span className="text-paper/35">(ızgarada gizlenir)</span>
             <span className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition ${hideCellText ? 'bg-mint' : 'bg-ink-500'}`}>
               <span
                 className={`inline-block h-3.5 w-3.5 transform rounded-full bg-ink-900 transition-transform ${
@@ -519,7 +525,7 @@ export default function EditCardPage({ params }) {
           </div>
         )}
 
-        <div className="max-h-[420px] space-y-2 overflow-y-auto pr-1">
+        <div className="themed-scroll max-h-[420px] space-y-2 overflow-y-auto pr-1">
           {cells.map((cell, i) => (
             <div key={cell.id} className="flex items-center gap-2 rounded-md border border-ink-500 bg-ink-800 p-2">
               <span className="w-6 shrink-0 text-center font-mono text-[10px] text-paper/30">{i + 1}</span>
@@ -529,7 +535,14 @@ export default function EditCardPage({ params }) {
                 placeholder={`Hücre ${i + 1} metni`}
                 className="min-w-0 flex-1 rounded-md border border-ink-500 bg-ink-700 px-2 py-1.5 text-sm"
               />
-              <ImagePicker value={cell.image} onChange={(img) => updateCell(cell.id, { image: img })} compact type="cell" />
+              <div className="group relative shrink-0">
+                <ImagePicker value={cell.image} onChange={(img) => updateCell(cell.id, { image: img })} compact type="cell" />
+                {(cell.text || cell.sourceFilename) && (
+                  <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink-900 px-2 py-1 text-[11px] text-paper opacity-0 shadow-ticket transition-opacity group-hover:opacity-100">
+                    {cell.text || filenameToText(cell.sourceFilename)}
+                  </div>
+                )}
+              </div>
               <button
                 type="button"
                 onClick={() => removeCell(cell.id)}
