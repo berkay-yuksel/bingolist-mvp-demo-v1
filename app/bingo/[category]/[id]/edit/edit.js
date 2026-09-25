@@ -9,6 +9,7 @@ import { CATEGORIES } from '@/lib/mockData';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
+import HoverTooltip from '@/components/HoverTooltip';
 import { parseBulkText, applyBulkText, filenameToText, computeAutoGrid } from '@/lib/bulkFill';
 
 function accentForCategory(category) {
@@ -537,14 +538,9 @@ export default function EditCardPage({ params }) {
                 placeholder={`Hücre ${i + 1} metni`}
                 className="min-w-0 flex-1 rounded-md border border-ink-500 bg-ink-700 px-2 py-1.5 text-sm"
               />
-              <div className="group relative shrink-0">
+              <HoverTooltip text={cell.text || (cell.sourceFilename ? filenameToText(cell.sourceFilename) : null)}>
                 <ImagePicker value={cell.image} onChange={(img) => updateCell(cell.id, { image: img })} compact type="cell" />
-                {(cell.text || cell.sourceFilename) && (
-                  <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink-900 px-2 py-1 text-[11px] text-paper opacity-0 shadow-ticket transition-opacity group-hover:opacity-100">
-                    {cell.text || filenameToText(cell.sourceFilename)}
-                  </div>
-                )}
-              </div>
+              </HoverTooltip>
               <button
                 type="button"
                 onClick={() => removeCell(cell.id)}

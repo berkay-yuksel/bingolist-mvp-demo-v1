@@ -8,6 +8,7 @@ import { CATEGORIES } from '@/lib/mockData';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
+import HoverTooltip from '@/components/HoverTooltip';
 import { parseBulkText, applyBulkText, filenameToText, computeAutoGrid } from '@/lib/bulkFill';
 
 function accentForCategory(category) {
@@ -75,6 +76,7 @@ function CreateInner() {
   const [customCols, setCustomCols] = useState(3);
   const [originalCardId, setOriginalCardId] = useState(null);
   const [originalTitle, setOriginalTitle] = useState(null);
+  const [originalCellsSnapshot, setOriginalCellsSnapshot] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
   const [loadingRemix, setLoadingRemix] = useState(!!remixOf);
@@ -100,6 +102,7 @@ function CreateInner() {
         setActivePreset('custom');
         setOriginalCardId(card.id);
         setOriginalTitle(card.title);
+        setOriginalCellsSnapshot(card.cells.map((c) => ({ text: (c.text || '').trim(), image: c.image || null })));
         setLoadingRemix(false);
       });
   }, [remixOf]);
@@ -201,6 +204,16 @@ function CreateInner() {
     if (!title.trim()) return setError('Kart için bir başlık gerekli.');
     const filledCells = cells.filter((c) => c.text.trim() || c.image);
     if (filledCells.length === 0) return setError('En az bir hücreye içerik girmelisin.');
+
+    if (originalCardId && originalCellsSnapshot) {
+      const currentSnapshot = cells.map((c) => ({ text: (c.text || '').trim(), image: c.image || null }));
+      const identical =
+        currentSnapshot.length === originalCellsSnapshot.length &&
+        currentSnapshot.every((c, i) => c.text === originalCellsSnapshot[i].text && c.image === originalCellsSnapshot[i].image);
+      if (identical) {
+        return setError('Remix yapmak için en az bir hücrede (yazı veya görsel) değişiklik yapmalısın.');
+      }
+    }
 
     setSubmitting(true);
     try {
@@ -493,14 +506,9 @@ function CreateInner() {
                 placeholder={`Hücre ${i + 1} metni`}
                 className="min-w-0 flex-1 rounded-md border border-ink-500 bg-ink-700 px-2 py-1.5 text-sm"
               />
-              <div className="group relative shrink-0">
+              <HoverTooltip text={cell.text || (cell.sourceFilename ? filenameToText(cell.sourceFilename) : null)}>
                 <ImagePicker value={cell.image} onChange={(img) => updateCell(cell.id, { image: img })} compact type="cell" />
-                {(cell.text || cell.sourceFilename) && (
-                  <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1.5 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink-900 px-2 py-1 text-[11px] text-paper opacity-0 shadow-ticket transition-opacity group-hover:opacity-100">
-                    {cell.text || filenameToText(cell.sourceFilename)}
-                  </div>
-                )}
-              </div>
+              </HoverTooltip>
               <button
                 type="button"
                 onClick={() => removeCell(cell.id)}

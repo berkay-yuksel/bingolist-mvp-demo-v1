@@ -1,5 +1,7 @@
 'use client';
 
+import HoverTooltip from './HoverTooltip';
+
 const MARKS = {
   check: '✓',
   dot: '●',
@@ -17,53 +19,56 @@ export default function BingoCell({ cell, selected, percent, showStats, checkSty
   const isBorderStyle = checkStyle === 'border';
   const mark = isBorderStyle ? null : MARKS[checkStyle] || MARKS.check;
   const markColor = accent || '#9C9A92';
+  const tooltipText = hideText && (cell.text || cell.emoji) ? `${cell.emoji ? cell.emoji + ' ' : ''}${cell.text || ''}`.trim() : null;
 
   return (
-    <button
-      type="button"
-      onClick={onToggle}
-      aria-pressed={selected}
-      className={`group relative flex ${aspect} flex-col items-center overflow-hidden border p-1.5 text-center transition-colors duration-150 ${radius} ${
-        cell.image ? 'justify-end' : 'justify-center'
-      } ${
-        selected ? 'bg-ink-600 text-paper' : 'border-ink-500 bg-ink-700/60 text-paper/50 hover:border-paper/30'
-      } ${selected && !isBorderStyle ? 'border-ink-500' : ''} ${selected && isBorderStyle ? 'border-2' : ''}`}
-      style={selected && isBorderStyle ? { borderColor: markColor } : undefined}
-    >
-      {cell.image && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={cell.image}
-          alt=""
-          className={`absolute inset-0 h-full w-full object-cover transition-all duration-200 ${
-            selected ? 'brightness-[1.05]' : 'brightness-[0.55]'
-          }`}
-          aria-hidden
-        />
-      )}
+    <HoverTooltip text={tooltipText} asChild>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-pressed={selected}
+        className={`group relative flex ${aspect} flex-col items-center border p-1.5 text-center transition-colors duration-150 ${radius} ${
+          cell.image ? 'justify-end' : 'justify-center'
+        } ${
+          selected ? 'bg-ink-600 text-paper' : 'border-ink-500 bg-ink-700/60 text-paper/50 hover:border-paper/30'
+        } ${selected && !isBorderStyle ? 'border-ink-500' : ''} ${selected && isBorderStyle ? 'border-2' : ''}`}
+        style={selected && isBorderStyle ? { borderColor: markColor } : undefined}
+      >
+        <div className={`absolute inset-0 overflow-hidden ${radius}`}>
+          {cell.image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={cell.image}
+              alt=""
+              className={`h-full w-full object-cover transition-all duration-200 ${selected ? 'brightness-[1.05]' : 'brightness-[0.55]'}`}
+              aria-hidden
+            />
+          )}
+        </div>
 
-      {!hideText && (
-        <span
-          className={`relative z-10 line-clamp-3 text-xs font-medium leading-tight sm:text-sm ${
-            cell.image ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]' : ''
-          }`}
-        >
-          {cell.emoji && <span className="mr-1">{cell.emoji}</span>}
-          {cell.text}
-        </span>
-      )}
+        {!hideText && (
+          <span
+            className={`relative z-10 line-clamp-3 text-xs font-medium leading-tight sm:text-sm ${
+              cell.image ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]' : ''
+            }`}
+          >
+            {cell.emoji && <span className="mr-1">{cell.emoji}</span>}
+            {cell.text}
+          </span>
+        )}
 
-      {showStats && (
-        <span className="relative z-10 mt-1 rounded-full bg-ink-900/70 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-paper">
-          {percent}%
-        </span>
-      )}
+        {showStats && (
+          <span className="relative z-10 mt-1 rounded-full bg-ink-900/70 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-paper">
+            {percent}%
+          </span>
+        )}
 
-      {selected && mark && (
-        <span className="absolute right-1 top-1 z-10 font-display text-sm leading-none" style={{ color: markColor }}>
-          {mark}
-        </span>
-      )}
-    </button>
+        {selected && mark && (
+          <span className="absolute right-1 top-1 z-10 font-display text-sm leading-none" style={{ color: markColor }}>
+            {mark}
+          </span>
+        )}
+      </button>
+    </HoverTooltip>
   );
 }
