@@ -9,7 +9,7 @@ import { CATEGORIES } from '@/lib/mockData';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
-import { parseBulkText, applyBulkText, filenameToText } from '@/lib/bulkFill';
+import { parseBulkText, applyBulkText, filenameToText, computeAutoGrid } from '@/lib/bulkFill';
 
 function accentForCategory(category) {
   return CATEGORIES.find((c) => c.slug === category)?.accent || '#38D6A7';
@@ -27,10 +27,10 @@ const MARKS = [
   { id: 'border', label: 'Çerçeve' },
 ];
 const PRESETS = [
-  { id: '3x3', n: 9, rows: 3, cols: 3, label: '3×3' },
-  { id: '5x4', n: 20, rows: 4, cols: 5, label: '5×4' },
-  { id: '5x5', n: 25, rows: 5, cols: 5, label: '5×5' },
-  { id: '10x10', n: 100, rows: 10, cols: 10, label: '10×10' },
+  { id: '3x3', n: 9, rows: 3, cols: 3 },
+  { id: '4x5', n: 20, rows: 4, cols: 5 },
+  { id: '5x5', n: 25, rows: 5, cols: 5 },
+  { id: '10x10', n: 100, rows: 10, cols: 10 },
 ];
 const MAX_COLS = 10;
 const MAX_ROWS = 20;
@@ -150,9 +150,16 @@ export default function EditCardPage({ params }) {
   }
 
   function handleBulkImages(images) {
+    if (!images.length) return;
+    const { rows, cols } = computeAutoGrid(Math.max(cells.length, images.length));
+    setActivePreset('custom');
+    setCustomRows(rows);
+    setCustomCols(cols);
+    setColumns(cols);
     setCells((prev) => {
+      const resized = resizeCells(prev, rows * cols);
       let imgIdx = 0;
-      const next = prev.map((c) => {
+      const next = resized.map((c) => {
         if (imgIdx < images.length && !c.image) {
           const img = images[imgIdx++];
           return { ...c, image: img.url, text: useFilenameAsText && !c.text ? filenameToText(img.filename) : c.text };
@@ -169,7 +176,16 @@ export default function EditCardPage({ params }) {
 
   function applyBulkTextInput() {
     const entries = parseBulkText(bulkTextInput);
-    setCells((prev) => applyBulkText(prev, entries));
+    if (entries.length === 0) {
+      setCells((prev) => applyBulkText(prev, entries));
+      return;
+    }
+    const { rows, cols } = computeAutoGrid(Math.max(cells.length, entries.length));
+    setActivePreset('custom');
+    setCustomRows(rows);
+    setCustomCols(cols);
+    setColumns(cols);
+    setCells((prev) => applyBulkText(resizeCells(prev, rows * cols), entries));
   }
 
   async function handleSubmit(e) {
@@ -409,68 +425,70 @@ export default function EditCardPage({ params }) {
 
       {/* Cells */}
       <section className="mt-4 rounded-lg border border-ink-500 bg-ink-700/40 p-4">
-        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-          <p className="text-xs font-medium text-paper/60">Hücreler ({cells.length})</p>
-          <BulkImagePicker onFiles={handleBulkImages} />
+        <p className="text-sm font-bold text-paper">Hücreler ({cells.length})</p>
+        <p className="mb-3 text-xs text-paper/45">Buradan toplu ekleyebilir ya da aşağıdan tek tek ekleyebilirsin.</p>
+
+        <div className="mb-3 flex flex-wrap items-center gap-2">
+          <BulkImagePicker onFiles={handleBulkImages} label="Görsel ekle" />
+          <span className="text-xs text-paper/40">
+            {cells.filter((c) => c.image).length}/{cells.length} hücrede görsel
+          </span>
         </div>
 
-        <label className="mb-4 flex items-center gap-2 text-xs text-paper/70">
-          <input
-            type="checkbox"
-            checked={hideCellText}
-            onChange={(e) => setHideCellText(e.target.checked)}
-            className="accent-mint"
-          />
-          Hücre yazılarını gizle (sadece görseller görünsün){' '}
-          <span className="text-paper/35">(tüm hücrelerde görsel olduğunda etkili olur)</span>
-        </label>
-
-        <div className="mb-4 rounded-md border border-dashed border-ink-500 p-3">
-          <p className="mb-1.5 text-xs font-medium text-paper/60">Hücreleri Toplu Doldur</p>
-          <textarea
-            value={bulkTextInput}
-            onChange={(e) => setBulkTextInput(e.target.value)}
-            rows={4}
-            placeholder={'Her satır bir hücre olur:\nDark Souls\nElden Ring\nBloodborne\n\n(tek satırsa virgülle de ayırabilirsin)'}
-            className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-xs focus:border-mint"
-          />
-          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-            <label className="flex items-center gap-2 text-[11px] text-paper/60">
-              <input
-                type="checkbox"
-                checked={useFilenameAsText}
-                onChange={(e) => setUseFilenameAsText(e.target.checked)}
-                className="accent-mint"
-              />
-              Toplu görsel yüklerken dosya adını yazı olarak kullan
-            </label>
-            <button
-              type="button"
-              onClick={applyBulkTextInput}
-              className="rounded-md border border-ink-500 px-3 py-1.5 text-xs font-medium text-paper/70 hover:border-mint hover:text-mint"
-            >
-              Uygula
-            </button>
-          </div>
-        </div>
-
-        <div className="mb-3 flex flex-wrap gap-1.5">
-          {PRESETS.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => applyPreset(p)}
-              className={`rounded-full border px-3 py-1 text-[11px] ${activePreset === p.id ? 'border-mint text-mint' : 'border-ink-500 text-paper/60 hover:border-mint hover:text-mint'}`}
-            >
-              {p.label}
-            </button>
-          ))}
+        <textarea
+          value={bulkTextInput}
+          onChange={(e) => setBulkTextInput(e.target.value)}
+          rows={5}
+          placeholder={'Buraya yapıştır:\nDark Souls\nElden Ring\nBloodborne'}
+          className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-xs focus:border-mint"
+        />
+        <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={selectCustom}
-            className={`flex items-center gap-1 rounded-full border px-3 py-1 text-[11px] ${activePreset === 'custom' ? 'border-mint text-mint' : 'border-ink-500 text-paper/60 hover:border-mint hover:text-mint'}`}
+            onClick={() => setUseFilenameAsText((v) => !v)}
+            className={`text-xs font-medium ${useFilenameAsText ? 'text-mint' : 'text-paper/40 hover:text-paper/60'}`}
           >
-            <Grid3x3 size={12} /> Özel
+            dosya adlarından içe aktar
+          </button>
+          <button
+            type="button"
+            onClick={applyBulkTextInput}
+            className="rounded-md border border-ink-500 px-4 py-1.5 text-xs font-semibold text-paper/80 hover:border-mint hover:text-mint"
+          >
+            Uygula
+          </button>
+        </div>
+
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3 border-t border-ink-500/50 pt-3">
+          <div className="flex flex-wrap gap-1.5">
+            {PRESETS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => applyPreset(p)}
+                className={`rounded-full border px-3 py-1 text-[11px] ${activePreset === p.id ? 'border-mint text-mint' : 'border-ink-500 text-paper/60 hover:border-mint hover:text-mint'}`}
+              >
+                {p.rows}×{p.cols}
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={selectCustom}
+              className={`flex items-center gap-1 rounded-full border px-3 py-1 text-[11px] ${activePreset === 'custom' ? 'border-mint text-mint' : 'border-ink-500 text-paper/60 hover:border-mint hover:text-mint'}`}
+            >
+              <Grid3x3 size={12} /> Özel
+            </button>
+          </div>
+
+          <button type="button" onClick={() => setHideCellText((v) => !v)} className="flex items-center gap-2 text-xs text-paper/60">
+            Metinleri sadece istatistik için kullan
+            <span className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition ${hideCellText ? 'bg-mint' : 'bg-ink-500'}`}>
+              <span
+                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-ink-900 transition-transform ${
+                  hideCellText ? 'translate-x-[18px]' : 'translate-x-0.5'
+                }`}
+              />
+            </span>
           </button>
         </div>
 
