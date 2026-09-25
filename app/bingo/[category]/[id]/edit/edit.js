@@ -173,10 +173,12 @@ export default function EditCardPage({ params }) {
     });
   }
 
-  function applyFilenamesAsText() {
-    setCells((prev) =>
-      prev.map((c) => (c.image && c.sourceFilename && !c.text ? { ...c, text: filenameToText(c.sourceFilename) } : c))
-    );
+  // Pastes each image-having cell's filename into the bulk-text box (one
+  // per line, in cell order) so the person can review/edit before hitting
+  // "Uygula" — never silently rewrites cell text on its own.
+  function importFilenamesToTextarea() {
+    const names = cells.filter((c) => c.image && c.sourceFilename).map((c) => filenameToText(c.sourceFilename));
+    setBulkTextInput(names.join('\n'));
   }
 
   function applyBulkTextInput() {
@@ -450,8 +452,8 @@ export default function EditCardPage({ params }) {
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={applyFilenamesAsText}
-            title="Görseli olup yazısı boş olan hücreleri, o görselin dosya adından doldurur"
+            onClick={importFilenamesToTextarea}
+            title="Görselli hücrelerin dosya adlarını yukarıdaki kutuya yapıştırır — düzenleyip Uygula'ya basabilirsin"
             className="text-xs font-medium text-paper/40 hover:text-mint"
           >
             dosya adlarından içe aktar

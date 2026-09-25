@@ -142,8 +142,8 @@ function CreateInner() {
   // slots first (in order), then appends new cells for any leftover images.
   // The grid auto-switches to "Özel" and grows (never shrinks) to fit.
   // The original filename is always kept on the cell (not shown by
-  // default) so "dosya adlarından içe aktar" can fill text in from it
-  // later, and so the hover preview has something to fall back to.
+  // default) so "dosya adlarından içe aktar" can paste it into the bulk
+  // text box later, and so the hover preview has something to fall back to.
   function handleBulkImages(images) {
     if (!images.length) return;
     const { rows, cols } = computeAutoGrid(Math.max(cells.length, images.length));
@@ -172,10 +172,12 @@ function CreateInner() {
   // Fills text in from each cell's stored filename — works for any cell
   // that currently has an image and no text yet, whether it was uploaded
   // just now or earlier in this session.
-  function applyFilenamesAsText() {
-    setCells((prev) =>
-      prev.map((c) => (c.image && c.sourceFilename && !c.text ? { ...c, text: filenameToText(c.sourceFilename) } : c))
-    );
+  // Pastes each image-having cell's filename into the bulk-text box (one
+  // per line, in cell order) so the person can review/edit before hitting
+  // "Uygula" — never silently rewrites cell text on its own.
+  function importFilenamesToTextarea() {
+    const names = cells.filter((c) => c.image && c.sourceFilename).map((c) => filenameToText(c.sourceFilename));
+    setBulkTextInput(names.join('\n'));
   }
 
   function applyBulkTextInput() {
@@ -399,8 +401,8 @@ function CreateInner() {
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={applyFilenamesAsText}
-            title="Görseli olup yazısı boş olan hücreleri, o görselin dosya adından doldurur"
+            onClick={importFilenamesToTextarea}
+            title="Görselli hücrelerin dosya adlarını yukarıdaki kutuya yapıştırır — düzenleyip Uygula'ya basabilirsin"
             className="text-xs font-medium text-paper/40 hover:text-mint"
           >
             dosya adlarından içe aktar
