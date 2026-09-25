@@ -409,7 +409,7 @@ function CreateInner() {
           onChange={(e) => setBulkTextInput(e.target.value)}
           rows={5}
           placeholder={'Buraya yapıştır:\nDark Souls\nElden Ring\nBloodborne'}
-          className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-xs focus:border-mint"
+          className="themed-scroll w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-xs focus:border-mint"
         />
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
@@ -423,7 +423,8 @@ function CreateInner() {
           <button
             type="button"
             onClick={applyBulkTextInput}
-            className="rounded-md border border-ink-500 px-4 py-1.5 text-xs font-semibold text-paper/80 hover:border-mint hover:text-mint"
+            disabled={!bulkTextInput.trim()}
+            className="rounded-md border border-ink-500 px-4 py-1.5 text-xs font-semibold text-paper/80 hover:border-mint hover:text-mint disabled:cursor-not-allowed disabled:border-ink-600 disabled:text-paper/25 disabled:hover:border-ink-600 disabled:hover:text-paper/25"
           >
             Uygula
           </button>
