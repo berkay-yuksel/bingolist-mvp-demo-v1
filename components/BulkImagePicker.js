@@ -6,8 +6,10 @@ import { uploadImage } from '@/lib/uploadImage';
 
 // Uploads run in a small concurrent pool instead of all at once — mostly
 // so we can report real progress as they finish, and to keep things a bit
-// more predictable under load with very large batches.
-const CONCURRENCY = 6;
+// more predictable under load with very large batches. Payloads are much
+// smaller now (client-side resize in uploadImage), so this can run a
+// bit higher than before without saturating anything.
+const CONCURRENCY = 8;
 
 async function uploadWithConcurrency(files, onProgress) {
   const results = new Array(files.length);

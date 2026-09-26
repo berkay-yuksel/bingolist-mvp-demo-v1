@@ -82,3 +82,23 @@
 .themed-scroll::-webkit-scrollbar-thumb:hover {
   background-color: #64708F;
 }
+
+/* A rotating green "chase light" around a button's border — used to draw
+   the eye to "Uygula" right after something got pasted in for review, so
+   it's obvious there's a next step to take. */
+@keyframes chase-light-spin {
+  to { transform: rotate(360deg); }
+}
+.chase-light {
+  position: relative;
+  isolation: isolate;
+}
+.chase-light::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: 0.6rem;
+  background: conic-gradient(from 0deg, transparent 0%, #38D6A7 18%, transparent 36%);
+  animation: chase-light-spin 1.3s linear infinite;
+}

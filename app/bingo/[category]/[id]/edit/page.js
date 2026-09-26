@@ -74,6 +74,7 @@ export default function EditCardPage({ params }) {
   const [columns, setColumns] = useState(3);
   const [cells, setCells] = useState([]);
   const [bulkTextInput, setBulkTextInput] = useState('');
+  const [applyGlow, setApplyGlow] = useState(false);
   const [activePreset, setActivePreset] = useState('custom');
   const [customRows, setCustomRows] = useState(3);
   const [customCols, setCustomCols] = useState(3);
@@ -174,15 +175,19 @@ export default function EditCardPage({ params }) {
     });
   }
 
-  // Fills text in from each cell's stored filename — applies immediately,
-  // no separate "Uygula" click needed.
-  function applyFilenamesAsText() {
-    setCells((prev) =>
-      prev.map((c) => (c.image && c.sourceFilename && !c.text ? { ...c, text: filenameToText(c.sourceFilename) } : c))
-    );
+  // Pastes each image-having cell's filename into the bulk-text box (one
+  // per line, in cell order) so the person can review/edit before hitting
+  // "Uygula" — never silently rewrites cell text on its own. The Uygula
+  // button gets a rotating green highlight for a moment so it's obvious
+  // there's a next step to take.
+  function importFilenamesToTextarea() {
+    const names = cells.filter((c) => c.image && c.sourceFilename).map((c) => filenameToText(c.sourceFilename));
+    setBulkTextInput(names.join('\n'));
+    setApplyGlow(true);
   }
 
   function applyBulkTextInput() {
+    setApplyGlow(false);
     const entries = parseBulkText(bulkTextInput);
     if (entries.length === 0) {
       setCells((prev) => applyBulkText(prev, entries));
@@ -453,8 +458,8 @@ export default function EditCardPage({ params }) {
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={applyFilenamesAsText}
-            title="Görseli olup yazısı boş olan hücreleri, o görselin dosya adından doğrudan doldurur"
+            onClick={importFilenamesToTextarea}
+            title="Görselli hücrelerin dosya adlarını yukarıdaki kutuya yapıştırır — düzenleyip Uygula'ya basabilirsin"
             className="text-xs font-medium text-paper/40 hover:text-mint"
           >
             dosya adlarından içe aktar
@@ -463,7 +468,9 @@ export default function EditCardPage({ params }) {
             type="button"
             onClick={applyBulkTextInput}
             disabled={!bulkTextInput.trim()}
-            className="rounded-md border border-ink-500 px-4 py-1.5 text-xs font-semibold text-paper/80 hover:border-mint hover:text-mint disabled:cursor-not-allowed disabled:border-ink-600 disabled:text-paper/25 disabled:hover:border-ink-600 disabled:hover:text-paper/25"
+            className={`rounded-md border border-ink-500 bg-ink-800 px-4 py-1.5 text-xs font-semibold text-paper/80 hover:border-mint hover:text-mint disabled:cursor-not-allowed disabled:border-ink-600 disabled:text-paper/25 disabled:hover:border-ink-600 disabled:hover:text-paper/25 ${
+              applyGlow && bulkTextInput.trim() ? 'chase-light' : ''
+            }`}
           >
             Uygula
           </button>
