@@ -174,13 +174,12 @@ function CreateInner() {
 
   // Fills text in from each cell's stored filename — works for any cell
   // that currently has an image and no text yet, whether it was uploaded
-  // just now or earlier in this session.
-  // Pastes each image-having cell's filename into the bulk-text box (one
-  // per line, in cell order) so the person can review/edit before hitting
-  // "Uygula" — never silently rewrites cell text on its own.
-  function importFilenamesToTextarea() {
-    const names = cells.filter((c) => c.image && c.sourceFilename).map((c) => filenameToText(c.sourceFilename));
-    setBulkTextInput(names.join('\n'));
+  // just now or earlier in this session. Applies immediately, no separate
+  // "Uygula" click needed.
+  function applyFilenamesAsText() {
+    setCells((prev) =>
+      prev.map((c) => (c.image && c.sourceFilename && !c.text ? { ...c, text: filenameToText(c.sourceFilename) } : c))
+    );
   }
 
   function applyBulkTextInput() {
@@ -414,8 +413,8 @@ function CreateInner() {
         <div className="mb-4 mt-2 flex flex-wrap items-center justify-between gap-2">
           <button
             type="button"
-            onClick={importFilenamesToTextarea}
-            title="Görselli hücrelerin dosya adlarını yukarıdaki kutuya yapıştırır — düzenleyip Uygula'ya basabilirsin"
+            onClick={applyFilenamesAsText}
+            title="Görseli olup yazısı boş olan hücreleri, o görselin dosya adından doğrudan doldurur"
             className="text-xs font-medium text-paper/40 hover:text-mint"
           >
             dosya adlarından içe aktar

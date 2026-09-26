@@ -44,7 +44,7 @@ export default function HoverTooltip({ text, children, delay = 350, className = 
     pos && text && typeof document !== 'undefined'
       ? createPortal(
           <span
-            style={{ position: 'fixed', top: pos.y - 14, left: pos.x + 14, transform: 'translate(0, -100%)' }}
+            style={{ position: 'fixed', top: pos.y - 4, left: pos.x + 6, transform: 'translate(0, -100%)' }}
             className="pointer-events-none z-50 max-w-[220px] whitespace-normal break-words rounded-md bg-ink-900 px-2 py-1 text-center text-[11px] text-paper shadow-ticket"
           >
             {text}
