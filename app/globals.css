@@ -83,22 +83,36 @@
   background-color: #64708F;
 }
 
-/* A rotating green "chase light" around a button's border — used to draw
-   the eye to "Uygula" right after something got pasted in for review, so
-   it's obvious there's a next step to take. */
 @keyframes chase-light-spin {
   to { transform: rotate(360deg); }
 }
+
 .chase-light {
   position: relative;
-  isolation: isolate;
+  overflow: hidden; /* Taşan dönen kısımları keser */
+  z-index: 1;
+  border-radius: 0.6rem; 
 }
+
+/* Dönen devasa arka plan ışığı */
 .chase-light::before {
   content: '';
   position: absolute;
-  inset: -3px;
-  z-index: -1;
-  border-radius: 0.6rem;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -2;
   background: conic-gradient(from 0deg, transparent 0%, #38D6A7 18%, transparent 36%);
   animation: chase-light-spin 1.3s linear infinite;
+}
+
+/* Butonun asıl gövdesini oluşturan, ortayı kapatan katman */
+.chase-light::after {
+  content: '';
+  position: absolute;
+  inset: 3px; /* Işığın kalınlığı */
+  z-index: -1;
+  border-radius: 0.4rem; /* Dış border'dan biraz daha küçük */
+  background-color: #1a1a1a; /* BURASI ÖNEMLİ: Butonun arka plan rengi neyse onu yazmalısın */
 }
