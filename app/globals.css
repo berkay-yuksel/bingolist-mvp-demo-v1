@@ -103,7 +103,8 @@
   width: 200%;
   height: 200%;
   z-index: -2;
-  background: conic-gradient(from 0deg, transparent 0%, #38D6A7 18%, transparent 36%);
+  /* Yüzdeler 4'te 1 oranında daraltıldı */
+  background: conic-gradient(from 0deg, transparent 0%, #38D6A7 4.5%, transparent 9%);
   animation: chase-light-spin 1.3s linear infinite;
 }
 
@@ -114,5 +115,5 @@
   inset: 3px; /* Işığın kalınlığı */
   z-index: -1;
   border-radius: 0.4rem; /* Dış border'dan biraz daha küçük */
-  background-color: #1a1a1a; /* BURASI ÖNEMLİ: Butonun arka plan rengi neyse onu yazmalısın */
+  background-color: #161a27; /* BURASI ÖNEMLİ: Butonun arka plan rengi neyse onu yazmalısın */
 }
