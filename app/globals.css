@@ -83,37 +83,36 @@
   background-color: #64708F;
 }
 
-@keyframes chase-light-spin {
-  to { transform: rotate(360deg); }
+/* CSS değişkenimizi açı (<angle>) olarak tanımlıyoruz ki anime edebilelim */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .chase-light {
-  position: relative;
-  overflow: hidden; /* Taşan dönen kısımları keser */
-  z-index: 1;
-  border-radius: 0.6rem; 
+  /* Temel buton stilleri */
+  padding: 12px 24px;
+  color: white;
+  border-radius: 0.6rem;
+  
+  /* Çerçeve kalınlığını transparent bir border ile belirliyoruz */
+  border: 3px solid transparent;
+  
+  background: 
+    /* 1. Katman (Üst): Butonun kendi arka plan rengi. Sadece içerik kısmını kaplar (padding-box) */
+    linear-gradient(#161a27, #161a27) padding-box,
+    
+    /* 2. Katman (Alt): Dönen renkli ışık. Border dahil tüm alanı kaplar (border-box) */
+    conic-gradient(from var(--angle), transparent 20%, #38D6A7 40%, transparent 60%) border-box;
+  
+  /* Animasyonu başlatıyoruz */
+  animation: spin-border 2s linear infinite;
 }
 
-/* Dönen devasa arka plan ışığı */
-.chase-light::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  z-index: -2;
-  /* Yüzdeler 4'te 1 oranında daraltıldı */
-  background: conic-gradient(from 0deg, transparent 0%, #38D6A7 4.5%, transparent 9%);
-  animation: chase-light-spin 1.3s linear infinite;
-}
-
-/* Butonun asıl gövdesini oluşturan, ortayı kapatan katman */
-.chase-light::after {
-  content: '';
-  position: absolute;
-  inset: 3px; /* Işığın kalınlığı */
-  z-index: -1;
-  border-radius: 0.4rem; /* Dış border'dan biraz daha küçük */
-  background-color: #161a27; /* BURASI ÖNEMLİ: Butonun arka plan rengi neyse onu yazmalısın */
+/* Sadece açıyı 360 dereceye doğru değiştiriyoruz */
+@keyframes spin-border {
+  to {
+    --angle: 360deg;
+  }
 }
