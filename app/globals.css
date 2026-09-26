@@ -93,11 +93,11 @@
 .chase-light {
   /* Temel buton stilleri */
   padding: 12px 24px;
-  color: white;
-  border-radius: 0.6rem;
+
+  border-radius: .375rem;
   
   /* Çerçeve kalınlığını transparent bir border ile belirliyoruz */
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   
   background: 
     /* 1. Katman (Üst): Butonun kendi arka plan rengi. Sadece içerik kısmını kaplar (padding-box) */
