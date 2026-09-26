@@ -4,11 +4,10 @@ import { useState } from 'react';
 import { Images, Loader2 } from 'lucide-react';
 import { uploadImage } from '@/lib/uploadImage';
 
-// Only this many uploads run at once — sending 50+ requests simultaneously
-// overwhelmed the server (each one does image compression + a Storage
-// write) and just failed outright. A small concurrent pool keeps things
-// moving without hammering it, and lets us report real progress.
-const CONCURRENCY = 4;
+// Uploads run in a small concurrent pool instead of all at once — mostly
+// so we can report real progress as they finish, and to keep things a bit
+// more predictable under load with very large batches.
+const CONCURRENCY = 6;
 
 async function uploadWithConcurrency(files, onProgress) {
   const results = new Array(files.length);
