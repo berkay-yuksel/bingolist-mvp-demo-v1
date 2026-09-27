@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { Images, Loader2 } from 'lucide-react';
 import { uploadImage } from '@/lib/uploadImage';
 
-// Uploads run in a small concurrent pool instead of all at once — mostly
-// so we can report real progress as they finish, and to keep things a bit
-// more predictable under load with very large batches. Payloads are much
-// smaller now (client-side resize in uploadImage), so this can run a
-// bit higher than before without saturating anything.
-const CONCURRENCY = 8;
+// Small batches felt instant before this existed (the browser/server
+// handles 20-ish parallel requests fine), so only cap concurrency once a
+// batch is actually large enough to risk overloading things or to need a
+// progress readout. Below the threshold, everything just fires at once.
+const SMALL_BATCH_THRESHOLD = 20;
+const LARGE_BATCH_CONCURRENCY = 8;
 
 async function uploadWithConcurrency(files, onProgress) {
   const results = new Array(files.length);
@@ -31,7 +31,8 @@ async function uploadWithConcurrency(files, onProgress) {
     }
   }
 
-  const workers = Array.from({ length: Math.min(CONCURRENCY, files.length) }, () => worker());
+  const concurrency = files.length <= SMALL_BATCH_THRESHOLD ? files.length : LARGE_BATCH_CONCURRENCY;
+  const workers = Array.from({ length: concurrency }, () => worker());
   await Promise.all(workers);
   return results.filter(Boolean);
 }
