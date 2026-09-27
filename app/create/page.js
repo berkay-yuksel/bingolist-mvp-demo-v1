@@ -61,7 +61,7 @@ function CreateInner() {
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState(CATEGORIES[0].slug);
+  const [category, setCategory] = useState('');
   const [tagsInput, setTagsInput] = useState('');
   const [visibility, setVisibility] = useState('public');
   const [cellShape, setCellShape] = useState('square');
@@ -204,6 +204,7 @@ function CreateInner() {
     setError(null);
 
     if (!title.trim()) return setError('Kart için bir başlık gerekli.');
+    if (!category) return setError('Bir kategori seçmelisin.');
     const filledCells = cells.filter((c) => c.text.trim() || c.image);
     if (filledCells.length === 0) return setError('En az bir hücreye içerik girmelisin.');
 
@@ -298,8 +299,12 @@ function CreateInner() {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
+              required
               className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-sm focus:border-mint"
             >
+              <option value="" disabled>
+                Kategori seç
+              </option>
               {CATEGORIES.map((c) => (
                 <option key={c.slug} value={c.slug}>{c.label}</option>
               ))}
