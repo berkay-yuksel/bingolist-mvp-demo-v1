@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, use } from 'react';
+import { useEffect, useRef, useState, use } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Plus, Trash2, Square, Circle, RectangleVertical, Grid3x3, Lock } from 'lucide-react';
@@ -10,7 +10,7 @@ import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
 import HoverTooltip from '@/components/HoverTooltip';
-import { parseBulkText, applyBulkText, filenameToText, computeAutoGrid } from '@/lib/bulkFill';
+import { parseBulkText, applyBulkText, filenameToText, placeImages, padCells, fitToAutoGrid } from '@/lib/bulkFill';
 
 function accentForCategory(category) {
   return CATEGORIES.find((c) => c.slug === category)?.accent || '#38D6A7';
@@ -28,13 +28,14 @@ const MARKS = [
   { id: 'border', label: 'Çerçeve' },
 ];
 const PRESETS = [
-  { id: '3x3', n: 9, rows: 3, cols: 3 },
+  { id: '4x4', n: 16, rows: 4, cols: 4 },
   { id: '5x4', n: 20, rows: 5, cols: 4 },
+  { id: '6x4', n: 24, rows: 6, cols: 4 },
   { id: '5x5', n: 25, rows: 5, cols: 5 },
-  { id: '10x10', n: 100, rows: 10, cols: 10 },
+  { id: '20x5', n: 100, rows: 20, cols: 5 },
 ];
 const MAX_COLS = 10;
-const MAX_ROWS = 20;
+const MAX_ROWS = 100;
 
 function emptyCell(i) {
   return { id: `c${Date.now()}_${i}`, text: '', emoji: null, image: null, description: '', sourceFilename: null };
@@ -79,6 +80,8 @@ export default function EditCardPage({ params }) {
   const [coverImage, setCoverImage] = useState(null);
   const [columns, setColumns] = useState(3);
   const [cells, setCells] = useState([]);
+  const cellsRef = useRef(cells);
+  cellsRef.current = cells;
   const [bulkTextInput, setBulkTextInput] = useState('');
   const [applyGlow, setApplyGlow] = useState(false);
   const [activePreset, setActivePreset] = useState('custom');
@@ -155,30 +158,25 @@ export default function EditCardPage({ params }) {
   function updateCell(cellId, patch) {
     setCells((prev) => prev.map((c) => (c.id === cellId ? { ...c, ...patch } : c)));
   }
+  // Sizes the grid for the cells' content (table in lib/bulkFill.js), flips
+  // the size selector to "Özel" and stores the result.
+  function commitAutoGrid(placedCells) {
+    const fit = fitToAutoGrid(placedCells, emptyCell);
+    setActivePreset('custom');
+    setCustomRows(fit.rows);
+    setCustomCols(fit.cols);
+    setColumns(fit.cols);
+    setCells(fit.cells);
+  }
 
+  // Drops a batch of uploaded images into the grid: empty-image cells first
+  // (in order), extra cells for any left over. Then the grid switches to
+  // "Özel" and is sized from the table in lib/bulkFill.js for the number of
+  // cells actually in use. The original filenames are kept on the cells so
+  // "dosya adlarından içe aktar" and the hover preview can use them.
   function handleBulkImages(images) {
     if (!images.length) return;
-    const { rows, cols } = computeAutoGrid(Math.max(cells.length, images.length));
-    setActivePreset('custom');
-    setCustomRows(rows);
-    setCustomCols(cols);
-    setColumns(cols);
-    setCells((prev) => {
-      const resized = resizeCells(prev, rows * cols);
-      let imgIdx = 0;
-      const next = resized.map((c) => {
-        if (imgIdx < images.length && !c.image) {
-          const img = images[imgIdx++];
-          return { ...c, image: img.url, sourceFilename: img.filename };
-        }
-        return c;
-      });
-      while (imgIdx < images.length) {
-        const img = images[imgIdx++];
-        next.push({ ...emptyCell(next.length), image: img.url, sourceFilename: img.filename });
-      }
-      return next;
-    });
+    commitAutoGrid(placeImages(cellsRef.current, images, emptyCell));
   }
 
   // Pastes each image-having cell's filename into the bulk-text box (one
@@ -195,16 +193,13 @@ export default function EditCardPage({ params }) {
   function applyBulkTextInput() {
     setApplyGlow(false);
     const entries = parseBulkText(bulkTextInput);
+    const current = cellsRef.current;
     if (entries.length === 0) {
-      setCells((prev) => applyBulkText(prev, entries));
+      setCells(applyBulkText(current, entries));
       return;
     }
-    const { rows, cols } = computeAutoGrid(Math.max(cells.length, entries.length));
-    setActivePreset('custom');
-    setCustomRows(rows);
-    setCustomCols(cols);
-    setColumns(cols);
-    setCells((prev) => applyBulkText(resizeCells(prev, rows * cols), entries));
+    // text goes in positionally, so make sure there are enough cells first
+    commitAutoGrid(applyBulkText(padCells(current, entries.length, emptyCell), entries));
   }
 
   async function handleSubmit(e) {
@@ -381,8 +376,7 @@ export default function EditCardPage({ params }) {
           <ImagePicker
             value={coverImage}
             onChange={setCoverImage}
-            fit="card"
-           />
+            fit="card" />
         </div>
         <div className="flex items-center gap-3">
           <label className="text-xs font-medium text-paper/60">Görünürlük</label>
