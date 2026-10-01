@@ -48,7 +48,7 @@ export default function BingoCell({ cell, selected, percent, showStats, checkSty
 
         {!hideText && (
           <span
-            className={`relative z-10 line-clamp-3 text-xs font-medium leading-tight sm:text-sm ${
+            className={`relative z-10 line-clamp-4 text-xs font-medium leading-tight sm:line-clamp-3 sm:text-sm ${
               cell.image ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]' : ''
             }`}
           >
