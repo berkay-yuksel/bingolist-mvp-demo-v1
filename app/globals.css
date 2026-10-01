@@ -109,7 +109,7 @@
    normal text-xs (0.75rem) applies as usual. */
 @media (max-width: 639px) {
   .text-xs {
-    font-size: 0.6rem;
-    line-height: 0.75rem;
+    font-size: 0.5rem;
+    line-height: 0.625rem;
   }
 }
