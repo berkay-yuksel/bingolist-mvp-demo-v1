@@ -9,7 +9,7 @@ import { useCurrentUser } from './UserContext';
 const SCROLL_AMOUNT = 500;
 
 function CreatorTile({ c }) {
-  const { userId } = useCurrentUser();
+  const { userId, requireLogin } = useCurrentUser();
   const [following, setFollowing] = useState(false);
   const isSelf = userId === c.id;
 
@@ -23,6 +23,7 @@ function CreatorTile({ c }) {
   async function toggleFollow(e) {
     e.preventDefault();
     e.stopPropagation();
+    if (!requireLogin()) return;
     const res = await fetch(`/api/users/${c.username}/follow`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

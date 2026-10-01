@@ -13,12 +13,12 @@ import ReportDialog from '@/components/ReportDialog';
 import CreateIssueDialog from '@/components/CreateIssueDialog';
 import MetricsRow from '@/components/MetricsRow';
 import CardRow from '@/components/CardRow';
-import { CATEGORIES } from '@/lib/mockData';
+import { CATEGORIES } from '@/lib/categories';
 import { markCardPlayed, isCardPlayed } from '@/lib/localFlags';
 
 export default function PlayPage({ params }) {
   const { id, category: categorySlug } = use(params);
-  const { userId, user } = useCurrentUser();
+  const { userId, user, ready, requireLogin } = useCurrentUser();
   const router = useRouter();
 
   const [data, setData] = useState(null);
@@ -62,9 +62,11 @@ export default function PlayPage({ params }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, userId]);
 
+  // wait for the session check so the view isn't counted twice (once as
+  // an anonymous visitor, once again as the signed-in user)
   useEffect(() => {
-    load();
-  }, [load]);
+    if (ready) load();
+  }, [ready, load]);
 
   useEffect(() => {
     fetch(`/api/cards?sort=trending&category=${categorySlug}&limit=16`)
@@ -87,6 +89,7 @@ export default function PlayPage({ params }) {
   }, [id, userId]);
 
   async function toggleCell(cellId) {
+    if (!requireLogin()) return;
     const next = new Set(selected);
     next.has(cellId) ? next.delete(cellId) : next.add(cellId);
     setSelected(next);
@@ -104,6 +107,7 @@ export default function PlayPage({ params }) {
   }
 
   async function handleSave() {
+    if (!requireLogin()) return;
     const res = await fetch(`/api/cards/${id}/play`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -118,6 +122,7 @@ export default function PlayPage({ params }) {
   }
 
   async function handleInteract(action, setter) {
+    if (!requireLogin()) return;
     const res = await fetch(`/api/cards/${id}/interact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -129,6 +134,7 @@ export default function PlayPage({ params }) {
   }
 
   async function handleShared() {
+    if (!userId) return;
     const res = await fetch(`/api/cards/${id}/interact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -139,6 +145,7 @@ export default function PlayPage({ params }) {
   }
 
   async function handleReport(reason) {
+    if (!requireLogin()) return;
     await fetch('/api/report', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -347,7 +354,7 @@ export default function PlayPage({ params }) {
           onBookmark={() => handleInteract('bookmark', setBookmarked)}
           onShare={() => setShareOpen(true)}
           onRemix={() => router.push(`/create?remixOf=${card.id}`)}
-          onReport={() => setReportOpen(true)}
+          onReport={() => requireLogin() && setReportOpen(true)}
         />
       </div>
 

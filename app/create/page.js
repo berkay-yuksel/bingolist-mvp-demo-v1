@@ -4,7 +4,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Plus, Trash2, Square, Circle, RectangleVertical, Grid3x3 } from 'lucide-react';
 import { useCurrentUser } from '@/components/UserContext';
-import { CATEGORIES } from '@/lib/mockData';
+import { CATEGORIES } from '@/lib/categories';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
@@ -51,13 +51,13 @@ function CreateInner() {
   const searchParams = useSearchParams();
   const remixOf = searchParams.get('remixOf');
   const router = useRouter();
-  const { userId, isRealSession, devSwitcherEnabled, ready } = useCurrentUser();
+  const { userId, isRealSession, ready } = useCurrentUser();
 
   useEffect(() => {
-    if (ready && !isRealSession && !devSwitcherEnabled) {
+    if (ready && !isRealSession) {
       router.replace('/login?next=/create');
     }
-  }, [ready, isRealSession, devSwitcherEnabled, router]);
+  }, [ready, isRealSession, router]);
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -253,7 +253,7 @@ function CreateInner() {
     return <div className="mx-auto max-w-2xl px-4 py-16 text-center text-paper/50">Orijinal kart yükleniyor…</div>;
   }
 
-  if (!ready || (!isRealSession && !devSwitcherEnabled)) {
+  if (!ready || !isRealSession) {
     return <div className="mx-auto max-w-2xl px-4 py-16 text-center text-paper/50">Yükleniyor…</div>;
   }
 
@@ -322,7 +322,11 @@ function CreateInner() {
         </div>
         <div>
           <label className="mb-1 block text-xs font-medium text-paper/60">Kapak görseli (opsiyonel — yoksa otomatik üretilir)</label>
-          <ImagePicker value={coverImage} onChange={setCoverImage} />
+          <ImagePicker
+            value={coverImage}
+            onChange={setCoverImage}
+            fit="card" 
+          />
         </div>
         <div className="flex items-center gap-3">
           <label className="text-xs font-medium text-paper/60">Görünürlük</label>

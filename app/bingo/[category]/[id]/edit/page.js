@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Plus, Trash2, Square, Circle, RectangleVertical, Grid3x3, Lock } from 'lucide-react';
 import { useCurrentUser } from '@/components/UserContext';
-import { CATEGORIES } from '@/lib/mockData';
+import { CATEGORIES } from '@/lib/categories';
 import ImagePicker from '@/components/ImagePicker';
 import BulkImagePicker from '@/components/BulkImagePicker';
 import BingoGrid from '@/components/BingoGrid';
@@ -55,7 +55,13 @@ function minutesLeft(iso) {
 export default function EditCardPage({ params }) {
   const { id } = use(params);
   const router = useRouter();
-  const { userId } = useCurrentUser();
+  const { userId, ready, isRealSession } = useCurrentUser();
+
+  useEffect(() => {
+    if (ready && !isRealSession) {
+      router.replace(`/login?next=${encodeURIComponent(window.location.pathname)}`);
+    }
+  }, [ready, isRealSession, router]);
 
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -372,7 +378,11 @@ export default function EditCardPage({ params }) {
         </div>
         <div>
           <label className="mb-1 block text-xs font-medium text-paper/60">Kapak görseli</label>
-          <ImagePicker value={coverImage} onChange={setCoverImage} />
+          <ImagePicker
+            value={coverImage}
+            onChange={setCoverImage}
+            fit="card"
+           />
         </div>
         <div className="flex items-center gap-3">
           <label className="text-xs font-medium text-paper/60">Görünürlük</label>

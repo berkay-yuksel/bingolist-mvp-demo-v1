@@ -8,7 +8,7 @@ import { formatCount } from '@/lib/format';
 import ReportDialog from './ReportDialog';
 
 export default function ProfileHeader({ profile }) {
-  const { userId } = useCurrentUser();
+  const { userId, requireLogin } = useCurrentUser();
   const [following, setFollowing] = useState(false);
   const [followerCount, setFollowerCount] = useState(profile.followerCount);
   const [reportOpen, setReportOpen] = useState(false);
@@ -21,6 +21,7 @@ export default function ProfileHeader({ profile }) {
   }, [profile.username, userId]);
 
   async function toggleFollow() {
+    if (!requireLogin()) return;
     const res = await fetch(`/api/users/${profile.username}/follow`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -101,7 +102,7 @@ export default function ProfileHeader({ profile }) {
             {following ? 'Takip ediliyor' : 'Takip et'}
           </button>
           <button
-            onClick={() => setReportOpen(true)}
+            onClick={() => requireLogin() && setReportOpen(true)}
             aria-label="Profili bildir"
             className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-ink-500 text-paper/50 hover:border-stamp hover:text-stamp"
           >

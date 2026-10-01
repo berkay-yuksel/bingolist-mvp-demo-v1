@@ -3,13 +3,13 @@
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
-import { Search } from 'lucide-react';
+import { Search, Plus } from 'lucide-react';
 import { useCurrentUser } from './UserContext';
 import NotificationBell from './NotificationBell';
 
 export default function Header() {
-  const { user, users, setUserId, isRealSession, devSwitcherEnabled, logout } = useCurrentUser();
-  const [switcherOpen, setSwitcherOpen] = useState(false);
+  const { user, ready, isRealSession, logout } = useCurrentUser();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [q, setQ] = useState('');
   const [results, setResults] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -60,12 +60,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink-500/40 bg-ink/90 backdrop-blur-md">
-      <div className="mx-auto flex w-[92vw] max-w-[1800px] items-center gap-6 py-3">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+      <div className="mx-auto flex w-[92vw] max-w-[1800px] items-center gap-3 py-3 sm:gap-6">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <span className="grid h-7 w-7 place-items-center rounded-md bg-stamp font-display text-sm font-bold text-ink shadow-stamp">
             B
           </span>
-          <span className="font-display text-lg font-bold tracking-tight">BingoList</span>
+          <span className="hidden font-display text-base font-bold tracking-tight min-[350px]:inline sm:text-lg">BingoList</span>
         </Link>
 
         <nav className="hidden items-center gap-5 md:flex">
@@ -131,135 +131,99 @@ export default function Header() {
           )}
         </div>
 
-        <Link
-          href="/create"
-          className="hidden shrink-0 rounded-full bg-stamp px-4 py-1.5 text-sm font-semibold text-ink transition hover:bg-stamp-light sm:block"
-        >
-          + Yeni Kart
-        </Link>
-
-        <div className="relative ml-2 shrink-0">
-          <NotificationBell />
-        </div>
-
-        {!isRealSession && (
-          <div className="hidden shrink-0 items-center gap-2 sm:flex">
-            <Link
-              href="/login"
-              className="rounded-full border border-ink-500 px-3 py-1.5 text-sm text-paper/70 hover:border-mint hover:text-mint"
-            >
-              Giriş yap
-            </Link>
-            <Link
-              href="/signup"
-              className="rounded-full bg-mint px-3 py-1.5 text-sm font-medium text-ink hover:bg-mint-dark"
-            >
-              Kayıt ol
-            </Link>
-          </div>
-        )}
-
-        {(isRealSession || devSwitcherEnabled) && (
-        <div className="relative shrink-0">
-          <button
-            onClick={() => setSwitcherOpen((s) => !s)}
-            className="flex items-center gap-2 rounded-full border border-ink-500 bg-ink-700 py-1 pl-1 pr-3 text-sm"
-            aria-label={isRealSession ? 'Hesap menüsü' : 'Demo kullanıcısını değiştir'}
+        {/* Right-hand cluster — the same on every screen size: new-card
+            button, then either (bell + avatar) when signed in or the
+            login / signup pair when not. On phones it sits at the far
+            right (ml-auto); from sm up the search box takes that spot. */}
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:ml-0 sm:gap-6">
+          <Link
+            href="/create"
+            aria-label="Yeni kart"
+            className="flex shrink-0 items-center gap-1 rounded-full bg-stamp px-3 py-1.5 text-[13px] font-semibold text-ink transition hover:bg-stamp-light sm:px-4 sm:text-sm"
           >
-            <span
-              className="grid h-6 w-6 place-items-center overflow-hidden rounded-full text-[11px] font-bold text-ink"
-              style={{ backgroundColor: user.avatarColor }}
-            >
-              {user.avatarImage ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={user.avatarImage} alt="" className="h-full w-full object-cover" />
-              ) : (
-                user.displayName[0]
-              )}
-            </span>
-            <span className="hidden text-paper/80 sm:inline">@{user.username}</span>
-          </button>
+            <Plus size={14} strokeWidth={3} />
+            <span className="hidden min-[480px]:inline">Yeni Kart</span>
+          </Link>
 
-          {switcherOpen && isRealSession && (
-            <div className="absolute right-0 top-11 w-56 overflow-hidden rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket">
-              <p className="truncate px-2 pb-1.5 pt-1 text-sm text-paper">
-                {user.displayName} <span className="text-paper/40">@{user.username}</span>
-              </p>
-              <Link
-                href={`/profile/${user.username}`}
-                onClick={() => setSwitcherOpen(false)}
-                className="mt-1 block rounded-lg px-2 py-1.5 text-sm text-mint hover:bg-ink-600"
-              >
-                Profilimi gör
-              </Link>
-              <button
-                onClick={() => {
-                  logout();
-                  setSwitcherOpen(false);
-                }}
-                className="mt-1 block w-full rounded-lg px-2 py-1.5 text-left text-sm text-stamp hover:bg-ink-600"
-              >
-                Çıkış yap
-              </button>
-            </div>
-          )}
+          {!ready && <div className="h-9 w-9" aria-hidden />}
 
-          {switcherOpen && !isRealSession && (
-            <div className="absolute right-0 top-11 max-h-96 w-64 overflow-y-auto rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket">
-              <p className="px-2 pb-1.5 pt-1 font-mono text-[10px] uppercase tracking-wider text-paper/40">
-                Demo kullanıcısı olarak gez
-              </p>
-              {users.map((u) => (
-                <button
-                  key={u.id}
-                  onClick={() => {
-                    setUserId(u.id);
-                    setSwitcherOpen(false);
-                  }}
-                  className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-ink-600 ${
-                    u.id === user.id ? 'bg-ink-600' : ''
-                  }`}
-                >
-                  <span
-                    className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-[11px] font-bold text-ink"
-                    style={{ backgroundColor: u.avatarColor }}
-                  >
-                    {u.displayName[0]}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate leading-tight text-paper">{u.displayName}</span>
-                    <span className="block truncate text-xs leading-tight text-paper/45">@{u.username}</span>
-                  </span>
-                  {u.role !== 'player' && (
-                    <span className="shrink-0 rounded-full bg-ink-800 px-1.5 py-0.5 text-[9px] uppercase tracking-wide text-paper/50">
-                      {u.role === 'moderator' ? 'Mod' : 'Editor'}
-                    </span>
-                  )}
-                  {u.isCreator && (
-                    <span className="shrink-0 rounded-full bg-stamp/15 px-1.5 py-0.5 text-[9px] uppercase tracking-wide text-stamp">
-                      Creator
-                    </span>
-                  )}
-                </button>
-              ))}
-              <Link
-                href={`/profile/${user.username}`}
-                onClick={() => setSwitcherOpen(false)}
-                className="mt-1 block rounded-lg px-2 py-1.5 text-sm text-mint hover:bg-ink-600"
-              >
-                Profilimi gör →
-              </Link>
+          {ready && !isRealSession && (
+            <div className="flex shrink-0 items-center gap-2">
               <Link
                 href="/login"
-                onClick={() => setSwitcherOpen(false)}
-                className="mt-1 block rounded-lg px-2 py-1.5 text-sm text-paper/60 hover:bg-ink-600"
+                className="rounded-full border border-ink-500 px-3 py-1.5 text-[13px] text-paper/70 hover:border-mint hover:text-mint sm:text-sm"
               >
-                Gerçek hesapla giriş yap →
+                Giriş yap
+              </Link>
+              <Link
+                href="/signup"
+                className="rounded-full bg-mint px-3 py-1.5 text-[13px] font-medium text-ink hover:bg-mint-dark sm:text-sm"
+              >
+                Kayıt ol
               </Link>
             </div>
           )}
+
+          {ready && isRealSession && (
+            <>
+              <NotificationBell />
+
+              <div className="relative shrink-0">
+                <button
+                  onClick={() => setMenuOpen((s) => !s)}
+                  className="flex items-center gap-2 rounded-full border border-ink-500 bg-ink-700 py-1 pl-1 pr-1 text-sm sm:pr-3"
+                  aria-label="Hesap menüsü"
+                >
+                  <span
+                    className="grid h-7 w-7 place-items-center overflow-hidden rounded-full text-[11px] font-bold text-ink"
+                    style={{ backgroundColor: user.avatarColor }}
+                  >
+                    {user.avatarImage ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={user.avatarImage} alt="" className="h-full w-full object-cover" />
+                    ) : (
+                      user.displayName[0]
+                    )}
+                  </span>
+                  <span className="hidden text-paper/80 sm:inline">@{user.username}</span>
+                </button>
+
+                {menuOpen && (
+                  <div className="absolute right-0 top-11 w-56 overflow-hidden rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket">
+                    <p className="truncate px-2 pb-1.5 pt-1 text-sm text-paper">
+                      {user.displayName} <span className="text-paper/40">@{user.username}</span>
+                    </p>
+                    <Link
+                      href={`/profile/${user.username}`}
+                      onClick={() => setMenuOpen(false)}
+                      className="mt-1 block rounded-lg px-2 py-1.5 text-sm text-mint hover:bg-ink-600"
+                    >
+                      Profilimi gör
+                    </Link>
+                    {(user.role === 'moderator' || user.role === 'editor') && (
+                      <Link
+                        href="/management"
+                        onClick={() => setMenuOpen(false)}
+                        className="mt-1 block rounded-lg px-2 py-1.5 text-sm text-paper/80 hover:bg-ink-600"
+                      >
+                        Yönetim
+                      </Link>
+                    )}
+                    <button
+                      onClick={() => {
+                        logout();
+                        setMenuOpen(false);
+                      }}
+                      className="mt-1 block w-full rounded-lg px-2 py-1.5 text-left text-sm text-stamp hover:bg-ink-600"
+                    >
+                      Çıkış yap
+                    </button>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </div>
-        )}
       </div>
     </header>
   );

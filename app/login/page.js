@@ -37,7 +37,9 @@ function LoginInner() {
       return;
     }
     await refreshSession();
-    router.push(searchParams.get('next') || '/');
+    // only ever redirect to a path on this site (never an external URL)
+    const next = searchParams.get('next');
+    router.push(next && next.startsWith('/') && !next.startsWith('//') ? next : '/');
   }
 
   return (
@@ -77,7 +79,7 @@ function LoginInner() {
 
       <p className="mt-4 text-center text-sm text-paper/50">
         Hesabın yok mu?{' '}
-        <Link href="/signup" className="text-mint hover:underline">
+        <Link href={searchParams.get('next') ? `/signup?next=${encodeURIComponent(searchParams.get('next'))}` : '/signup'} className="text-mint hover:underline">
           Kayıt ol
         </Link>
       </p>

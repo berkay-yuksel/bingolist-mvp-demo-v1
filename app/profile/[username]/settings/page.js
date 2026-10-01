@@ -2,7 +2,7 @@
 
 import { useEffect, useState, use, Suspense } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Eye, MousePointerClick, Heart, Bookmark, Share2, Repeat, Check, X as XIcon, Trash2 } from 'lucide-react';
 import { useCurrentUser } from '@/components/UserContext';
 import { formatCount } from '@/lib/format';
@@ -115,8 +115,15 @@ function timeAgo(iso) {
 
 function SettingsInner({ params }) {
   const { username } = use(params);
-  const { user, userId } = useCurrentUser();
+  const { user, userId, ready, isRealSession } = useCurrentUser();
+  const router = useRouter();
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (ready && !isRealSession) {
+      router.replace(`/login?next=${encodeURIComponent(window.location.pathname + window.location.search)}`);
+    }
+  }, [ready, isRealSession, router]);
   const [tab, setTab] = useState(searchParams.get('tab') === 'notifications' ? 'notifications' : 'profile');
 
   const [displayName, setDisplayName] = useState('');

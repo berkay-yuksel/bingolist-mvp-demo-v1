@@ -83,24 +83,38 @@
   background-color: #64708F;
 }
 
-/* A rotating green "chase light" around a button's border — used to draw
-   the eye to "Uygula" right after something got pasted in for review, so
-   it's obvious there's a next step to take. */
-@keyframes chase-light-spin {
-  to { transform: rotate(360deg); }
+/* CSS değişkenimizi açı (<angle>) olarak tanımlıyoruz ki anime edebilelim */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
+
 .chase-light {
-  position: relative;
-  isolation: isolate;
+  /* Temel buton stilleri */
+  padding: 12px 24px;
+
+  border-radius: .375rem;
+
+  /* Çerçeve kalınlığını transparent bir border ile belirliyoruz */
+  border: 1px solid transparent;
+
+  background:
+    /* 1. Katman (Üst): Butonun kendi arka plan rengi. Sadece içerik kısmını kaplar (padding-box) */
+    linear-gradient(#161a27, #161a27) padding-box,
+
+    /* 2. Katman (Alt): Dönen renkli ışık. Border dahil tüm alanı kaplar (border-box) */
+    conic-gradient(from var(--angle), transparent 20%, #38D6A7 40%, transparent 60%) border-box;
+
+  /* Animasyonu başlatıyoruz */
+  animation: spin-border 2s linear infinite;
 }
-.chase-light::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  z-index: -1;
-  border-radius: 0.6rem;
-  background: conic-gradient(from 0deg, transparent 0%, #38D6A7 18%, transparent 36%);
-  animation: chase-light-spin 1.3s linear infinite;
+
+/* Sadece açıyı 360 dereceye doğru değiştiriyoruz */
+@keyframes spin-border {
+  to {
+    --angle: 360deg;
+  }
 }
 
 /* Mobile screens are tight on space for dense bingo grids — shrink the

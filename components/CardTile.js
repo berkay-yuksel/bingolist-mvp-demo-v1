@@ -26,7 +26,7 @@ import { isCardHidden, setCardHidden, isCardPlayed } from '@/lib/localFlags';
 // and relabels it "Kaydedilenlerden kaldır" instead of the generic
 // "Kaydet"/"Kaydedildi" pair.
 export default function CardTile({ card, pinned, onTogglePin, extraMenuItems, dimmed, topLeftBadge, savedContext, onRemoved }) {
-  const { userId } = useCurrentUser();
+  const { userId, requireLogin } = useCurrentUser();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [bookmarked, setBookmarked] = useState(!!savedContext);
@@ -52,6 +52,7 @@ export default function CardTile({ card, pinned, onTogglePin, extraMenuItems, di
   async function toggleBookmark(e) {
     e.preventDefault();
     e.stopPropagation();
+    if (!requireLogin()) return;
     const res = await fetch(`/api/cards/${card.id}/interact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

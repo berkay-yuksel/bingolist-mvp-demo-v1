@@ -48,9 +48,11 @@ export default function BingoCell({ cell, selected, percent, showStats, checkSty
 
         {!hideText && (
           <span
-            className={`relative z-10 line-clamp-6 text-xs font-medium leading-tight sm:line-clamp-4 sm:text-sm ${
-              cell.image ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]' : ''
-            }`}
+            className={`relative z-10 text-xs font-medium leading-tight sm:text-sm ${
+              // The community-% badge takes room of its own, so with it on
+              // the caption drops back to max 4 lines even on phones.
+              showStats ? 'line-clamp-4' : 'line-clamp-6 sm:line-clamp-4'
+            } ${cell.image ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]' : ''}`}
           >
             {cell.emoji && <span className="mr-1">{cell.emoji}</span>}
             {cell.text}

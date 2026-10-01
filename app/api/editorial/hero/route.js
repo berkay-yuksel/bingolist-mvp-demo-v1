@@ -22,6 +22,11 @@ export async function PATCH(request) {
       if (cardId && !db.cards.some((c) => c.id === cardId)) {
         return { error: 'Kart bulunamadı.', status: 404 };
       }
+      // Keep a flag on the cards themselves so every small card tile can
+      // tag the banner card automatically (see publicCardSummary).
+      db.cards.forEach((c) => {
+        c.isBanner = !!cardId && c.id === cardId;
+      });
       db.heroBanner.cardId = cardId || null;
     }
     if (media !== undefined) db.heroBanner.media = media;

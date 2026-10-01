@@ -1,18 +1,17 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
-import { USERS } from '@/lib/mockData';
+import { useRouter } from 'next/navigation';
 
-const STORAGE_KEY = 'bingolist:currentUserId';
 const UserCtx = createContext(null);
 
-// Used only when there's no real session AND the static demo USERS list is
-// empty (e.g. once all the placeholder seed accounts are deleted from
-// mockData.js) — keeps anonymous browsing from crashing instead of relying
-// on USERS[0] always existing.
+// What `user` looks like before/without a login. It has an empty id on
+// purpose: every API call that needs a person (play, like, bookmark,
+// follow, ...) rejects an empty userId, so a visitor who isn't signed in
+// can never silently act as somebody else.
 const GUEST_USER = {
-  id: 'guest',
-  username: 'guest',
+  id: '',
+  username: '',
   displayName: 'Ziyaretçi',
   avatarColor: '#4FA3FF',
   avatarImage: null,
@@ -20,15 +19,12 @@ const GUEST_USER = {
   isCreator: false,
 };
 
-// Identity source: a real logged-in session (cookie-based, from
-// /api/auth). The old localStorage "switch persona" dev tool is fully
-// retired now that the site has real accounts — devSwitcherEnabled always
-// stays false, kept only so nothing else in the app has to change.
+// Identity comes from exactly one place: the real session cookie
+// (/api/auth/me). There are no demo accounts anymore.
 export function UserProvider({ children }) {
-  const [userId, setUserIdState] = useState(USERS[0]?.id || GUEST_USER.id);
+  const router = useRouter();
   const [realUser, setRealUser] = useState(null);
   const [ready, setReady] = useState(false);
-  const [devSwitcherEnabled, setDevSwitcherEnabled] = useState(false);
 
   const refreshSession = useCallback(async () => {
     try {
@@ -41,24 +37,8 @@ export function UserProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored && USERS.some((u) => u.id === stored)) {
-      setUserIdState(stored);
-    }
-
-    // Demo persona switcher retired now that the site has real accounts.
-    setDevSwitcherEnabled(false);
-
     refreshSession().finally(() => setReady(true));
   }, [refreshSession]);
-
-  function setUserId(id) {
-    setUserIdState(id);
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(STORAGE_KEY, id);
-    }
-  }
 
   async function logout() {
     await fetch('/api/auth/logout', { method: 'POST' });
@@ -66,19 +46,29 @@ export function UserProvider({ children }) {
   }
 
   const isRealSession = !!realUser;
-  const user = isRealSession ? realUser : USERS.find((u) => u.id === userId) || USERS[0] || GUEST_USER;
+  const user = realUser || GUEST_USER;
+
+  // Call this at the top of anything that needs an account (marking a
+  // cell, liking, saving, following ...). Returns true when it's fine to
+  // go ahead; otherwise sends the visitor to the login page and comes
+  // back to the same spot afterwards, and returns false.
+  const requireLogin = useCallback(() => {
+    if (realUser) return true;
+    if (!ready) return false; // session check still running — don't misfire
+    const next = window.location.pathname + window.location.search;
+    router.push(`/login?next=${encodeURIComponent(next)}`);
+    return false;
+  }, [realUser, ready, router]);
 
   return (
     <UserCtx.Provider
       value={{
         userId: user.id,
         user,
-        setUserId,
-        users: USERS,
         ready,
         isRealSession,
-        devSwitcherEnabled,
         refreshSession,
+        requireLogin,
         logout,
       }}
     >

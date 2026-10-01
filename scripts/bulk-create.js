@@ -6,19 +6,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://bingolist-demo.vercel.app/'; // <-- burayı değiştir
+const SITE_URL = 'https://bingolist-demo.vercel.app'.replace(/\/$/, ''); // <-- burayı değiştir
 
+// The old demo accounts (spinoza, nietzsche ...) no longer exist. Add the
+// real accounts you want to post as: username -> user id (find the id with
+// the SQL query from the setup notes).
 const USERNAME_TO_ID = {
-  spinoza: 'u_asli',
-  nietzsche: 'u_deniz',
-  epiktetos: 'u_mert',
-  epikuros: 'u_ece',
-  marcusaurelius: 'u_can',
-  seneca: 'u_selin',
-  camus: 'u_leyla',
-  schopenhauer: 'u_arda',
-  carljung: 'u_duru',
-  aynrand: 'u_bora',
   lunarisdev: 'u_1789495703392',
 };
 
@@ -27,7 +20,11 @@ async function main() {
   console.log(`${cards.length} kart bulundu, gönderiliyor...`);
 
   for (const card of cards) {
-    const creatorId = USERNAME_TO_ID[card.creatorUsername] || 'u_asli';
+    const creatorId = USERNAME_TO_ID[card.creatorUsername];
+    if (!creatorId) {
+      console.log(`✗ ${card.title} -> bilinmeyen creatorUsername "${card.creatorUsername}" (USERNAME_TO_ID'ye ekle)`);
+      continue;
+    }
     const body = { ...card, creatorId };
     delete body.creatorUsername;
 
