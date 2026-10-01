@@ -284,25 +284,17 @@ export default function PlayPage({ params }) {
             );
           })}
         </div>
-        <div className="flex shrink-0 items-center gap-1.5">
-          <button
-            onClick={() => {
-              navigator.clipboard?.writeText(card.id);
-              setIdCopied(true);
-              setTimeout(() => setIdCopied(false), 1500);
-            }}
-            title="ID'yi kopyala"
-            className="shrink-0 rounded-md border border-ink-500 bg-ink-800 px-2 py-1 font-mono text-[11px] text-paper/40 hover:border-mint hover:text-mint"
-          >
-            {idCopied ? 'Kopyalandı ✓' : card.id}
-          </button>
-          {/* Only the narrowest phones actually cramp up (tags wrapping
-              pushes the ID button down onto its own line) — this hint only
-              shows there, not on anything wider. */}
-          <span className="hidden max-[380px]:inline-flex shrink-0 items-center rounded-md border-2 border-stamp/50 bg-stamp/10 px-2 py-1 text-[10px] font-bold text-stamp">
-            ↻ Telefonu yatay çevir
-          </span>
-        </div>
+        <button
+          onClick={() => {
+            navigator.clipboard?.writeText(card.id);
+            setIdCopied(true);
+            setTimeout(() => setIdCopied(false), 1500);
+          }}
+          title="ID'yi kopyala"
+          className="shrink-0 rounded-md border border-ink-500 bg-ink-800 px-2 py-1 font-mono text-[11px] text-paper/40 hover:border-mint hover:text-mint"
+        >
+          {idCopied ? 'Kopyalandı ✓' : card.id}
+        </button>
       </div>
 
       {completed && (
