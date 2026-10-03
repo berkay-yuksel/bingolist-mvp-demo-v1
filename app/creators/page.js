@@ -1,14 +1,13 @@
-import { readDB, publicUserSummary } from '@/lib/db';
+import { readDB, publicUserSummary, sortCreatorsByPlayers } from '@/lib/db';
 import CreatorRow from '@/components/CreatorRow';
 
 export const dynamic = 'force-dynamic';
 
 export default async function CreatorsPage() {
   const db = await readDB();
-  const creators = [...db.users]
-    .filter((u) => u.isCreator)
-    .sort((a, b) => b.followers.length - a.followers.length)
-    .map((u) => publicUserSummary(u, db));
+  const creators = sortCreatorsByPlayers(
+    db.users.filter((u) => u.isCreator).map((u) => publicUserSummary(u, db))
+  );
 
   return (
     <div className="mx-auto w-[92vw] max-w-[1800px] py-10">

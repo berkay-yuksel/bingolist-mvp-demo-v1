@@ -19,7 +19,7 @@ export async function GET() {
   return NextResponse.json({
     cards,
     categories: db.categories,
-    featuredCategories: db.featuredCategories,
+    homeSections: db.homeSections,
     categoryPopularTags: db.categoryPopularTags || {},
     collections: db.collections,
   });

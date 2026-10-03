@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Plus, Save, Image as ImageIcon, Video, ChevronDown } from 'lucide-react';
+import { Plus, Save, Image as ImageIcon, Video, ChevronDown, ArrowUp, ArrowDown, X, Trash2 } from 'lucide-react';
 import { useCurrentUser } from '@/components/UserContext';
 import BannerImagePicker from '@/components/BannerImagePicker';
+import ConfirmDialog from '@/components/ConfirmDialog';
 
 function parseIdList(text) {
   return text
@@ -32,6 +33,13 @@ export default function EditorialPage() {
   const [newAdCategory, setNewAdCategory] = useState('');
   const [savingAd, setSavingAd] = useState(false);
   const [adError, setAdError] = useState(null);
+
+  const [newPickId, setNewPickId] = useState('');
+  const [savingPick, setSavingPick] = useState(false);
+  const [pickError, setPickError] = useState(null);
+
+  const [deleteTarget, setDeleteTarget] = useState(null);
+  const [deleting, setDeleting] = useState(false);
 
   async function load() {
     const res = await fetch('/api/editorial/overview');
@@ -179,6 +187,102 @@ export default function EditorialPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ editorId: userId, isAd: false }),
     });
+    load();
+  }
+
+  // ---- Editörün seçimi: cards flagged `featured` (homepage "Öne Çıkanlar") ----
+  const picks = data.cards.filter((c) => c.featured);
+
+  async function setPick(id, featured) {
+    const res = await fetch(`/api/editorial/cards/${id}/featured`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ editorId: userId, featured }),
+    });
+    return res;
+  }
+
+  async function addPick() {
+    setPickError(null);
+    const id = newPickId.trim();
+    if (!id) return;
+    const card = data.cards.find((c) => c.id === id);
+    if (!card) {
+      setPickError('Bu ID ile bir kart bulunamadı.');
+      return;
+    }
+    if (card.featured) {
+      setPickError('Bu kart zaten editörün seçiminde.');
+      return;
+    }
+    setSavingPick(true);
+    const res = await setPick(id, true);
+    setSavingPick(false);
+    if (res.ok) {
+      setNewPickId('');
+      load();
+    } else {
+      setPickError((await res.json()).error);
+    }
+  }
+
+  async function removePick(id) {
+    await setPick(id, false);
+    load();
+  }
+
+  // ---- Anasayfa başlıkları: category rows, collections and "Popüler Bingolar",
+  // in the order the editor picks. Keys: 'category:<slug>', 'collection:<id>', 'popular'.
+  const homeKeys = data.homeSections || [];
+
+  function describeSection(key) {
+    if (key === 'featured') return { key, label: 'Editörün Seçimi (Öne Çıkanlar)', kind: 'Hazır satır' };
+    if (key === 'popular') return { key, label: 'Popüler Bingolar', kind: 'Hazır satır' };
+    if (key.startsWith('category:')) {
+      const cat = data.categories.find((c) => c.slug === key.slice('category:'.length));
+      return cat ? { key, label: `${cat.label} kategorisinde trend`, kind: 'Kategori', color: cat.accent } : null;
+    }
+    if (key.startsWith('collection:')) {
+      const col = data.collections.find((c) => c.id === key.slice('collection:'.length));
+      return col ? { key, label: col.title, kind: 'Koleksiyon' } : null;
+    }
+    return null;
+  }
+
+  const shownSections = homeKeys.map(describeSection).filter(Boolean);
+  const allKeys = [
+    'featured',
+    'popular',
+    ...data.categories.map((c) => `category:${c.slug}`),
+    ...data.collections.map((c) => `collection:${c.id}`),
+  ];
+  const hiddenSections = allKeys.filter((k) => !homeKeys.includes(k)).map(describeSection).filter(Boolean);
+
+  async function saveHomeSections(nextKeys) {
+    setData((d) => ({ ...d, homeSections: nextKeys })); // show it right away
+    await fetch('/api/editorial/home-sections', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ editorId: userId, homeSections: nextKeys }),
+    });
+    load();
+  }
+
+  function moveSection(key, direction) {
+    const keys = shownSections.map((x) => x.key);
+    const i = keys.indexOf(key);
+    const j = i + direction;
+    if (i < 0 || j < 0 || j >= keys.length) return;
+    [keys[i], keys[j]] = [keys[j], keys[i]];
+    saveHomeSections(keys);
+  }
+
+  async function confirmDeleteCollection() {
+    if (!deleteTarget) return;
+    setDeleting(true);
+    await fetch(`/api/editorial/collections/${deleteTarget.id}?editorId=${userId}`, { method: 'DELETE' });
+    setDeleting(false);
+    setDeleteTarget(null);
     load();
   }
 
@@ -331,6 +435,140 @@ export default function EditorialPage() {
           </div>
         </section>
 
+        {/* Editor's picks */}
+        <section className="rounded-lg border border-ink-500 bg-ink-700/40 p-4">
+          <h2 className="mb-1 font-display text-lg font-bold">Editörün Seçimi</h2>
+          <p className="mb-3 text-xs text-paper/45">
+            Anasayfadaki "Öne Çıkanlar" satırında gösterilen kartlar. Satırın anasayfadaki yerini aşağıdaki "Anasayfa Başlıkları"ndan ayarlarsın. Sadece yayında olan kartlar görünür.
+          </p>
+          {!homeKeys.includes('featured') && (
+            <p className="mb-3 rounded-md border border-marker/40 bg-marker/10 px-3 py-2 text-xs text-marker">
+              Bu satır şu anda anasayfada gösterilmiyor, seçtiğin kartlar görünmez. "Anasayfa Başlıkları"ndan ekleyebilirsin.
+            </p>
+          )}
+          <div className="mb-3 flex flex-wrap items-end gap-2">
+            <div className="min-w-0 flex-1">
+              <label className="mb-1 block text-xs font-medium text-paper/60">Kart ID</label>
+              <input
+                value={newPickId}
+                onChange={(e) => setNewPickId(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addPick();
+                  }
+                }}
+                list="editorial-card-options"
+                placeholder="Kart ID yaz veya listeden seç…"
+                className="w-full rounded-md border border-ink-500 bg-ink-800 px-3 py-2 text-sm font-mono focus:border-mint"
+              />
+            </div>
+            <button
+              onClick={addPick}
+              disabled={savingPick || !newPickId.trim()}
+              className="flex items-center gap-1.5 rounded-md bg-stamp px-4 py-2 text-sm font-semibold text-ink hover:bg-stamp-light disabled:opacity-60"
+            >
+              <Plus size={14} /> Ekle
+            </button>
+          </div>
+          {pickError && <p className="mb-2 text-xs text-stamp">{pickError}</p>}
+          {picks.length === 0 ? (
+            <p className="text-xs text-paper/40">Henüz editör seçimi yok.</p>
+          ) : (
+            <div className="space-y-1">
+              {picks.map((c) => (
+                <div key={c.id} className="flex items-center justify-between gap-2 rounded-md bg-ink-800 px-3 py-2 text-sm">
+                  <span className="min-w-0 truncate">
+                    {c.title} <span className="ml-1 font-mono text-[10px] text-paper/30">{c.id}</span>
+                  </span>
+                  <span className="flex shrink-0 items-center gap-2">
+                    {c.publicationState !== 'PUBLISHED' && (
+                      <span className="rounded-full bg-stamp/15 px-2 py-0.5 text-[10px] font-medium text-stamp">yayında değil</span>
+                    )}
+                    <button onClick={() => removePick(c.id)} className="text-xs text-paper/40 hover:text-stamp">
+                      Kaldır
+                    </button>
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
+        {/* Homepage rows: categories, collections, popular */}
+        <section className="rounded-lg border border-ink-500 bg-ink-700/40 p-4">
+          <h2 className="mb-1 font-display text-lg font-bold">Anasayfa Başlıkları</h2>
+          <p className="mb-3 text-xs text-paper/45">
+            Anasayfada "Yeniler"in altında hangi satırların (Editörün Seçimi, kategoriler, koleksiyonlar, Popüler Bingolar)
+            hangi sırayla görüneceği. Sıralamak için okları kullan.
+          </p>
+
+          {shownSections.length === 0 ? (
+            <p className="mb-3 text-xs text-paper/40">Anasayfada bu satırlardan hiçbiri gösterilmiyor.</p>
+          ) : (
+            <div className="mb-3 space-y-1">
+              {shownSections.map((item, i) => (
+                <div key={item.key} className="flex items-center justify-between gap-2 rounded-md bg-ink-800 px-3 py-2 text-sm">
+                  <span className="flex min-w-0 items-center gap-2">
+                    <span
+                      className="h-2.5 w-2.5 shrink-0 rounded-full bg-paper/35"
+                      style={item.color ? { backgroundColor: item.color } : undefined}
+                    />
+                    <span className="truncate">{item.label}</span>
+                    <span className="shrink-0 rounded-full bg-ink-600 px-2 py-0.5 text-[10px] text-paper/45">{item.kind}</span>
+                  </span>
+                  <span className="flex shrink-0 items-center gap-1">
+                    <button
+                      onClick={() => moveSection(item.key, -1)}
+                      disabled={i === 0}
+                      aria-label="Yukarı taşı"
+                      className="rounded p-1 text-paper/45 hover:bg-ink-600 hover:text-paper disabled:opacity-25 disabled:hover:bg-transparent"
+                    >
+                      <ArrowUp size={14} />
+                    </button>
+                    <button
+                      onClick={() => moveSection(item.key, 1)}
+                      disabled={i === shownSections.length - 1}
+                      aria-label="Aşağı taşı"
+                      className="rounded p-1 text-paper/45 hover:bg-ink-600 hover:text-paper disabled:opacity-25 disabled:hover:bg-transparent"
+                    >
+                      <ArrowDown size={14} />
+                    </button>
+                    <button
+                      onClick={() => saveHomeSections(shownSections.filter((x) => x.key !== item.key).map((x) => x.key))}
+                      aria-label="Anasayfadan kaldır"
+                      className="rounded p-1 text-paper/45 hover:bg-stamp/15 hover:text-stamp"
+                    >
+                      <X size={14} />
+                    </button>
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {hiddenSections.length > 0 && (
+            <>
+              <p className="mb-1.5 text-xs font-medium text-paper/60">Eklenebilecek başlıklar</p>
+              <div className="flex flex-wrap gap-1.5">
+                {hiddenSections.map((item) => (
+                  <button
+                    key={item.key}
+                    onClick={() => saveHomeSections([...shownSections.map((x) => x.key), item.key])}
+                    title={item.kind}
+                    className={`flex items-center gap-1 rounded-full border px-3 py-1 text-xs hover:border-mint hover:text-mint ${
+                      item.kind === 'Kategori' ? 'border-ink-500 text-paper/65' : 'border-dashed border-ink-500 text-paper/65'
+                    }`}
+                  >
+                    <Plus size={12} /> {item.kind === 'Kategori' ? item.label.replace(' kategorisinde trend', '') : item.label}
+                  </button>
+                ))}
+              </div>
+              <p className="mt-1.5 text-[11px] text-paper/35">Kesik çizgili olanlar koleksiyon ve hazır satırlar, düz çizgili olanlar kategori.</p>
+            </>
+          )}
+        </section>
+
         {/* Existing collections */}
         <section className="rounded-lg border border-ink-500 bg-ink-700/40 p-4 lg:col-span-2">
           <h2 className="mb-3 font-display text-lg font-bold">Koleksiyonlar</h2>
@@ -364,6 +602,12 @@ export default function EditorialPage() {
                           className="flex items-center gap-1 rounded-md bg-mint px-3 py-1.5 text-xs font-semibold text-ink hover:bg-mint-dark disabled:opacity-60"
                         >
                           <Save size={13} /> Kaydet
+                        </button>
+                        <button
+                          onClick={() => setDeleteTarget(col)}
+                          className="flex items-center gap-1 rounded-md border border-ink-500 px-3 py-1.5 text-xs font-medium text-paper/55 hover:border-stamp hover:text-stamp"
+                        >
+                          <Trash2 size={13} /> Sil
                         </button>
                       </div>
                       <input
@@ -456,6 +700,17 @@ export default function EditorialPage() {
           </div>
         </section>
       </div>
+
+      {deleteTarget && (
+        <ConfirmDialog
+          title="Koleksiyonu sil"
+          body={`"${deleteTarget.title}" koleksiyonunu silmek istediğine emin misin? İçindeki kartlar silinmez, sadece koleksiyon ve anasayfadaki satırı kalkar.`}
+          confirmLabel="Evet, sil"
+          busy={deleting}
+          onConfirm={confirmDeleteCollection}
+          onCancel={() => setDeleteTarget(null)}
+        />
+      )}
     </div>
   );
 }

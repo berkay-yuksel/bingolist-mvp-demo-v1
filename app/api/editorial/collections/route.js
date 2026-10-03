@@ -17,6 +17,14 @@ export async function POST(request) {
       cardIds: Array.isArray(cardIds) ? cardIds : [],
     };
     db.collections.push(collection);
+
+    const key = `collection:${collection.id}`;
+    const sections = db.homeSections || [];
+    const popularAt = sections.indexOf('popular');
+    if (popularAt >= 0) sections.splice(popularAt, 0, key);
+    else sections.push(key);
+    db.homeSections = sections;
+
     return { collection };
   });
 
