@@ -279,7 +279,7 @@ export default function ShareModal({ card, selectedIds, cellStats, shareUrl, onC
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         lines.forEach((line, li) => {
-          ctx.fillText(line, x + cellW / 2, groupTop + li * captionLineH + captionLineH / 2);
+          fillCenteredLine(ctx, line, x + cellW / 2, groupTop + li * captionLineH + captionLineH / 2);
         });
 
         drawPercentPill(ctx, pct, x + cellW / 2, groupTop + captionH + gapBetween + pillH / 2, pillFont, pillH);
@@ -564,6 +564,67 @@ function drawCover(ctx, img, x, y, w, h) {
   ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
 }
 
+// ---- emoji-safe text ------------------------------------------------------
+// Safari draws a *centered* canvas line wrongly when it contains a flag or
+// another emoji: it starts the line at the middle of the cell instead of
+// centering it, so the text runs off the edge. Left-aligned text is drawn
+// correctly, so a centered line that contains emoji is placed by hand: the
+// plain text is measured, each emoji gets a sane fixed width, and every piece
+// is drawn left-aligned from the computed start. Lines without emoji take the
+// normal path and come out exactly as before.
+const EMOJI_UNIT = '(?:\\p{Emoji_Presentation}|\\p{Extended_Pictographic}\\uFE0F)\\p{Emoji_Modifier}?';
+const EMOJI_CLUSTER = new RegExp(`(\\p{Regional_Indicator}{2}|[#*0-9]\\uFE0F?\\u20E3|${EMOJI_UNIT}(?:\\u200D${EMOJI_UNIT})*)`, 'u');
+
+// [{ s, emoji }] — a flag, a keycap or a ZWJ sequence stays in one piece.
+function emojiPieces(str) {
+  return str
+    .split(EMOJI_CLUSTER)
+    .map((s, i) => ({ s, emoji: i % 2 === 1 }))
+    .filter((p) => p.s !== '');
+}
+
+function fontPixels(ctx) {
+  const m = /([\d.]+)px/.exec(ctx.font);
+  return m ? parseFloat(m[1]) : 16;
+}
+
+function pieceWidths(ctx, pieces) {
+  const px = fontPixels(ctx);
+  return pieces.map((p) => {
+    const w = ctx.measureText(p.s).width;
+    if (!p.emoji) return w;
+    // use the browser's number for an emoji only when it is believable for
+    // one glyph; otherwise fall back to a typical emoji advance
+    return w >= px * 0.8 && w <= px * 2.2 ? w : px * 1.2;
+  });
+}
+
+// ctx.measureText(str).width, but with emoji measured the safe way above, so
+// line breaks are decided with the same widths the line is drawn with.
+function textWidth(ctx, str) {
+  const pieces = emojiPieces(str);
+  if (!pieces.some((p) => p.emoji)) return ctx.measureText(str).width;
+  return pieceWidths(ctx, pieces).reduce((a, b) => a + b, 0);
+}
+
+// Draws one line centered on cx (textBaseline/fillStyle/font set by the caller).
+function fillCenteredLine(ctx, line, cx, y) {
+  const pieces = emojiPieces(line);
+  if (!pieces.some((p) => p.emoji)) {
+    ctx.textAlign = 'center';
+    ctx.fillText(line, cx, y);
+    return;
+  }
+  const widths = pieceWidths(ctx, pieces);
+  let x = cx - widths.reduce((a, b) => a + b, 0) / 2;
+  ctx.textAlign = 'left';
+  pieces.forEach((p, i) => {
+    ctx.fillText(p.s, x, y);
+    x += widths[i];
+  });
+  ctx.textAlign = 'center';
+}
+
 // Like wrapLines, but never drops text: no line cap, and a single word wider
 // than the line is broken up by characters instead of running off the edge.
 function wrapAllLines(ctx, text, maxWidth) {
@@ -571,7 +632,7 @@ function wrapAllLines(ctx, text, maxWidth) {
   let line = '';
   for (const word of text.split(/\s+/).filter(Boolean)) {
     const test = line ? `${line} ${word}` : word;
-    if (ctx.measureText(test).width <= maxWidth) {
+    if (textWidth(ctx, test) <= maxWidth) {
       line = test;
       continue;
     }
@@ -579,10 +640,10 @@ function wrapAllLines(ctx, text, maxWidth) {
       lines.push(line);
       line = '';
     }
-    let rest = Array.from(word);
-    while (ctx.measureText(rest.join('')).width > maxWidth && rest.length > 1) {
+    let rest = emojiPieces(word).flatMap((p) => (p.emoji ? [p.s] : Array.from(p.s)));
+    while (textWidth(ctx, rest.join('')) > maxWidth && rest.length > 1) {
       let cut = rest.length - 1;
-      while (cut > 1 && ctx.measureText(rest.slice(0, cut).join('')).width > maxWidth) cut--;
+      while (cut > 1 && textWidth(ctx, rest.slice(0, cut).join('')) > maxWidth) cut--;
       lines.push(rest.slice(0, cut).join(''));
       rest = rest.slice(cut);
     }
@@ -598,7 +659,7 @@ function wrapLines(ctx, text, maxWidth, maxLines) {
   let lines = [];
   words.forEach((word) => {
     const test = line ? `${line} ${word}` : word;
-    if (ctx.measureText(test).width > maxWidth && line) {
+    if (textWidth(ctx, test) > maxWidth && line) {
       lines.push(line);
       line = word;
     } else {
@@ -615,7 +676,7 @@ function wrapCenteredText(ctx, text, cx, cy, maxWidth, lineHeight, maxLines) {
   let lines = [];
   words.forEach((word) => {
     const test = line ? `${line} ${word}` : word;
-    if (ctx.measureText(test).width > maxWidth && line) {
+    if (textWidth(ctx, test) > maxWidth && line) {
       lines.push(line);
       line = word;
     } else {
@@ -628,5 +689,5 @@ function wrapCenteredText(ctx, text, cx, cy, maxWidth, lineHeight, maxLines) {
   const startY = cy - totalH / 2 + lineHeight / 2;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  lines.forEach((l, i) => ctx.fillText(l, cx, startY + i * lineHeight));
+  lines.forEach((l, i) => fillCenteredLine(ctx, l, cx, startY + i * lineHeight));
 }
