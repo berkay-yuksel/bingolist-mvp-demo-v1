@@ -113,7 +113,9 @@ export default function ShareModal({ card, selectedIds, cellStats, shareUrl, onC
     // Never force a square, and never cap the height either — a big grid
     // simply makes a taller image with no left/right dead space, instead
     // of shrinking every cell down to fit an arbitrary frame.
-    const naturalTotalH = headerH + naturalGridH + PAD + 56; // +56 reserves the corner mark
+    // the stats view is as tall as its list needs to be, not as tall as the card grid
+    const bodyH = view === 'stats' ? layoutStats(tmpCtx, availW).height : naturalGridH;
+    const naturalTotalH = headerH + bodyH + PAD + 56; // +56 reserves the corner mark
     const CANVAS_H = Math.max(naturalTotalH, CANVAS_W);
     setCanvasAspect(CANVAS_W / CANVAS_H);
 
@@ -142,7 +144,7 @@ export default function ShareModal({ card, selectedIds, cellStats, shareUrl, onC
     const contentBottom = CANVAS_H - PAD - 56; // leave room for the corner mark
 
     if (view === 'stats') {
-      drawStatsBlock(ctx, theme, markColor, PAD, cursorY, availW, contentBottom - cursorY);
+      drawStatsBlock(ctx, theme, markColor, PAD, cursorY, availW);
     } else if (view === 'card') {
       drawGrid(ctx, cache, markColor, PAD, cursorY, availW, contentBottom - cursorY, false);
     } else {
@@ -226,9 +228,16 @@ export default function ShareModal({ card, selectedIds, cellStats, shareUrl, onC
       ctx.fillRect(x, y, cellW, cellH);
 
       if (img) {
-        ctx.filter = isSelected ? 'brightness(1.05)' : 'brightness(0.55)';
         drawCover(ctx, img, x, y, cellW, cellH);
-        ctx.filter = 'none';
+        // Unselected cells are dimmed with a plain black overlay: black at
+        // 45% leaves exactly 55% of the brightness, the same as the
+        // brightness(0.55) filter used before. ctx.filter would do it in one
+        // step, but Safari (every iPhone browser) ignores it — so on phones
+        // the unselected cells stayed fully bright.
+        if (!isSelected) {
+          ctx.fillStyle = 'rgba(0,0,0,0.45)';
+          ctx.fillRect(x, y, cellW, cellH);
+        }
 
         // A strong scrim is only needed when the photo is at full
         // brightness (selected) — piling a heavy scrim on top of an
@@ -306,29 +315,44 @@ export default function ShareModal({ card, selectedIds, cellStats, shareUrl, onC
     });
   }
 
-  function drawStatsBlock(ctx, theme, markColor, x0, y0, w, maxH) {
+  // The stats view lists EVERY cell that has text (most-agreed-with first),
+  // each label wrapped over as many lines as it needs — nothing is dropped
+  // and nothing is cut short with "…". The canvas grows to fit it.
+  const STATS_FONT = 26;
+  const STATS_LINE_H = 32;
+  const STATS_PCT_W = 104; // room kept free on the right for "%100"
+
+  function layoutStats(ctx, w) {
+    ctx.font = `${STATS_FONT}px sans-serif`;
+    const items = card.cells
+      .filter((c) => c.text && c.text.trim())
+      .map((c, i) => ({ c, i, pct: cellStats?.[c.id]?.percent ?? 0 }))
+      .sort((a, b) => b.pct - a.pct || a.i - b.i)
+      .map(({ c, pct }) => ({ c, pct, lines: wrapAllLines(ctx, c.text.trim(), w - STATS_PCT_W) }));
+    let height = 58; // heading
+    items.forEach((it) => {
+      it.top = height;
+      height += (it.lines.length - 1) * STATS_LINE_H + 54;
+    });
+    return { items, height: height + 6 };
+  }
+
+  function drawStatsBlock(ctx, theme, markColor, x0, y0, w) {
     ctx.fillStyle = theme.muted;
     ctx.font = `25px sans-serif`;
     ctx.textAlign = 'left';
     ctx.fillText('Topluluk karşılaştırması', x0, y0 + 24);
 
-    const top = [...card.cells]
-      .filter((c) => c.text && c.text.trim())
-      .map((c) => ({ c, pct: cellStats?.[c.id]?.percent ?? 0 }))
-      .sort((a, b) => b.pct - a.pct)
-      .slice(0, 6);
+    const { items } = layoutStats(ctx, w);
 
-    const rowH = Math.min(62, Math.max(40, (maxH - 50) / Math.max(1, top.length)));
-
-    top.forEach(({ c, pct }, i) => {
-      const y = y0 + 58 + i * rowH;
+    items.forEach(({ pct, lines, top }) => {
+      const y = y0 + top;
       ctx.fillStyle = theme.text;
-      ctx.font = `26px sans-serif`;
+      ctx.font = `${STATS_FONT}px sans-serif`;
       ctx.textAlign = 'left';
-      const label = c.text.length > 34 ? c.text.slice(0, 34) + '…' : c.text;
-      ctx.fillText(label, x0, y);
+      lines.forEach((line, li) => ctx.fillText(line, x0, y + li * STATS_LINE_H));
 
-      const barY = y + 11;
+      const barY = y + (lines.length - 1) * STATS_LINE_H + 11;
       ctx.fillStyle = theme.id === 'original' ? 'rgba(244,238,221,0.12)' : 'rgba(0,0,0,0.08)';
       roundRect(ctx, x0, barY, w, 9, 4.5);
       ctx.fill();
@@ -538,6 +562,34 @@ function drawCover(ctx, img, x, y, w, h) {
   const sx = (img.width - sw) / 2;
   const sy = (img.height - sh) / 2;
   ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+}
+
+// Like wrapLines, but never drops text: no line cap, and a single word wider
+// than the line is broken up by characters instead of running off the edge.
+function wrapAllLines(ctx, text, maxWidth) {
+  const lines = [];
+  let line = '';
+  for (const word of text.split(/\s+/).filter(Boolean)) {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width <= maxWidth) {
+      line = test;
+      continue;
+    }
+    if (line) {
+      lines.push(line);
+      line = '';
+    }
+    let rest = Array.from(word);
+    while (ctx.measureText(rest.join('')).width > maxWidth && rest.length > 1) {
+      let cut = rest.length - 1;
+      while (cut > 1 && ctx.measureText(rest.slice(0, cut).join('')).width > maxWidth) cut--;
+      lines.push(rest.slice(0, cut).join(''));
+      rest = rest.slice(cut);
+    }
+    line = rest.join('');
+  }
+  if (line) lines.push(line);
+  return lines.length ? lines : [''];
 }
 
 function wrapLines(ctx, text, maxWidth, maxLines) {

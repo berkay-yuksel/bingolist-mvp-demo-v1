@@ -14,6 +14,8 @@ export default function Header() {
   const [results, setResults] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const searchRef = useRef(null);
+  const mobileSearchRef = useRef(null);
+  const [mobileSearch, setMobileSearch] = useState(false); // phone: search row under the header
   const router = useRouter();
   const pathname = usePathname();
 
@@ -41,11 +43,17 @@ export default function Header() {
 
   useEffect(() => {
     function onClickOutside(e) {
-      if (searchRef.current && !searchRef.current.contains(e.target)) setSearchOpen(false);
+      const inside = [searchRef, mobileSearchRef].some((r) => r.current && r.current.contains(e.target));
+      if (!inside) setSearchOpen(false);
     }
     document.addEventListener('mousedown', onClickOutside);
     return () => document.removeEventListener('mousedown', onClickOutside);
   }, []);
+
+  useEffect(() => {
+    setMobileSearch(false);
+    setSearchOpen(false);
+  }, [pathname]);
 
   const navLink = (href, label) => (
     <Link
@@ -58,36 +66,12 @@ export default function Header() {
     </Link>
   );
 
-  return (
-    <header className="sticky top-0 z-40 border-b border-ink-500/40 bg-ink/90 backdrop-blur-md">
-      <div className="mx-auto flex w-[92vw] max-w-[1800px] items-center gap-3 py-3 sm:gap-6">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="grid h-7 w-7 place-items-center rounded-md bg-stamp font-display text-sm font-bold text-ink shadow-stamp">
-            B
-          </span>
-          <span className="hidden font-display text-base font-bold tracking-tight min-[350px]:inline sm:text-lg">BingoList</span>
-        </Link>
-
-        <nav className="hidden items-center gap-5 md:flex">
-          {navLink('/', 'Keşfet')}
-          {navLink('/categories', 'Kategoriler')}
-          {navLink('/create', 'Oluştur')}
-          {(user.role === 'moderator' || user.role === 'editor') && navLink('/management', 'Yönetim')}
-        </nav>
-
-        <div ref={searchRef} className="relative ml-auto hidden max-w-xs flex-1 sm:block">
-          <form onSubmit={handleSearch} className="flex items-center">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              onFocus={() => q.trim() && setSearchOpen(true)}
-              placeholder="Kart veya @kullanıcı ara"
-              className="w-full rounded-full border border-ink-500 bg-ink-700 px-4 py-1.5 text-sm text-paper placeholder:text-paper/35 focus:border-mint"
-            />
-          </form>
-
-          {searchOpen && results && (
-            <div className="absolute right-0 top-10 max-h-96 w-80 overflow-y-auto rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket">
+  // The dropdown under a search box — same content for the desktop box and
+  // the phone one, only the positioning classes differ.
+  function renderResults(panelClass) {
+    if (!searchOpen || !results) return null;
+    return (
+      <div className={panelClass}>
               {results.creators.length === 0 && results.cards.length === 0 ? (
                 <p className="px-2 py-4 text-center text-sm text-paper/40">Sonuç bulunamadı.</p>
               ) : (
@@ -127,8 +111,39 @@ export default function Header() {
                   </button>
                 </>
               )}
-            </div>
-          )}
+      </div>
+    );
+  }
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-ink-500/40 bg-ink/90 backdrop-blur-md">
+      <div className="mx-auto flex w-[92vw] max-w-[1800px] items-center gap-3 py-3 sm:gap-6">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
+          <span className="grid h-7 w-7 place-items-center rounded-md bg-stamp font-display text-sm font-bold text-ink shadow-stamp">
+            B
+          </span>
+          <span className="hidden font-display text-base font-bold tracking-tight min-[420px]:inline sm:text-lg">BingoList</span>
+        </Link>
+
+        <nav className="hidden items-center gap-5 md:flex">
+          {navLink('/', 'Keşfet')}
+          {navLink('/categories', 'Kategoriler')}
+          {navLink('/create', 'Oluştur')}
+          {(user.role === 'moderator' || user.role === 'editor') && navLink('/management', 'Yönetim')}
+        </nav>
+
+        <div ref={searchRef} className="relative ml-auto hidden max-w-xs flex-1 sm:block">
+          <form onSubmit={handleSearch} className="flex items-center">
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              onFocus={() => q.trim() && setSearchOpen(true)}
+              placeholder="Kart veya @kullanıcı ara"
+              className="w-full rounded-full border border-ink-500 bg-ink-700 px-4 py-1.5 text-sm text-paper placeholder:text-paper/35 focus:border-mint"
+            />
+          </form>
+
+          {renderResults('absolute right-0 top-10 max-h-96 w-80 overflow-y-auto rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket')}
         </div>
 
         {/* Right-hand cluster — the same on every screen size: new-card
@@ -136,6 +151,17 @@ export default function Header() {
             login / signup pair when not. On phones it sits at the far
             right (ml-auto); from sm up the search box takes that spot. */}
         <div className="ml-auto flex shrink-0 items-center gap-2 sm:ml-0 sm:gap-6">
+          <button
+            type="button"
+            onClick={() => setMobileSearch((v) => !v)}
+            aria-label="Ara"
+            aria-expanded={mobileSearch}
+            className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border transition sm:hidden ${
+              mobileSearch ? 'border-mint text-mint' : 'border-ink-500 text-paper/70 hover:border-mint hover:text-mint'
+            }`}
+          >
+            <Search size={16} />
+          </button>
           <Link
             href="/create"
             aria-label="Yeni kart"
@@ -225,6 +251,25 @@ export default function Header() {
           )}
         </div>
       </div>
+
+      {mobileSearch && (
+        <div className="border-t border-ink-500/30 sm:hidden">
+          <div ref={mobileSearchRef} className="relative mx-auto w-[92vw] py-2">
+            <form onSubmit={handleSearch} className="flex items-center">
+              <input
+                autoFocus
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                onFocus={() => q.trim() && setSearchOpen(true)}
+                onKeyDown={(e) => e.key === 'Escape' && setMobileSearch(false)}
+                placeholder="Kart veya @kullanıcı ara"
+                className="w-full rounded-full border border-ink-500 bg-ink-700 px-4 py-2 text-sm text-paper placeholder:text-paper/35 focus:border-mint"
+              />
+            </form>
+            {renderResults('absolute inset-x-0 top-full mt-1 max-h-[60vh] overflow-y-auto rounded-xl border border-ink-500 bg-ink-700 p-2 shadow-ticket')}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

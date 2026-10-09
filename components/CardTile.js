@@ -228,7 +228,7 @@ export default function CardTile({ card, pinned, onTogglePin, extraMenuItems, di
           <p className="line-clamp-2 min-h-[2.75rem] font-display text-base font-bold leading-snug text-paper">
             {card.title}
           </p>
-          <div className="mt-2 flex items-center gap-2 font-mono text-xs text-paper/45">
+          <div className="mt-2 flex items-center gap-2 font-mono text-[0.65rem] text-paper/45 sm:text-xs">
             <span>{card.cellCount} hücre</span>
             {card.metrics?.plays != null && (
               <>
