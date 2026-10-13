@@ -8,7 +8,7 @@ import { formatCount } from '@/lib/format';
 import ReportDialog from './ReportDialog';
 
 export default function ProfileHeader({ profile }) {
-  const { userId, requireLogin } = useCurrentUser();
+  const { userId, refreshSession, requireLogin } = useCurrentUser();
   const [following, setFollowing] = useState(false);
   const [followerCount, setFollowerCount] = useState(profile.followerCount);
   const [reportOpen, setReportOpen] = useState(false);
@@ -30,6 +30,7 @@ export default function ProfileHeader({ profile }) {
     const json = await res.json();
     setFollowing(json.following);
     setFollowerCount(json.followerCount);
+    refreshSession(); // the creator tiles read "who do I follow" from the session
   }
 
   async function handleReport(reason) {

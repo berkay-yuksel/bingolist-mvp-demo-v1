@@ -9,16 +9,19 @@ import { useCurrentUser } from './UserContext';
 const SCROLL_AMOUNT = 500;
 
 function CreatorTile({ c }) {
-  const { userId, requireLogin } = useCurrentUser();
-  const [following, setFollowing] = useState(false);
+  const { userId, user, refreshSession, requireLogin } = useCurrentUser();
   const isSelf = userId === c.id;
 
+  // Whether the signed-in person follows this creator is already known: the
+  // session (/api/auth/me) carries the list of people they follow. This used to
+  // fetch every creator's whole profile one by one — a request per tile, each
+  // one reading the entire database on the server — and did so for visitors
+  // who aren't signed in too, just to read this one yes/no.
+  const followsThem = !!user.following?.includes(c.id);
+  const [following, setFollowing] = useState(followsThem);
   useEffect(() => {
-    fetch(`/api/users/${c.username}?viewerId=${userId}`)
-      .then((r) => r.json())
-      .then((json) => setFollowing(json.isFollowing))
-      .catch(() => {});
-  }, [c.username, userId]);
+    setFollowing(followsThem);
+  }, [followsThem]);
 
   async function toggleFollow(e) {
     e.preventDefault();
@@ -31,6 +34,7 @@ function CreatorTile({ c }) {
     });
     const json = await res.json();
     setFollowing(json.following);
+    refreshSession(); // keep the session's "following" list in step with this change
   }
 
   return (
