@@ -45,12 +45,12 @@ export default function HeroCard({ card, media }) {
             <video src={media.url} className="h-full w-full object-cover" autoPlay muted loop playsInline />
           ) : media?.type === 'image' && media.url ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={media.url} alt={card.title} className="h-full w-full object-cover" />
+            <img src={media.url} alt={card.title} loading="eager" fetchPriority="high" className="h-full w-full object-cover" />
           ) : card.coverImage ? (
             // No banner media was picked — fall back to the selected card's
             // own cover image before resorting to the procedural pattern.
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={card.coverImage} alt={card.title} className="h-full w-full object-cover" />
+            <img src={card.coverImage} alt={card.title} loading="eager" fetchPriority="high" className="h-full w-full object-cover" />
           ) : (
             <CardCover accent={card.theme?.accent} seed={card.coverSeed ?? 0} title={card.title} className="h-full w-full" />
           )}
