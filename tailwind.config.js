@@ -3,6 +3,8 @@ module.exports = {
   content: [
     './app/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
+    // lib/markdown.js builds HTML with Tailwind classes (headings, lists, links)
+    './lib/**/*.js',
   ],
   theme: {
     extend: {
